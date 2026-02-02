@@ -1,5 +1,4 @@
-'use client';
-
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -18,6 +17,14 @@ import {
   ArrowRight
 } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'Redefining Where Innovation Happens | Universe Coworks About Page',
+  description: 'Learn about Universe Coworks\' mission to build world-class infrastructure in Trichy, empowering startups and offshore enterprises with global-standard facilities.',
+  alternates: {
+    canonical: 'https://universecoworks.com/about',
+  }
+};
+
 export default function AboutPage() {
   return (
     <div className="bg-white font-sans overflow-x-hidden selection:bg-[#00a896] selection:text-white">
@@ -25,7 +32,7 @@ export default function AboutPage() {
       <section className="relative min-h-[70vh] flex items-center bg-[#0a0f1a] overflow-hidden">
         <div className="absolute inset-0 z-0 ">
           <Image
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=75&w=1600&auto=format&fit=crop"
             alt="Universe Coworks Hub"
             fill
             className="object-cover opacity-30 "
@@ -36,11 +43,11 @@ export default function AboutPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-20 ">
           <div className="max-w-3xl space-y-6 md:pt-20">
-            <div className="inline-flex items-center space-x-2 bg-white/5 backdrop-blur-md px-4 py-2 rounded-full text-[#00a896] text-xs font-bold border border-white/10 uppercase tracking-widest animate-fade-in ">
+            <div className="inline-flex items-center space-x-2 bg-white/5 backdrop-blur-md px-4 py-2 rounded-full text-[#00a896] text-sm font-bold border border-white/10 uppercase tracking-widest animate-fade-in ">
               <span>Established 2023 • Global Standards Hub</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight font-headings tracking-tight animate-fade-in-up">
+            <h1 className="text-4xl md:text-6xl xl:text-7xl font-bold text-white leading-tight font-headings tracking-tight animate-fade-in-up">
               Redefining Where <br />
               <span className="text-[#00a896]">Innovation</span> Happens.
             </h1>
@@ -61,15 +68,15 @@ export default function AboutPage() {
       {/* Philosophy Section - Clean split layout */}
       <section className="py-24 px-4 bg-white relative">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 xl:gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <span className="text-[#00a896] font-black text-xs uppercase tracking-[0.3em]">Our Philosophy</span>
+                <span className="text-[#00a896] font-black text-sm uppercase tracking-[0.3em]">Our Philosophy</span>
                 <h2 className="text-3xl md:text-5xl font-bold text-[#0f172a] font-headings leading-tight">Geography should not dictate potential.</h2>
               </div>
 
               <div className="p-6 bg-gray-50 border-l-4 border-[#00a896] rounded-r-2xl">
-                <p className="text-gray-600 font-medium italic text-lg leading-relaxed">
+                <p className="text-gray-600 font-medium   text-lg leading-relaxed">
                   "We recognized an untapped opportunity: Trichy, Tamil Nadu — a strategic growth hub offering world-class talent and economics."
                 </p>
               </div>
@@ -90,7 +97,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative h-[500px] rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=75&w=1200&auto=format&fit=crop"
                   alt="Ecosystem Image"
                   fill
                   className="object-cover"
@@ -112,7 +119,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div className="space-y-4">
-              <span className="text-[#00a896] font-black text-xs uppercase tracking-[0.3em]">The Strategic Roadmap</span>
+              <span className="text-[#00a896] font-black text-sm uppercase tracking-[0.3em]">The Strategic Roadmap</span>
               <h2 className="text-3xl md:text-5xl text-white font-bold font-headings">Our Four Pillars</h2>
             </div>
             <p className="text-gray-400 max-w-sm text-sm font-medium leading-relaxed">
@@ -120,7 +127,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
             {[
               { title: "Global Gateway", icon: Globe, desc: "Positioning Trichy as the credible alternative for offshore operations." },
               { title: "Founder Fuel", icon: Target, desc: "Eliminating capital barriers that force founders to sacrifice runway." },
@@ -142,11 +149,11 @@ export default function AboutPage() {
       {/* Strategic Hub - Modern Feature Split */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 xl:gap-20 items-center">
             <div className="relative order-2 lg:order-1">
               <div className="relative h-[600px] rounded-[3rem] overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+                  src="https://images.pexels.com/photos/29267511/pexels-photo-29267511.jpeg"
                   alt="Industrial Hub"
                   fill
                   className="object-cover"
@@ -154,13 +161,13 @@ export default function AboutPage() {
               </div>
               <div className="absolute top-10 right-10 bg-white p-6 rounded-2xl shadow-xl border border-gray-100">
                 <div className="text-3xl font-bold text-[#273a96] font-headings">40-60%</div>
-                <p className="text-xs font-black text-[#00a896] uppercase tracking-widest">OpEx Advantage</p>
+                <p className="text-sm font-black text-[#00a896] uppercase tracking-widest">OpEx Advantage</p>
               </div>
             </div>
 
             <div className="space-y-10 order-1 lg:order-2">
               <div className="space-y-4">
-                <span className="text-[#273a96] font-black text-xs uppercase tracking-[0.3em]">Why Trichy?</span>
+                <span className="text-[#273a96] font-black text-sm uppercase tracking-[0.3em]">Why Trichy?</span>
                 <h2 className="text-3xl md:text-5xl font-bold text-[#0f172a] font-headings leading-tight">Strategic Hub for <span className="text-[#00a896]">Global Visionaries</span></h2>
               </div>
               <p className="text-lg text-gray-500 font-medium">
@@ -178,7 +185,7 @@ export default function AboutPage() {
                       <item.icon className="h-5 w-5" />
                     </div>
                     <div className="ml-5">
-                      <h4 className="font-bold text-[#0f172a] leading-none mb-1">{item.t}</h4>
+                      <h4 className="font-bold text-[#0f172a] mb-1">{item.t}</h4>
                       <p className="text-sm text-gray-500">{item.d}</p>
                     </div>
                   </div>
@@ -193,12 +200,12 @@ export default function AboutPage() {
       <section className="py-24 bg-[#0a0f1a] text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-20 space-y-4">
-            <span className="text-[#00a896] font-black text-xs uppercase tracking-[0.3em]">Standard-Setting</span>
+            <span className="text-[#00a896] font-black text-sm uppercase tracking-[0.3em]">Standard-Setting</span>
             <h2 className="text-3xl md:text-5xl text-white font-bold font-headings">Infrastructure Without Compromise</h2>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg">Establishing India entry points for companies requiring ISO-grade specifications.</p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-8">
             {[
               { t: "99.9% Uptime", icon: Zap, label: "Dedicated Fiber" },
               { t: "Biometric Ops", icon: ShieldCheck, label: "24/7 Monitoring" },
@@ -210,7 +217,7 @@ export default function AboutPage() {
                   <stat.icon className="h-8 w-8" />
                 </div>
                 <h4 className="text-xl font-bold text-white font-headings">{stat.t}</h4>
-                <p className="text-xs font-black uppercase tracking-widest text-gray-500">{stat.label}</p>
+                <p className="text-sm font-black uppercase tracking-widest text-gray-500">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -221,35 +228,42 @@ export default function AboutPage() {
       <section className="py-24 bg-white px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 space-y-4">
-            <span className="text-[#273a96] font-black text-xs uppercase tracking-[0.3em]">Cost Advantage</span>
+            <span className="text-[#273a96] font-black text-sm uppercase tracking-[0.3em]">Cost Advantage</span>
             <h2 className="text-3xl md:text-5xl font-bold text-[#0f172a] font-headings">Economic Viability</h2>
           </div>
 
-          <div className="max-w-4xl mx-auto bg-gray-50 rounded-[2.5rem] p-4 md:p-12 border border-gray-100 shadow-sm overflow-x-auto">
-            <table className="w-full text-left min-w-[600px]">
-              <thead>
-                <tr className="text-gray-400 font-black text-[10px] uppercase tracking-widest border-b border-gray-200">
-                  <th className="pb-6 px-4">Location</th>
-                  <th className="pb-6">Workspace Cost</th>
-                  <th className="pb-6">Salary Range</th>
-                  <th className="pb-6 text-right px-4">Total Estimate</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-100">
-                <tr className="group">
-                  <td className="py-8 px-4 font-bold text-gray-400">Bangalore (Tier-1)</td>
-                  <td className="py-8 text-gray-500">₹12k - 18k</td>
-                  <td className="py-8 text-gray-500">₹50k - 80k</td>
-                  <td className="py-8 text-right px-4 font-black text-red-400">₹62k - 98k</td>
-                </tr>
-                <tr className="group bg-[#00a896]/5 rounded-xl">
-                  <td className="py-8 px-4 font-black text-[#273a96]">Trichy (Universe Hub)</td>
-                  <td className="py-8 font-black text-[#0f172a]">₹5k - 8k</td>
-                  <td className="py-8 font-black text-[#0f172a]">₹30k - 50k</td>
-                  <td className="py-8 text-right px-4 font-black text-[#00a896] text-xl">₹35k - 58k</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="max-w-4xl mx-auto bg-gray-50 rounded-[2.5rem] p-4 md:p-12 border border-gray-100 shadow-sm overflow-hidden text-center">
+            <div className="mb-4 text-sm font-bold text-gray-400 uppercase tracking-widest flex items-center justify-center gap-2 lg:hidden">
+              <ArrowRight className="h-3 w-3 animate-pulse" />
+              Scroll horizontally to compare
+              <ArrowRight className="h-3 w-3 animate-pulse" />
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left min-w-[600px]">
+                <thead>
+                  <tr className="text-gray-400 font-black text-[10px] uppercase tracking-widest border-b border-gray-200">
+                    <th className="pb-6 px-4">Location</th>
+                    <th className="pb-6">Workspace Cost</th>
+                    <th className="pb-6">Salary Range</th>
+                    <th className="pb-6 text-right px-4">Total Estimate</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  <tr className="group">
+                    <td className="py-8 px-4 font-bold text-gray-400">Bangalore (Tier-1)</td>
+                    <td className="py-8 text-gray-500">₹12k - 18k</td>
+                    <td className="py-8 text-gray-500">₹50k - 80k</td>
+                    <td className="py-8 text-right px-4 font-black text-red-400">₹62k - 98k</td>
+                  </tr>
+                  <tr className="group bg-[#00a896]/5 rounded-xl">
+                    <td className="py-8 px-4 font-black text-[#273a96]">Trichy (Universe Hub)</td>
+                    <td className="py-8 font-black text-[#0f172a]">₹5k - 8k</td>
+                    <td className="py-8 font-black text-[#0f172a]">₹30k - 50k</td>
+                    <td className="py-8 text-right px-4 font-black text-[#00a896] text-xl">₹35k - 58k</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
@@ -260,7 +274,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-8">
             <div className="bg-[#0a0f1a] rounded-[2.5rem] p-12 text-white flex flex-col justify-between">
               <div className="space-y-6">
-                <span className="text-[#00a896] font-black text-xs uppercase tracking-[0.3em]">Elite Access</span>
+                <span className="text-[#00a896] font-black text-sm uppercase tracking-[0.3em]">Elite Access</span>
                 <h3 className="text-3xl font-bold font-headings  text-white leading-tight">Access to India's Premier Talent.</h3>
                 <p className="text-gray-400 leading-relaxed font-medium">
                   Tap into graduates from NIT Trichy and IIM. Employees in Tier-2 cities demonstrate significantly higher loyalty due to family proximity and reduced living stress.
@@ -320,7 +334,7 @@ export default function AboutPage() {
             ].map((t, i) => (
               <div key={i} className="p-12 bg-gray-50 rounded-[2.5rem] border border-gray-100 relative">
                 <Quote className="h-10 w-10 text-[#00a896] opacity-20 mb-6" />
-                <p className="text-xl font-bold text-[#0f172a] font-headings italic leading-relaxed mb-8">"{t.quote}"</p>
+                <p className="text-xl font-bold text-[#0f172a] font-headings   leading-relaxed mb-8">"{t.quote}"</p>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
                   <div>
@@ -340,7 +354,7 @@ export default function AboutPage() {
           <div className="bg-[#00a896] rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden">
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/shattered-island.png')] opacity-10"></div>
             <div className="relative z-10 space-y-8">
-              <h2 className="text-4xl md:text-6xl font-bold font-headings tracking-tight">Build the Future from Trichy.</h2>
+              <h2 className="text-3xl md:text-5xl xl:text-6xl font-bold font-headings tracking-tight">Build the Future from Trichy.</h2>
               <p className="text-lg md:text-xl text-white/80 font-medium max-w-2xl mx-auto leading-relaxed">
                 Ready to establish your India operations or launch your next innovation? Let's design your growth trajectory together.
               </p>
@@ -359,7 +373,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/50 mb-2">Speak to Us</p>
-                  <p className="text-sm font-bold">+91 97866 55005</p>
+                  <p className="text-sm font-bold">+91 86755-56079</p>
                 </div>
               </div>
             </div>

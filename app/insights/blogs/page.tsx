@@ -13,7 +13,7 @@ const blogs = [
     author: "Universe Team",
     date: "Jan 10, 2026",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=75&w=800&auto=format&fit=crop"
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const blogs = [
     author: "Priya Sundaram",
     date: "Jan 5, 2026",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=75&w=800&auto=format&fit=crop"
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const blogs = [
     author: "Suresh Natarajan",
     date: "Dec 28, 2025",
     readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=75&w=800&auto=format&fit=crop"
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ const blogs = [
     author: "Anjali Mehta",
     date: "Dec 15, 2025",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=75&w=800&auto=format&fit=crop"
   }
 ];
 
@@ -51,13 +51,13 @@ export default function BlogsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-[#0f172a] text-white py-24 relative overflow-hidden">
+      <section className="bg-[#0f172a] text-white py-32 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#273a96] rounded-full blur-[100px] opacity-30 translate-x-1/2 -translate-y-1/2"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="inline-block px-4 py-1.5 bg-blue-900/50 text-blue-200 rounded-full text-sm font-semibold mb-6 border border-blue-800">
             Latest Insights
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 font-headings">Stories from the Universe</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 font-headings text-white">Stories from the Universe</h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto font-sans">
             Trends, guides, and success stories from Trichy's fastest-growing startup ecosystem.
           </p>
@@ -65,7 +65,7 @@ export default function BlogsPage() {
       </section>
 
       {/* Blog Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto -mt-20 relative z-20">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mt-5 relative z-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-10">
           {blogs.map((post) => (
             <div key={post.id} className="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 flex flex-col h-full">
@@ -118,18 +118,7 @@ export default function BlogsPage() {
         </div>
       </section>
 
-      {/* Newsletter CTA */}
-      <section className="bg-[#273a96] py-20 px-4 text-center mt-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-        <div className="relative z-10 max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-4 font-headings">Subscribe to Our Newsletter</h2>
-          <p className="text-blue-200 mb-8 font-sans">Get the latest insights on startup growth and remote work delivered to your inbox.</p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <input type="email" placeholder="Enter your email" className="flex-grow px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-blue-300 focus:outline-none focus:ring-2 focus:ring-[#00a896]" />
-            <button className="px-8 py-4 bg-[#00a896] text-white font-bold rounded-full hover:bg-[#00897b] transition-colors shadow-lg">Subscribe</button>
-          </div>
-        </div>
-      </section>
+     
     </div>
   );
 }

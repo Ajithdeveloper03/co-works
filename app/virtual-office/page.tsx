@@ -25,7 +25,7 @@ export default function VirtualOfficePage() {
       <section className="relative h-[80vh] flex items-center bg-[#0f172a] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=75&w=1280&auto=format&fit=crop"
             alt="Trichy Business District"
             fill
             className="object-cover opacity-40"
@@ -68,7 +68,7 @@ export default function VirtualOfficePage() {
               <div className="absolute -inset-4 bg-gradient-to-r from-[#00a896] to-[#273a96] rounded-[2.5rem] opacity-30 blur-xl group-hover:opacity-50 transition-opacity duration-500"></div>
               <div className="relative h-[400px] w-full rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=75&w=1200&auto=format&fit=crop"
                   alt="Premium Business Address"
                   fill
                   className="object-cover transform group-hover:scale-105 transition-transform duration-700"
@@ -88,6 +88,7 @@ export default function VirtualOfficePage() {
               </p>
               <ul className="space-y-4">
                 {[
+
                   "Registration for GST & Company Incorporation",
                   "Prime locations in Thillai Nagar & Cantonment",
                   "Perfect for Remote Teams & Global Companies"
@@ -112,7 +113,7 @@ export default function VirtualOfficePage() {
                   fill
                   className="object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
-               
+
               </div>
             </div>
             <div className="md:w-1/2">
@@ -182,7 +183,7 @@ export default function VirtualOfficePage() {
               <div className="relative h-[400px] w-full rounded-[2rem] overflow-hidden shadow-2xl">
                 {/* Using one of the existing office interior images from another generation or a placeholder for now - fallback to hero image re-used to avoid broken link if no specific workspace image gen yet */}
                 <Image
-                  src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2301&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=75&w=1200&auto=format&fit=crop"
                   alt="On Demand Workspace"
                   fill
                   className="object-cover transform group-hover:scale-105 transition-transform duration-700"
@@ -314,19 +315,19 @@ export default function VirtualOfficePage() {
       {/* Call to Action */}
       <section className="py-16 bg-[#273a96] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 font-headings">Start Your Trichy Business Presence Today</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 font-headings text-white">Start Your Trichy Business Presence Today</h2>
           <div className="grid md:grid-cols-3 gap-8 mb-12 text-center">
             <div className="relative">
               <div className="text-6xl font-bold text-white/20 mb-2">1</div>
-              <h4 className="font-bold text-xl">Choose Plan</h4>
+              <h4 className="font-bold text-xl text-white">Choose Plan</h4>
             </div>
             <div className="relative">
               <div className="text-6xl font-bold text-white/20 mb-2">2</div>
-              <h4 className="font-bold text-xl">Submit Docs</h4>
+              <h4 className="font-bold text-xl text-white">Submit Docs</h4>
             </div>
             <div className="relative">
               <div className="text-6xl font-bold text-white/20 mb-2">3</div>
-              <h4 className="font-bold text-xl">Go Live</h4>
+              <h4 className="font-bold text-xl text-white">Go Live</h4>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -338,7 +339,7 @@ export default function VirtualOfficePage() {
             </Link>
           </div>
           <p className="mt-8 text-blue-200">
-            Questions? Call us at <span className="font-bold text-white">+91 97866 55005</span> or WhatsApp
+            Questions? Call us at <span className="font-bold text-white">+91 86755-56079</span> or WhatsApp
           </p>
         </div>
       </section>

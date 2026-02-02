@@ -6,14 +6,14 @@ import { Facebook, Twitter, Instagram, Linkedin, MapPin, Mail, Phone, ShieldChec
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a0f1a] text-white pt-24 pb-12 border-t border-white/5">
+    <footer className="bg-[#0a0f1a] text-white pt-12 pb-12 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 xl:gap-16 mb-8">
 
           {/* Column 1: About */}
           <div className="space-y-8">
-            <Link href="/" className="inline-block relative h-10 w-48">
-              <Image src="/co-works/logo.png" alt="Universe Coworks" fill className="object-contain" />
+            <Link href="/" className="inline-block relative h-12 w-48">
+              <Image src="/logo.png" alt="Universe Coworks" fill className="object-contain" />
             </Link>
 
             <p className="text-gray-400 text-sm leading-relaxed font-medium">
@@ -42,6 +42,7 @@ export default function Footer() {
                 { name: 'Startup Community', href: '/community' },
                 { name: 'Virtual Presence', href: '/virtual-office' },
                 { name: 'Pricing Plans', href: '/pricing' },
+                { name: 'FAQ', href: '/frequently-asked-questions' },
                 { name: 'Connect', href: '/contact' }
               ].map((link) => (
                 <li key={link.name}>
@@ -60,7 +61,11 @@ export default function Footer() {
             <ul className="space-y-6 text-gray-400">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-[#00a896] mr-4 mt-0.5 shrink-0" />
-                <span className="text-sm font-medium">11th Cross East, Thillai Nagar & Cantonment, Trichy, TN, India</span>
+                <span className="text-sm font-medium">74A, Salai Rd, 2 floor nd
+                  opp. Vaishali Hospital,
+                  Thillai Nagar East,
+                  Tiruchirappalli, Tamil Nadu
+                  620018</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-[#273a96] mr-4 shrink-0" />
@@ -68,22 +73,23 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-[#00a896] mr-4 shrink-0" />
-                <a href="tel:+919786655005" className="text-sm font-bold hover:text-white transition-colors">+91 97866 55005</a>
+                <a href="tel:+9186755-56079" className="text-sm font-bold hover:text-white transition-colors">+91 86755-56079 <br /> +91 97899-13368</a>
               </li>
             </ul>
-            <div className="mt-10">
-              <Link href="/contact" className="inline-flex items-center px-8 py-3 bg-[#273a96] hover:bg-[#1e2a78] text-white rounded-xl font-black text-xs uppercase tracking-widest transition-all shadow-xl">
-                Book Workspace
-              </Link>
-            </div>
           </div>
 
-          {/* Column 4: Reach */}
+          {/* Column 4: Hub Operations */}
           <div>
-            <h4 className="text-xs font-black uppercase tracking-[0.4em] mb-10 text-white/40">Digital Access</h4>
-            <div className="flex mb-8">
-              <input type="email" placeholder="Work Email" className="bg-white/5 border border-white/10 rounded-l-2xl px-5 py-3 text-white w-full focus:ring-1 focus:ring-[#00a896] outline-none text-sm font-bold" />
-              <button className="bg-[#00a896] px-6 py-3 rounded-r-2xl hover:bg-[#00897b] text-white font-black text-xs uppercase tracking-widest transition-colors">Join</button>
+            <h4 className="text-xs font-black uppercase tracking-[0.4em] mb-10 text-white/40">Hub Operations</h4>
+            <div className="space-y-4 mb-10">
+              <div className="flex justify-between items-center text-sm font-bold border-b border-white/5 pb-2">
+                <span className="text-gray-400">Monday - Saturday</span>
+                <span className="text-[#00a896]">09:00 - 6:00</span>
+              </div>
+              <div className="flex justify-between items-center text-sm font-bold border-b border-white/5 pb-2">
+                <span className="text-gray-400">Sunday</span>
+                <span className="text-gray-600 italic">By Appointment</span>
+              </div>
             </div>
 
             <div className="flex space-x-6">
@@ -98,15 +104,20 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+            <div className="mt-10">
+              <Link href="/contact" className="inline-flex items-center px-8 py-3 bg-[#273a96] hover:bg-[#1e2a78] text-white rounded-xl font-black text-xs uppercase tracking-widest transition-all shadow-xl">
+                Book Workspace
+              </Link>
+            </div>
           </div>
         </div>
 
-        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs font-bold uppercase tracking-[0.2em]">
+        <div className="pt-5 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs font-bold uppercase tracking-[0.2em]">
           <p>© 2026 Universe Coworks. Global Standards Hub.</p>
           <div className="flex space-x-8 mt-6 md:mt-0">
             <Link href="#" className="hover:text-white transition-colors">Privacy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms</Link>
-            <Link href="#" className="hover:text-white transition-colors">Covenants</Link>
+
           </div>
         </div>
       </div>

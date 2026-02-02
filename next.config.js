@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/co-works',
-  assetPrefix: '/co-works', 
+  basePath: '',
+  assetPrefix: '', 
   output: 'export',         
   eslint: {
     ignoreDuringBuilds: true,

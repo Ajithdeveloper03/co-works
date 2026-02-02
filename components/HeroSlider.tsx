@@ -14,7 +14,7 @@ const slides = [
     linkPrimary: '/contact',
     ctaSecondary: '',
     linkSecondary: '',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop'
+    image: 'https://images.pexels.com/photos/7071/space-desk-office-workspace.jpg'
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const slides = [
     linkPrimary: '/locations',
     ctaSecondary: 'Compare Membership Plans',
     linkSecondary: '/pricing',
-    image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=75&w=1600&auto=format&fit=crop'
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const slides = [
     linkPrimary: '/contact',
     ctaSecondary: 'Read Trichy Member Reviews',
     linkSecondary: '/#testimonials',
-    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2664&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=75&w=1600&auto=format&fit=crop'
   }
 ];
 
@@ -90,7 +90,7 @@ export default function HeroSlider() {
                   </div>
                 )}
 
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight font-headings">
+                <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold text-white leading-tight tracking-tight font-headings">
                   {slide.title}
                 </h1>
 

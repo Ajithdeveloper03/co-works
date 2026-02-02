@@ -1,8 +1,15 @@
-'use client';
-
+﻿import { Metadata } from 'next';
 import Image from 'next/image';
 import { MapPin, Phone, Mail, Clock, ArrowRight, Share2, Navigation, CheckCircle, Smartphone, Globe } from 'lucide-react';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Universe Coworks Locations | Prime Business Hubs in Trichy',
+  description: 'Explore our strategic coworking locations in Trichy. Situated in the commercial heart of the city, offering seamless access to key transit and talent hubs.',
+  alternates: {
+    canonical: 'https://universecoworks.com/locations',
+  }
+};
 
 export default function LocationsPage() {
   return (
@@ -109,7 +116,7 @@ export default function LocationsPage() {
                 <div className="flex items-start">
                   <Clock className="h-6 w-6 text-[#00a896] mr-4 shrink-0 mt-1" />
                   <div>
-                    <p className="font-bold text-lg mb-1">9 AM – 9 PM</p>
+                    <p className="font-bold text-lg mb-1">9 AM ΓÇô 9 PM</p>
                     <p className="text-sm text-gray-400">Monday - Saturday (Full Services)</p>
                   </div>
                 </div>

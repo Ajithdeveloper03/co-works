@@ -1,7 +1,9 @@
-'use client';
+﻿'use client';
 
-import HeroSlider from '@/components/HeroSlider';
-import TestimonialSlider from '@/components/TestimonialSlider';
+import dynamic from 'next/dynamic';
+
+const HeroSlider = dynamic(() => import('@/components/HeroSlider'), { ssr: false });
+const TestimonialSlider = dynamic(() => import('@/components/TestimonialSlider'), { ssr: false });
 import { MapPin, ChevronDown, CheckCircle, Users, TrendingUp, Zap, ArrowRight, Star } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -23,7 +25,7 @@ export default function Home() {
                 <span>Trichy's Premier Coworking</span>
               </div>
 
-              <h2 className="text-3xl md:text-5xl font-bold text-[#0f172a] leading-tight font-headings tracking-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] leading-tight font-headings tracking-tight">
                 About Universe Coworks: <span className="text-[#273a96]">Trichy's Premier</span> Hub.
               </h2>
 
@@ -38,10 +40,9 @@ export default function Home() {
 
               <div className="pt-4 grid sm:grid-cols-2 gap-4">
                 {[
-                  "Near Trichy Junction",
-                  "Thillai Nagar Hub",
-                  "Cantonment Zone",
-                  "500+ Community"
+                  "Salai Road & Shastri Road Junction zone",
+                  "Near  Chatram  Bus Stand"
+                 
                 ].map((item, i) => (
                   <div key={i} className="flex items-center bg-gray-50 px-4 py-3 rounded-lg border border-gray-100">
                     <CheckCircle className="h-5 w-5 text-[#00a896] mr-3 flex-shrink-0" />
@@ -55,7 +56,7 @@ export default function Home() {
             <div className="relative group lg:pl-10">
               <div className="relative h-[600px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
                 <Image
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=75&w=1200&auto=format&fit=crop"
                   alt="Trichy Coworking Interior"
                   fill
                   className="object-cover transform group-hover:scale-105 transition-transform duration-700"
@@ -63,7 +64,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent"></div>
 
                 {/* Floating Badge */}
-                <div className="absolute bottom-8 left-8 right-8 text-white p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                <div className="absolute bottom-8 left-18 right-8 text-white p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
                   <div className="flex items-center space-x-4">
                     <div className="p-3 bg-[#00a896] rounded-xl shadow-lg">
                       <Users className="h-8 w-8 text-white" />
@@ -79,7 +80,7 @@ export default function Home() {
               {/* Secondary Floating Image */}
               <div className="absolute -bottom-10 -left-10 w-48 h-48 rounded-2xl overflow-hidden border-4 border-white shadow-xl hidden md:block">
                 <Image
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=75&w=400&auto=format&fit=crop"
                   alt="Team Collaboration"
                   fill
                   className="object-cover"
@@ -94,17 +95,17 @@ export default function Home() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0f172a] mb-6 font-headings tracking-tight">Why Choose Universe in Trichy?</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-6 font-headings tracking-tight">Why Choose Universe in Trichy?</h2>
             <p className="text-lg text-gray-500 font-medium">
               Finding the right coworking space in Trichy means balancing location, amenities, and cost. We deliver all three.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {/* Card 1: Strategic Location (Image Background) */}
             <div className="md:col-span-2 relative h-[400px] rounded-[2.5rem] overflow-hidden group shadow-lg">
               <Image
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=75&w=1200&auto=format&fit=crop"
                 alt="Trichy Location"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -131,14 +132,14 @@ export default function Home() {
                 <div className="w-14 h-14 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6">
                   <Zap className="h-7 w-7 text-yellow-400" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 font-headings">Enterprise Grade</h3>
+                <h3 className="text-2xl font-bold mb-4 font-headings text-white">Enterprise Grade</h3>
                 <p className="text-blue-100 leading-relaxed">
                   High-speed fiber internet, 100% power backup, and ergonomic furniture designed for productivity.
                 </p>
               </div>
 
               <div className="mt-8 relative h-32 w-full rounded-xl overflow-hidden border border-white/20">
-                <Image src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2301&auto=format&fit=crop" alt="Office Amenities" fill className="object-cover" />
+                <Image src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=75&w=800&auto=format&fit=crop" alt="Office Amenities" fill className="object-cover" />
               </div>
             </div>
 
@@ -154,12 +155,12 @@ export default function Home() {
                 </p>
               </div>
               <div className="mt-8 relative h-32 w-full rounded-xl overflow-hidden border border-white/20">
-                <Image src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" alt="Community Event" fill className="object-cover" />
+                <Image src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=75&w=800&auto=format&fit=crop" alt="Community Event" fill className="object-cover" />
               </div>
             </div>
 
             {/* Card 4: Cost Effective (Split Image/Text) */}
-            <div className="md:col-span-2 bg-white rounded-[2.5rem] overflow-hidden group shadow-lg border border-gray-100">
+            <div className="md:col-span-2 xl:col-span-2 bg-white rounded-[2.5rem] overflow-hidden group shadow-lg border border-gray-100">
               <div className="grid md:grid-cols-2 h-full">
                 <div className="p-10 flex flex-col justify-center">
                   <div className="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-orange-600">
@@ -172,7 +173,7 @@ export default function Home() {
                 </div>
                 <div className="relative h-64 md:h-auto">
                   <Image
-                    src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?q=80&w=2070&auto=format&fit=crop"
+                    src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?q=75&w=800&auto=format&fit=crop"
                     alt="Financial Growth"
                     fill
                     className="object-cover"
@@ -189,10 +190,10 @@ export default function Home() {
       {/* FAQ Section with Side Image */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-10 xl:gap-16 items-start">
             <div className="relative h-[600px] rounded-[2.5rem] overflow-hidden shadow-2xl hidden lg:block">
               <Image
-                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2301&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=75&w=1200&auto=format&fit=crop"
                 alt="Support Team"
                 fill
                 className="object-cover"
@@ -208,14 +209,14 @@ export default function Home() {
 
             <div className="space-y-8">
               <div className="mb-10">
-                <h2 className="text-3xl md:text-5xl font-bold text-[#0f172a] mb-6 font-headings tracking-tight">Frequently Asked Questions</h2>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-6 font-headings tracking-tight">Frequently Asked Questions</h2>
                 <p className="text-gray-500 text-lg font-medium">Everything you need to know about Trichy's premier workspace.</p>
               </div>
 
               <div className="space-y-4">
                 {[
-                  { q: "Where is Universe Coworks located in Trichy?", a: "We operate premium spaces in Thillai Nagar (Commercial Hub) and Cantonment (near Trichy Junction). Both locations offer world-class amenities and are easily accessible via bus and rail." },
-                  { q: "Is Universe Coworks accessible from Trichy Junction?", a: "Yes. Our Cantonment location is just 7 minutes (2.5 km) from Trichy Junction Railway Station. Thillai Nagar is about 10 minutes away." },
+                  { q: "Where is Universe Coworks located in Trichy?", a: "Our premium co-working spaces are strategically located at two key areas in Trichy: • East Thillai Nagar Salai Road • Chatram Bus Stand" },
+                  { q: "Is Universe Coworks accessible from Trichy Junction?", a: "20 mins to reach our location From trichy Junction, 5-10 mins from Chatram bus stand" },
                   { q: "Do you offer day passes for coworking?", a: "Yes. Our day pass starts at ₹499/day. It includes high-speed internet, unlimited coffee, and access to hot desks. Perfect for travelers and freelancers." },
                   { q: "Are there long-term contracts?", a: "No. All memberships operate on a flexible month-to-month basis. You can upgrade, downgrade, or cancel with notice. Zero lock-in for hot desks." },
                   { q: "How do I book a space?", a: "You can book online instantly or schedule a free tour. We offer immediate move-in availability." }
@@ -242,7 +243,7 @@ export default function Home() {
       <section className="bg-[#273a96] py-24 px-4 text-center text-white relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2301&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=75&w=1600&auto=format&fit=crop"
             alt="Office Background"
             fill
             className="object-cover opacity-10"
@@ -251,7 +252,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold mb-8 font-headings tracking-tight">Ready to Upgrade Your Workspace?</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 font-headings tracking-tight">Ready to Upgrade Your Workspace?</h2>
           <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
             Join Trichy's fastest-growing professional community today.
           </p>

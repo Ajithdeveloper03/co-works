@@ -78,7 +78,7 @@ export default function PricingPage() {
       <section className="bg-[#0f172a] text-white pt-32 pb-24 text-center relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=2070&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=75&w=1200&auto=format&fit=crop"
             alt="Pricing Background"
             fill
             className="object-cover opacity-40"
@@ -88,7 +88,7 @@ export default function PricingPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 animate-fade-in-up">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 font-headings">Transparent Pricing for <br /><span className="text-[#00a896]">Every Stage</span></h1>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-headings">Transparent Pricing for <br /><span className="text-[#00a896]">Every Stage</span></h1>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto font-light">
             Whether you're a freelancer, startup, or enterprise, we have a flexible plan that grows with you. No hidden costs.
           </p>
@@ -113,7 +113,7 @@ export default function PricingPage() {
 
       {/* Pricing Grid */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto -mt-20 relative z-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
           {pricingPlans.map((plan, idx) => (
             <div
               key={idx}
@@ -179,7 +179,7 @@ export default function PricingPage() {
                 <Phone className="h-10 w-10 text-[#00a896] mx-auto mb-4" />
                 <h4 className="font-bold text-lg mb-2">Call Us</h4>
                 <p className="text-gray-500 mb-4">Immediate assistance</p>
-                <a href="tel:+919786655005" className="text-[#273a96] font-bold hover:underline">+91 97866 55005</a>
+                <a href="tel:+919786655005" className="text-[#273a96] font-bold hover:underline">+91 86755-56079</a>
               </div>
               <div className="p-6 border-x border-gray-200">
                 <Building2 className="h-10 w-10 text-[#00a896] mx-auto mb-4" />

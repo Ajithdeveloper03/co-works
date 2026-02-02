@@ -30,7 +30,7 @@ export default function CommunityPage() {
             <section className="relative h-[60vh] flex items-center justify-center bg-[#0f172a] overflow-hidden text-center">
                 <div className="absolute inset-0">
                     <Image
-                        src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2070&auto=format&fit=crop"
+                        src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=75&w=1200&auto=format&fit=crop"
                         alt="Vibrant Community"
                         fill
                         className="object-cover opacity-30"
@@ -80,7 +80,7 @@ export default function CommunityPage() {
                 {/* Events Tab */}
                 {activeTab === 'events' && (
                     <div className="animate-fade-in space-y-20">
-                        <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="grid lg:grid-cols-2 gap-10 xl:gap-16 items-center">
                             <div className="space-y-8">
                                 <h2 className="text-3xl md:text-4xl font-bold text-[#0f172a] font-headings tracking-tight">Where Conversations Turn Into Collaborations</h2>
                                 <p className="text-lg text-gray-600 leading-relaxed font-medium">
@@ -107,7 +107,7 @@ export default function CommunityPage() {
                             </div>
 
                             <div className="relative h-[600px] bg-gray-900 rounded-[2.5rem] overflow-hidden shadow-2xl group">
-                                <Image src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop" alt="Mixer Event" fill className="object-cover opacity-80" />
+                                <Image src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=75&w=1200&auto=format&fit=crop" alt="Mixer Event" fill className="object-cover opacity-80" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
                                 <div className="absolute bottom-10 left-10 right-10">
                                     <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
@@ -130,7 +130,7 @@ export default function CommunityPage() {
                             </p>
                         </div>
 
-                        <div className="grid md:grid-cols-3 gap-8 mb-16">
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                             {[
                                 { t: "Small Cohorts", d: "Sessions are deliberately kept small (15-25 participants) ensuring genuine interaction, hands-on exercises, and personalized guidance.", icon: Users },
                                 { t: "Expert Instructors", d: "We don't bring theoretical academics; our instructors are operators with battle scars: founders who've built and exited, marketers managing significant budgets, investors evaluating hundreds of deals annually.", icon: CheckCircle },
@@ -148,7 +148,7 @@ export default function CommunityPage() {
 
                         <div className="bg-[#0f172a] rounded-[3rem] overflow-hidden relative shadow-2xl">
                             <div className="absolute inset-0">
-                                <Image src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=2070&auto=format&fit=crop" alt="Workshop" fill className="object-cover opacity-20" />
+                                <Image src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=75&w=1200&auto=format&fit=crop" alt="Workshop" fill className="object-cover opacity-20" />
                                 <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a] to-[#273a96]/80"></div>
                             </div>
                             <div className="relative z-10 p-12 md:p-20 text-white">
@@ -176,9 +176,9 @@ export default function CommunityPage() {
                 {/* Networking Tab */}
                 {activeTab === 'networking' && (
                     <div className="animate-fade-in">
-                        <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="grid lg:grid-cols-2 gap-10 xl:gap-16 items-center">
                             <div className="order-2 lg:order-1 relative h-[600px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-700">
-                                <Image src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=2070&auto=format&fit=crop" alt="Networking" fill className="object-cover" />
+                                <Image src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=75&w=1200&auto=format&fit=crop" alt="Networking" fill className="object-cover" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#273a96]/90 to-transparent flex items-end p-10">
                                     <div className="text-white">
                                         <p className="text-2xl font-bold italic mb-4">"Through Universe Coworks, I found my first customer and hired my first employee. The membership ROI is 100X."</p>
@@ -233,7 +233,7 @@ export default function CommunityPage() {
                     <div className="animate-fade-in">
                         <div className="bg-[#273a96] rounded-[3rem] overflow-hidden text-white relative mb-16">
                             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#00a896] rounded-full blur-[100px] opacity-30 pointer-events-none"></div>
-                            <div className="grid md:grid-cols-2">
+                            <div className="grid lg:grid-cols-2">
                                 <div className="p-12 md:p-20 flex flex-col justify-center">
                                     <h2 className="text-3xl md:text-4xl font-bold mb-6 font-headings tracking-tight">Connecting Talent With Opportunity</h2>
                                     <p className="text-blue-100 text-lg mb-8 leading-relaxed">
@@ -251,7 +251,7 @@ export default function CommunityPage() {
                                     </div>
                                 </div>
                                 <div className="relative min-h-[400px]">
-                                    <Image src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop" alt="Hiring" fill className="object-cover" />
+                                    <Image src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=75&w=1200&auto=format&fit=crop" alt="Hiring" fill className="object-cover" />
                                 </div>
                             </div>
                         </div>

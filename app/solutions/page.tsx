@@ -29,7 +29,7 @@ export default function SolutionsPage() {
       <section className="relative py-32 bg-[#273a96] overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=75&w=1600&auto=format&fit=crop"
             alt="Workspace Solutions"
             fill
             className="object-cover opacity-40"
@@ -39,7 +39,7 @@ export default function SolutionsPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
-          <h1 className="text-4xl md:text-6xl text-white font-bold mb-8 font-headings leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl text-white font-bold mb-8 font-headings leading-tight">
             Workspace Solutions Designed for <br className="hidden md:block" />
             <span className="text-[#00a896]  px-4 py-1 rounded-lg inline-block mt-2">Your Business Stage and Ambitions</span>
           </h1>
@@ -75,7 +75,7 @@ export default function SolutionsPage() {
       </section>
 
       {/* Content Switching Section */}
-      <section className="py-20 relative -mt-20 z-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 relative -mt-10 z-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border border-gray-100 min-h-[800px]">
 
           {/* ==================== STARTUP SOLUTIONS TAB ==================== */}
@@ -84,7 +84,7 @@ export default function SolutionsPage() {
             {/* Startup Visual Header */}
             <div className="relative h-96 w-full">
               <Image
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=75&w=1200&auto=format&fit=crop"
                 alt="Startup Ecosystem"
                 fill
                 className="object-cover"
@@ -92,7 +92,7 @@ export default function SolutionsPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
               <div className="absolute bottom-0 left-0 w-full p-8 md:p-12">
                 <div className="inline-block bg-[#00a896] text-white px-4 py-1 rounded-full text-sm font-bold mb-4 uppercase tracking-wider">Startup Solutions</div>
-                <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 font-headings max-w-4xl">
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-headings max-w-4xl">
                   End-to-End Support for Building and <br /> Scaling Your Startup from Trichy
                 </h2>
               </div>
@@ -108,7 +108,7 @@ export default function SolutionsPage() {
               </div>
 
               {/* Startup Features Grid */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
                 {[
                   {
                     icon: Zap,
@@ -157,7 +157,7 @@ export default function SolutionsPage() {
                   <Rocket className="w-64 h-64 -mr-16 -mt-16" />
                 </div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-6 flex items-center">
+                  <h3 className="text-2xl font-bold mb-6 flex items-center text-white">
                     <CheckCircle className="h-8 w-8 text-[#00a896] mr-3" />
                     Why Startups Choose Us
                   </h3>
@@ -187,7 +187,7 @@ export default function SolutionsPage() {
             {/* Enterprise Visual Header */}
             <div className="relative h-96 w-full">
               <Image
-                src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=75&w=1200&auto=format&fit=crop"
                 alt="Enterprise Office"
                 fill
                 className="object-cover"
@@ -195,7 +195,7 @@ export default function SolutionsPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
               <div className="absolute bottom-0 left-0 w-full p-8 md:p-12">
                 <div className="inline-block bg-[#273a96] text-white px-4 py-1 rounded-full text-sm font-bold mb-4 uppercase tracking-wider">Enterprise Solutions</div>
-                <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 font-headings max-w-4xl">
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-headings max-w-4xl">
                   Tailor-Made Office Solutions for Enterprises <br /> and Fast-Growing Companies
                 </h2>
               </div>
@@ -284,7 +284,7 @@ export default function SolutionsPage() {
       {/* Footer Call to Action (Contextual) */}
       <section className="bg-white py-24 pb-32">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0f172a] mb-8 font-headings">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-8 font-headings">
             Your Next Workspace Awaits in Trichy
           </h2>
 
@@ -301,7 +301,7 @@ export default function SolutionsPage() {
                   </Link>
                 </div>
                 <div className="mt-6 text-sm text-gray-500">
-                  Or speak with an advisor: <a href="tel:+919876543210" className="text-[#00a896] font-bold hover:underline">+91 97866 55005</a>
+                  Or speak with an advisor: <a href="tel:+919789913368" className="text-[#00a896] font-bold hover:underline">+91 86755-56079</a>
                 </div>
               </div>
             ) : (

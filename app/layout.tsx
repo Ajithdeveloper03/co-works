@@ -7,7 +7,8 @@ import type { Metadata } from 'next';
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-plus-jakarta',
-  weight: ['300', '400', '500', '600', '700', '800']
+  display: 'swap',
+  weight: ['400', '500', '600', '700', '800']
 });
 
 export const metadata: Metadata = {
@@ -37,7 +38,10 @@ export const metadata: Metadata = {
     images: ['https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop'],
   },
   icons: {
-    icon: '/co-works/logo.png',
+    icon: '/favi.png',
+  },
+  alternates: {
+    canonical: 'https://universecoworks.com/',
   },
 };
 
@@ -79,7 +83,7 @@ export default function RootLayout({
                 "latitude": "10.8296",
                 "longitude": "78.6924"
               },
-              "telephone": "+919876543210",
+              "telephone": "+919789913368",
               "priceRange": "₹5000 - ₹50000",
               "openingHoursSpecification": [
                 {

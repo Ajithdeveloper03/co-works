@@ -14,32 +14,35 @@ export default function Header() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Spaces', href: '/spaces' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Virtual Office', href: '/virtual-office' },
+    { name: 'About Us', href: '/about' },
     {
-      name: 'Community',
-      href: '/community',
+      name: 'Solutions',
+      href: '/best-workspace-solutions-in-trichy',
       hasDropdown: true,
       dropdownItems: [
-        { name: 'Events & Meetups', href: '/community?tab=events' },
-        { name: 'Workshops', href: '/community?tab=workshops' },
-        { name: 'Networking', href: '/community?tab=networking' },
-        { name: 'Careers', href: '/community?tab=careers' }
+        { name: 'Workspace Solutions', href: '/best-workspace-solutions-in-trichy' },
+        { name: 'Virtual Office', href: '/virtual-office-in-trichy' },
+        { name: 'Coworking Space', href: '/coworking-space-trichy' }
       ]
     },
     {
-      name: 'Insights',
-      href: '#',
+      name: 'Services',
+      href: '/spaces',
       hasDropdown: true,
       dropdownItems: [
-        { name: 'Blogs', href: '/insights/blogs' },
-        { name: 'FAQs', href: '/insights/faqs' }
+        { name: 'Hot Desks', href: '/hot-desk-in-trichy' },
+        { name: 'Dedicated Desks', href: '/affordable-dedicated-desk-in-trichy' },
+        { name: 'Private Offices', href: '/affordable-private-office-space-in-trichy' },
+        { name: 'Meeting Rooms', href: '/meeting-room-in-trichy' },
+        { name: 'Training Rooms', href: '/affordable-training-room-in-trichy' },
+        { name: 'Managed Office Space', href: '/managed-office-space-in-trichy' }
       ]
     },
-    { name: 'Locations', href: '/locations' },
+    { name: 'Blog', href: '/insights/blogs' },
+    { name: 'FAQ', href: '/frequently-asked-questions' },
+    { name: 'Locations', href: '/locations' }
+
+
   ];
 
   const toggleDropdown = (name: string) => {
@@ -60,22 +63,23 @@ export default function Header() {
 
   return (
     <header
-      className="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 py-3 transition-all duration-300 font-sans"
+      className="fixed w-full z-50 bg-white backdrop-blur-md shadow-sm border-b border-gray-100 py-3 transition-all duration-300 font-sans"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 relative h-12 w-48">
             <Image
-              src="/co-works/logo.png"
+              src="/logo.png"
               alt="Universe Coworks"
               fill
               className="object-contain"
+              priority
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6">
+          <nav className="hidden xl:flex items-center space-x-4 2xl:space-x-8">
             {navLinks.map((link) => (
               <div key={link.name} className="relative group">
                 {link.hasDropdown ? (
@@ -85,7 +89,7 @@ export default function Header() {
                     className="relative py-2"
                   >
                     <button
-                      className="flex items-center text-sm font-bold tracking-wide transition-colors text-gray-700 hover:text-[#273a96]"
+                      className="flex items-center text-[13px] font-bold tracking-wide transition-colors text-gray-700 hover:text-[#273a96]"
                     >
                       {link.name} <ChevronDown className="ml-1 h-4 w-4" />
                     </button>
@@ -109,7 +113,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={link.href}
-                    className={`text-sm font-bold tracking-wide transition-colors ${pathname === link.href ? 'text-[#273a96]' : 'text-gray-700 hover:text-[#273a96]'}`}
+                    className={`text-[13px] font-bold tracking-wide transition-colors ${pathname === link.href ? 'text-[#273a96]' : 'text-gray-700 hover:text-[#273a96]'}`}
                   >
                     {link.name}
                   </Link>
@@ -119,14 +123,14 @@ export default function Header() {
 
             <Link
               href="/contact"
-              className="px-6 py-2.5 rounded-full font-bold text-sm bg-[#273a96] text-white hover:bg-[#1e2a78] transition-all shadow-lg hover:scale-105"
+              className="px-5 py-2.5 rounded-full font-bold text-sm bg-[#273a96] text-white hover:bg-[#1e2a78] transition-all shadow-lg hover:scale-105 whitespace-nowrap"
             >
               Book a tour
             </Link>
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className="xl:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-md text-gray-900"
@@ -139,7 +143,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 max-h-[90vh] overflow-y-auto">
+        <div className="xl:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 max-h-[90vh] overflow-y-auto">
           <div className="px-4 pt-4 pb-8 space-y-2">
             {navLinks.map((link) => (
               <div key={link.name}>
@@ -187,7 +191,7 @@ export default function Header() {
                 Book a Free Tour
               </Link>
               <div className="flex justify-center space-x-6 mt-6 text-gray-500">
-                <a href="tel:+919876543210" className="flex items-center"><Phone className="h-4 w-4 mr-2" /> Call Us</a>
+                <a href="tel:+919789913368" className="flex items-center"><Phone className="h-4 w-4 mr-2" /> Call Us</a>
                 <a href="https://maps.google.com" className="flex items-center"><MapPin className="h-4 w-4 mr-2" /> Directions</a>
               </div>
             </div>
