@@ -118,6 +118,33 @@ export default function PrivateOfficePage() {
                     })
                 }}
             />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                    "@context": "https://schema.org/",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [{
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://universecoworks.com/"
+                    }, {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Workspace Solutions",
+                        "item": "https://universecoworks.com/best-workspace-solutions-in-trichy"
+                    }, {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Coworking Space",
+                        "item": "https://universecoworks.com/coworking-space-trichy"
+                    }, {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Private office",
+                        "item": "https://universecoworks.com/affordable-private-office-space-in-trichy"
+                    }]
+                })
+            }} />
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a]">
                 <div className="absolute inset-0 z-0">

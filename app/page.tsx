@@ -11,6 +11,23 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div className="min-h-screen bg-white font-sans">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://universecoworks.com/"
+          }, {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "",
+            "item": ""
+          }]
+        })
+      }} />
       <HeroSlider />
 
       {/* About Us Section - Split Layout with Image */}
@@ -42,7 +59,7 @@ export default function Home() {
                 {[
                   "Salai Road & Shastri Road Junction zone",
                   "Near  Chatram  Bus Stand"
-                 
+
                 ].map((item, i) => (
                   <div key={i} className="flex items-center bg-gray-50 px-4 py-3 rounded-lg border border-gray-100">
                     <CheckCircle className="h-5 w-5 text-[#00a896] mr-3 flex-shrink-0" />
@@ -246,13 +263,13 @@ export default function Home() {
             src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=75&w=1600&auto=format&fit=crop"
             alt="Office Background"
             fill
-            className="object-cover opacity-10"
+            className="object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-[#273a96]/90"></div>
+          <div className="absolute inset-0 bg-[#273a96]/60"></div>
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 font-headings tracking-tight">Ready to Upgrade Your Workspace?</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 font-headings tracking-tight text-white">Ready to Upgrade Your Workspace?</h2>
           <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
             Join Trichy's fastest-growing professional community today.
           </p>

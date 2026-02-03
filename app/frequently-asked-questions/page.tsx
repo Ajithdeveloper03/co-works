@@ -168,7 +168,7 @@ export default function FAQPage() {
                         src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2000&auto=format&fit=crop"
                         alt="FAQ Background"
                         fill
-                        className="object-cover opacity-10"
+                        className="object-cover opacity-60"
                         priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/50 to-[#0f172a]"></div>

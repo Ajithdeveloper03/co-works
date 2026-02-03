@@ -336,7 +336,7 @@ export default function AboutPage() {
                 <Quote className="h-10 w-10 text-[#00a896] opacity-20 mb-6" />
                 <p className="text-xl font-bold text-[#0f172a] font-headings   leading-relaxed mb-8">"{t.quote}"</p>
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
+                  {/* <div className="w-12 h-12 bg-gray-200 rounded-full"></div> */}
                   <div>
                     <p className="font-bold text-gray-900 text-sm">{t.author}</p>
                     <p className="text-[#00a896] font-black text-[10px] uppercase tracking-widest">{t.desc}</p>

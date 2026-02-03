@@ -152,6 +152,28 @@ export default function CoworkingSpacePage() {
                     })
                 }}
             />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                    "@context": "https://schema.org/",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [{
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://universecoworks.com/"
+                    }, {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Workspace solutions",
+                        "item": "https://universecoworks.com/best-workspace-solutions-in-trichy"
+                    }, {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Co working space",
+                        "item": "https://universecoworks.com/coworking-space-trichy"
+                    }]
+                })
+            }} />
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#0a0f1a]">
                 <div className="absolute inset-0 z-0">

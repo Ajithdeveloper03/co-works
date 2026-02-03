@@ -137,6 +137,28 @@ export default function ManagedOfficePage() {
                     })
                 }}
             />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                    "@context": "https://schema.org/",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [{
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://universecoworks.com/"
+                    }, {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Workspace Solutions",
+                        "item": "https://universecoworks.com/best-workspace-solutions-in-trichy"
+                    }, {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Managed office",
+                        "item": "https://universecoworks.com/managed-office-space-in-trichy"
+                    }]
+                })
+            }} />
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#0a0f1a]">
                 <div className="absolute inset-0 z-0">

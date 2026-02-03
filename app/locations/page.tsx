@@ -18,7 +18,7 @@ export default function LocationsPage() {
       <section className="relative h-[70vh] flex items-center bg-[#0a0f1a] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.pexels.com/photos/8266735/pexels-photo-8266735.jpeg"
+            src="https://images.pexels.com/photos/7412095/pexels-photo-7412095.jpeg"
             alt="Trichy City Pulse"
             fill
             className="object-cover opacity-40 scale-105 animate-slow-zoom"
@@ -56,7 +56,7 @@ export default function LocationsPage() {
           </div>
           <div className="space-y-6">
             <p className="text-lg text-gray-500 leading-relaxed font-medium">
-              We don't just pick buildings; we select strategic nodes that eliminate commute stress and maximize business visibility. Our Thillai Nagar and Cantonment hubs represent the pinnacle of Trichy's commercial real estate.
+              We don't just pick buildings; we select strategic nodes that eliminate commute stress and maximize business visibility. Our Thillai Nagar and Chatram Bus Stand hubs represent the pinnacle of Trichy's commercial real estate.
             </p>
             <div className="flex gap-8">
               <div className="flex items-center space-x-3">
@@ -84,7 +84,7 @@ export default function LocationsPage() {
 
             <div className="lg:col-span-7 relative h-[500px] lg:h-auto overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.817837258244!2d78.68789247480578!3d10.833302389318956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf500746a0ec1%3A0xe6d1f52e232d74a3!2sUniverse%20Co-works!5e1!3m2!1sen!2sin!4v1768369438182!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.795828645711!2d78.68290027480563!3d10.82693108932494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf5a330c779d9%3A0x96f5fe5d0a900a31!2sVaishali%20Hospital!5e0!3m2!1sen!2sin!4v1770014383075!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -97,7 +97,7 @@ export default function LocationsPage() {
 
             <div className="lg:col-span-5 p-12 md:p-20 flex flex-col justify-center space-y-10 text-white relative z-10">
               <div className="space-y-4">
-                <h2 className="text-5xl font-bold font-headings tracking-tight">Thillai Nagar Hub</h2>
+                <h2 className="text-5xl font-bold font-headings tracking-tight text-white">Thillai Nagar Hub</h2>
                 <p className="text-[#00a896] font-black uppercase text-sm tracking-[0.3em]">The Commercial Heart</p>
               </div>
 
@@ -116,14 +116,14 @@ export default function LocationsPage() {
                 <div className="flex items-start">
                   <Clock className="h-6 w-6 text-[#00a896] mr-4 shrink-0 mt-1" />
                   <div>
-                    <p className="font-bold text-lg mb-1">9 AM ΓÇô 9 PM</p>
+                    <p className="font-bold text-lg mb-1">9 AM to 9 PM</p>
                     <p className="text-sm text-gray-400">Monday - Saturday (Full Services)</p>
                   </div>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                <a href="https://maps.google.com" target="_blank" className="flex items-center justify-center px-8 py-4 bg-white text-[#0f172a] rounded-2xl font-black text-lg hover:bg-gray-100 transition-colors shadow-xl">
+                <a href="https://maps.google.com" target="_blank" className="flex items-center justify-center px-4 py-4 bg-white text-[#0f172a] rounded-2xl font-black text-lg hover:bg-gray-100 transition-colors shadow-xl">
                   <Navigation className="h-5 w-5 mr-3" /> Get Directions
                 </a>
                 <Link href="/contact" className="flex items-center justify-center px-8 py-4 border-2 border-white/20 text-white rounded-2xl font-black text-lg hover:bg-white/10 transition-colors">
@@ -133,7 +133,7 @@ export default function LocationsPage() {
             </div>
           </div>
 
-          {/* Location 2: Cantonment - Swapped Layout */}
+          {/* Location 2: Chatram Bus Stand - Swapped Layout */}
           <div className="grid lg:grid-cols-12 gap-0 bg-gray-50 rounded-[4rem] overflow-hidden shadow-xl border border-gray-100 relative group">
             <div className="lg:col-span-12 absolute top-0 left-0 p-12 z-20 pointer-events-none">
               <span className="px-6 py-2 bg-[#273a96] text-white font-black text-xs uppercase tracking-widest rounded-full shadow-lg">Transit Hub</span>
@@ -141,7 +141,7 @@ export default function LocationsPage() {
 
             <div className="lg:col-span-5 p-12 md:p-20 flex flex-col justify-center space-y-10 text-[#0f172a] relative z-10 order-2 lg:order-1">
               <div className="space-y-4">
-                <h2 className="text-5xl font-bold font-headings tracking-tight">Cantonment Suite</h2>
+                <h2 className="text-5xl font-bold font-headings tracking-tight">Chatram Bus Stand Suite</h2>
                 <p className="text-[#273a96] font-black uppercase text-sm tracking-[0.3em]">Connectivity King</p>
               </div>
 
@@ -154,7 +154,7 @@ export default function LocationsPage() {
                   <MapPin className="h-6 w-6 text-[#273a96] mr-4 shrink-0 mt-1" />
                   <div>
                     <p className="font-bold text-lg mb-1">2nd Floor, Bharath Plaza</p>
-                    <p className="text-sm text-gray-400">Promenade Road, Cantonment, Trichy - 620001</p>
+                    <p className="text-sm text-gray-400">Promenade Road, Chatram Bus Stand, Trichy - 620001</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -170,7 +170,7 @@ export default function LocationsPage() {
                 <a href="https://maps.google.com" target="_blank" className="flex items-center justify-center px-8 py-4 bg-[#273a96] text-white rounded-2xl font-black text-lg hover:bg-[#1e2a78] transition-colors shadow-xl">
                   <Navigation className="h-5 w-5 mr-3" /> Get Directions
                 </a>
-                <Link href="/contact" className="flex items-center justify-center px-8 py-4 border-2 border-gray-200 text-gray-700 rounded-2xl font-black text-lg hover:border-[#273a96] hover:text-[#273a96] transition-colors">
+                <Link href="/contact" className="flex items-center justify-center px-4 py-4 border-2 border-gray-200 text-gray-700 rounded-2xl font-black text-lg hover:border-[#273a96] hover:text-[#273a96] transition-colors">
                   Book Tour
                 </Link>
               </div>
@@ -206,7 +206,7 @@ export default function LocationsPage() {
               <Globe className="h-12 w-12 text-[#00a896] mb-8" />
               <h4 className="text-3xl font-bold mb-6 font-headings italic">One Membership. Multiple Access.</h4>
               <p className="text-blue-100/60 text-lg leading-relaxed max-w-xl">
-                A Universe Coworks membership isn't just for a desk; it's a passport to our entire local network. Need to meet a client in Thillai Nagar but your base is Cantonment? No problem.
+                A Universe Coworks membership isn't just for a desk; it's a passport to our entire local network. Need to meet a client in Thillai Nagar but your base is Chatram Bus Stand? No problem.
               </p>
             </div>
             <div className="bg-[#00a896] p-12 rounded-[3.5rem] flex flex-col justify-between shadow-2xl">
@@ -230,7 +230,7 @@ export default function LocationsPage() {
             <div className="relative z-10 space-y-12">
               <h3 className="text-3xl md:text-5xl font-bold font-headings tracking-tight">Experience Our Spaces Today.</h3>
               <p className="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mx-auto">
-                The best way to evaluate a workspace is to feel its energy. We offer no-obligation tours at both Thillai Nagar and Cantonment.
+                The best way to evaluate a workspace is to feel its energy. We offer no-obligation tours at both Thillai Nagar and Chatram Bus Stand.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-6">
                 <Link href="/contact" className="px-12 py-5 bg-[#00a896] text-white rounded-2xl font-black text-xl hover:bg-[#00897b] transition-all shadow-2xl">

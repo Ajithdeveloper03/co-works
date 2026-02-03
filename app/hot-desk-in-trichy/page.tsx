@@ -163,6 +163,33 @@ export default function HotDeskPage() {
                     })
                 }}
             />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                    "@context": "https://schema.org/",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [{
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://universecoworks.com/"
+                    }, {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Workspace Solutions",
+                        "item": "https://universecoworks.com/best-workspace-solutions-in-trichy"
+                    }, {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Coworking Space",
+                        "item": "https://universecoworks.com/coworking-space-trichy"
+                    }, {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Hot desk",
+                        "item": "https://universecoworks.com/hot-desk-in-trichy"
+                    }]
+                })
+            }} />
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#0f172a]">
                 <div className="absolute inset-0 z-0">
@@ -278,7 +305,7 @@ export default function HotDeskPage() {
                         {[
                             { icon: Wifi, title: "High-Speed WiFi", desc: "Reliable fiber internet with dedicated bandwidth.", img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600" },
                             { icon: Monitor, title: "Ergonomic Furniture", desc: "Premium seating designed for long-duration focus.", img: "https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?q=80&w=600" },
-                            { icon: Printer, title: "Office Services", desc: "Printing, scanning, and professional mail handling.", img: "https://images.unsplash.com/photo-1589149028212-9c3f0b8339c0?q=80&w=600" },
+                            { icon: Printer, title: "Office Services", desc: "Printing, scanning, and professional mail handling.", img: "https://images.pexels.com/photos/7511749/pexels-photo-7511749.jpeg" },
                             { icon: Coffee, title: "Refreshments", desc: "Complimentary beverages to keep you energized.", img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=600" },
                         ].map((feature, i) => (
                             <div key={i} className="group p-10 bg-gray-50 rounded-[2.5rem] hover:bg-[#273a96] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 overflow-hidden relative">
@@ -298,7 +325,7 @@ export default function HotDeskPage() {
 
                     <div className="mt-20 p-12 bg-[#0f172a] rounded-[3rem] text-center text-white relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#00a896] opacity-20 blur-[100px] rounded-full"></div>
-                        <p className="text-2xl md:text-3xl leading-relaxed italic font-light relative z-10 max-w-4xl mx-auto">
+                        <p className="text-2xl md:text-3xl leading-relaxed   font-light relative z-10 max-w-4xl mx-auto">
                             "Our climate-controlled workspace with natural lighting creates the ideal environment for focused work."
                         </p>
                     </div>
@@ -423,7 +450,7 @@ export default function HotDeskPage() {
                     </Accordion>
 
                     <div className="bg-[#f0f9ff] border-l-4 border-[#00a896] p-10 rounded-2xl max-w-4xl mx-auto">
-                        <p className="text-xl text-gray-700 leading-relaxed font-medium italic">
+                        <p className="text-xl text-gray-700 leading-relaxed font-medium  ">
                             {summaryText}
                         </p>
                     </div>
