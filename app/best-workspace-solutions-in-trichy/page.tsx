@@ -43,6 +43,9 @@ export const metadata: Metadata = {
     description: 'Uncover innovative Workspace Solutions in Trichy to transform your office environment. Check out our blog for insights on optimizing your workspace.',
     alternates: {
         canonical: 'https://universecoworks.com/best-workspace-solutions-in-trichy',
+    },
+    openGraph: {
+        url: 'https://universecoworks.com/best-workspace-solutions-in-trichy',
     }
 };
 
@@ -172,10 +175,10 @@ export default function WorkspaceSolutionsPage() {
                             Transform your office environment with innovative solutions designed for modern enterprises, startups, and remote professionals.
                         </p>
                         <div className="flex flex-wrap gap-4">
-                            <Link href="/contact" className="px-10 py-5 bg-[#00a896] text-white rounded-full font-bold text-lg hover:bg-[#00897b] transition-all shadow-xl hover:-translate-y-1">
+                            <Link href="/contact" className="px-8 py-4 bg-[#00a896] text-white rounded-full font-bold text-sm hover:bg-[#00897b] transition-all shadow-xl hover:-translate-y-1">
                                 Book Your Workspace Now
                             </Link>
-                            <Link href="/contact" className="px-10 py-5 bg-white/5 border border-white/20 text-white rounded-full font-bold text-lg hover:bg-white/10 transition-all backdrop-blur-sm">
+                            <Link href="/contact" className="px-8 py-4 bg-white/5 border border-white/20 text-white rounded-full font-bold text-sm hover:bg-white/10 transition-all backdrop-blur-sm">
                                 Schedule a Tour
                             </Link>
                         </div>
@@ -187,7 +190,7 @@ export default function WorkspaceSolutionsPage() {
             <section className="py-24 bg-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-20 max-w-3xl mx-auto">
-                        <h2 className="text-4xl font-bold font-headings leading-tight">Why Choose Our Workspace Solutions in Trichy?</h2>
+                        <h2 className="text-3xl font-bold font-headings leading-tight">Why Choose Our Workspace Solutions in Trichy?</h2>
                         <div className="h-1.5 w-24 bg-[#273a96] mx-auto rounded-full mt-6"></div>
                     </div>
 
@@ -294,11 +297,11 @@ export default function WorkspaceSolutionsPage() {
                             <div className="flex flex-col lg:flex-row">
                                 <div className="lg:w-1/2 p-12 lg:p-24 space-y-10 text-white relative z-10">
                                     <span className="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest">Premium Enclosure</span>
-                                    <h3 className="text-4xl md:text-5xl font-black text-white leading-tight">Private Office Cabins</h3>
+                                    <h3 className="text-3xl md:text-5xl font-black text-white leading-tight">Private Office Cabins</h3>
                                     <p className="text-xl text-gray-400 font-light leading-relaxed">
                                         Secure, soundproof cabins for teams of 2–10 members requiring privacy and focused work environments. Fully furnished with customizable layouts.
                                     </p>
-                                    <div className="grid grid-cols-2 gap-x-12 gap-y-6">
+                                    <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-6">
                                         {[
                                             { icon: Lock, t: "Acoustic Privacy" },
                                             { icon: Clock, t: "24/7 Access" },
@@ -314,7 +317,7 @@ export default function WorkspaceSolutionsPage() {
                                         ))}
                                     </div>
                                     <div className="pt-8">
-                                        <Link href="/affordable-private-office-space-in-trichy" className="px-12 py-5 bg-blue-600 text-white rounded-full font-black text-lg hover:bg-blue-700 transition-all inline-flex items-center">
+                                        <Link href="/affordable-private-office-space-in-trichy" className="px-8 py-4 bg-blue-600 text-white rounded-full font-black text-sm hover:bg-blue-700 transition-all inline-flex items-center">
                                             View Private Offices <ArrowRight className="ml-3 h-5 w-5" />
                                         </Link>
                                     </div>
@@ -412,13 +415,13 @@ export default function WorkspaceSolutionsPage() {
             <section className="py-24 bg-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-[#f8fafc] rounded-[5rem] p-12 lg:p-24 border border-gray-100">
-                        <div className="grid lg:grid-cols-2 gap-20 items-center">
+                        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                             <div className="space-y-10">
                                 <h2 className="text-4xl font-bold font-headings">Standard Facilities Included</h2>
                                 <p className="text-lg text-gray-500 font-light">
                                     All our workspace solutions in Trichy, India include every essential utility to power your business from day one.
                                 </p>
-                                <div className="grid grid-cols-2 gap-8">
+                                <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
                                     {[
                                         { icon: Wifi, t: "Broadband Connectivity" },
                                         { icon: Zap, t: "Uninterrupted Power" },
@@ -439,7 +442,7 @@ export default function WorkspaceSolutionsPage() {
                                 </div>
                             </div>
                             <div className="relative group">
-                                <div className="relative h-[550px] w-full rounded-[4rem] overflow-hidden shadow-2xl skew-y-1">
+                                <div className="relative h-[300px] md:h-[550px] w-full rounded-[2rem] overflow-hidden shadow-2xl skew-y-1">
                                     <Image src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=1200" alt="Ready-to-use office desk with computer and plants, highlighting a zero setup workspace solution in Trichy." fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
                                 </div>
                                 <div className="absolute -bottom-6 -left-6 bg-white p-10 rounded-[2.5rem] shadow-xl border border-gray-50 hidden md:block">

@@ -19,7 +19,8 @@ import {
     Plus,
     Minus,
     MapPin,
-    Smartphone
+    Smartphone,
+    Laptop
 } from 'lucide-react';
 import {
     Accordion,
@@ -33,6 +34,17 @@ export const metadata: Metadata = {
     description: 'Looking for a flexible work environment? Explore the advantages of a Hot Desk in Trichy and how it can enhance your work experience.',
     alternates: {
         canonical: 'https://universecoworks.com/hot-desk-in-trichy',
+    },
+    openGraph: {
+        url: 'https://universecoworks.com/hot-desk-in-trichy',
+        images: [
+            {
+                url: 'https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?q=80&w=1200',
+                width: 1200,
+                height: 630,
+                alt: 'Hot Desk in Trichy',
+            },
+        ],
     }
 };
 
@@ -215,10 +227,10 @@ export default function HotDeskPage() {
                             Looking for a professional hot desk in Trichy? Universe Coworks provides flexible workspace solutions for freelancers, remote workers, startups, and business professionals who need quality infrastructure without long-term commitments.
                         </p>
                         <div className="flex flex-wrap gap-4">
-                            <Link href="/contact" className="px-8 py-4 bg-[#00a896] text-white rounded-full font-bold text-lg hover:bg-[#00897b] transition-all shadow-xl hover:shadow-[#00a896]/20 hover:-translate-y-1">
+                            <Link href="/contact" className="px-8 py-4 bg-[#00a896] text-white rounded-full font-bold text-sm hover:bg-[#00897b] transition-all shadow-xl hover:shadow-[#00a896]/20 hover:-translate-y-1">
                                 Book Your Workspace Now
                             </Link>
-                            <Link href="#pricing" className="px-8 py-4 bg-white/10 text-white border border-white/20 backdrop-blur-sm rounded-full font-bold text-lg hover:bg-white/20 transition-all">
+                            <Link href="#pricing" className="px-8 py-4 bg-white/10 text-white border border-white/20 backdrop-blur-sm rounded-full font-bold text-sm hover:bg-white/20 transition-all">
                                 View Pricing Plans
                             </Link>
                         </div>

@@ -36,6 +36,17 @@ export const metadata: Metadata = {
     description: 'Looking for a coworking space in Trichy? Discover the best office space Trichy has to offer with flexible options and affordable office space for rent Trichy.',
     alternates: {
         canonical: 'https://universecoworks.com/coworking-space-trichy',
+    },
+    openGraph: {
+        url: 'https://universecoworks.com/coworking-space-trichy',
+        images: [
+            {
+                url: 'https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=1200',
+                width: 1200,
+                height: 630,
+                alt: 'Coworking Space in Trichy',
+            },
+        ],
     }
 };
 
@@ -190,7 +201,7 @@ export default function CoworkingSpacePage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <span className="inline-block px-4 py-1.5 rounded-full bg-[#00a896]/10 border border-[#00a896]/20 text-[#00a896] text-sm font-bold uppercase tracking-wider mb-6">
+                            <span className="inline-block px-4 py-1.5 rounded-full bg-[#00a896]/10 border border-[#00a896]/20 text-[#00a896] text-sm font-bold   tracking-wider mb-6">
                                 Premium Office Spaces
                             </span>
                             <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
@@ -271,7 +282,7 @@ export default function CoworkingSpacePage() {
                             </div>
                             <div className="absolute -bottom-10 -left-10 bg-[#00a896] p-12 rounded-[2.5rem] text-white shadow-2xl hidden lg:block">
                                 <p className="text-5xl font-black">500+</p>
-                                <p className="text-xs font-bold uppercase tracking-widest mt-2">Active Successes</p>
+                                <p className="text-xs font-bold   tracking-widest mt-2">Active Successes</p>
                             </div>
                         </div>
                     </div>
@@ -463,7 +474,7 @@ export default function CoworkingSpacePage() {
                                 <div className="h-12 w-12 bg-[#273a96] rounded-xl flex items-center justify-center text-white"><Star className="h-6 w-6" /></div>
                                 <div>
                                     <p className="font-bold text-gray-900">Proven Track Record</p>
-                                    <p className="text-xs text-gray-500 font-medium font-headings tracking-widest uppercase">4.8/5 Rating based on 200+ reviews</p>
+                                    <p className="text-xs text-gray-500 font-medium font-headings tracking-widest  ">4.8/5 Rating based on 200+ reviews</p>
                                 </div>
                             </div>
                         </div>
@@ -489,10 +500,10 @@ export default function CoworkingSpacePage() {
                                 Book Your Free Tour Today. See our facilities, meet our community, and test our workspace before committing. Tours available Mon–Sat, 10 AM–6 PM.
                             </p>
                             <div className="flex flex-col md:flex-row justify-center gap-6">
-                                <Link href="/contact" className="px-12 py-5 bg-[#00a896] text-white rounded-full font-black text-xl hover:bg-[#00897b] transition-all shadow-xl hover:-translate-y-1 flex items-center justify-center group uppercase tracking-widest text-sm">
+                                <Link href="/contact" className="px-4 py-4 bg-[#00a896] text-white rounded-full font-black text-md hover:bg-[#00897b] transition-all shadow-xl hover:-translate-y-1 flex items-center justify-center group   tracking-widest text-sm">
                                     SCHEDULE YOUR FREE VISIT <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-2 transition-transform" />
                                 </Link>
-                                <Link href="/contact" className="px-12 py-5 bg-white text-[#273a96] rounded-full font-black text-xl hover:bg-gray-100 transition-all shadow-xl hover:-translate-y-1 flex items-center justify-center">
+                                <Link href="/contact" className="px-8 py-4 bg-white text-[#273a96] rounded-full font-black text-md hover:bg-gray-100 transition-all shadow-xl hover:-translate-y-1 flex items-center justify-center">
                                     Call Our Team
                                 </Link>
                             </div>
@@ -500,7 +511,7 @@ export default function CoworkingSpacePage() {
                     </div>
 
                     <div className="mt-20 flex flex-col items-center gap-6">
-                        <p className="font-bold text-gray-500 uppercase tracking-widest text-xs">A Community-First Approach</p>
+                        <p className="font-bold text-gray-500   tracking-widest text-xs">A Community-First Approach</p>
                         <div className="flex flex-wrap justify-center gap-12 opacity-40">
                             <div className="flex items-center gap-2"><Heart className="h-4 w-4" /> Networking Events</div>
                             <div className="flex items-center gap-2"><Heart className="h-4 w-4" /> Skill-Sharing</div>

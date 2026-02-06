@@ -42,6 +42,9 @@ export const metadata: Metadata = {
     description: 'Looking for the perfect training room in Trichy? Discover top venues equipped for your needs. Check out our blog for the best options available!',
     alternates: {
         canonical: 'https://universecoworks.com/affordable-training-room-in-trichy',
+    },
+    openGraph: {
+        url: 'https://universecoworks.com/affordable-training-room-in-trichy',
     }
 };
 

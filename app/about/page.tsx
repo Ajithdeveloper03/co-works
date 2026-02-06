@@ -22,6 +22,17 @@ export const metadata: Metadata = {
   description: 'Learn about Universe Coworks\' mission to build world-class infrastructure in Trichy, empowering startups and offshore enterprises with global-standard facilities.',
   alternates: {
     canonical: 'https://universecoworks.com/about',
+  },
+  openGraph: {
+    url: 'https://universecoworks.com/about',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=75&w=1600&auto=format&fit=crop',
+        width: 1600,
+        height: 600,
+        alt: 'Universe Coworks About',
+      },
+    ],
   }
 };
 
@@ -97,7 +108,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative h-[500px] rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=75&w=1200&auto=format&fit=crop"
+                  src="https://images.pexels.com/photos/19996231/pexels-photo-19996231.jpeg"
                   alt="Ecosystem Image"
                   fill
                   className="object-cover"
@@ -373,7 +384,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/50 mb-2">Speak to Us</p>
-                  <p className="text-sm font-bold">+91 86755-56079</p>
+                  <p className="text-sm font-bold">+91 9789913368</p>
                 </div>
               </div>
             </div>

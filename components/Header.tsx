@@ -5,12 +5,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X, ChevronDown, ChevronRight, MapPin, Phone } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import { usePopup } from '@/context/PopupContext';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
   const pathname = usePathname();
+  const { openPopup } = usePopup();
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -40,9 +42,8 @@ export default function Header() {
     },
     { name: 'Blog', href: '/insights/blogs' },
     { name: 'FAQ', href: '/frequently-asked-questions' },
-    { name: 'Locations', href: '/locations' }
-
-
+    { name: 'Locations', href: '/locations' },
+    { name: 'Connect', href: '/contact' }
   ];
 
   const toggleDropdown = (name: string) => {
@@ -183,13 +184,15 @@ export default function Header() {
               </div>
             ))}
             <div className="pt-4 px-4">
-              <Link
-                href="/contact"
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  openPopup();
+                }}
                 className="block w-full text-center py-4 bg-[#273a96] text-white font-bold rounded-xl shadow-lg hover:bg-[#1e2a78]"
-                onClick={() => setIsOpen(false)}
               >
                 Book a Free Tour
-              </Link>
+              </button>
               <div className="flex justify-center space-x-6 mt-6 text-gray-500">
                 <a href="tel:+919789913368" className="flex items-center"><Phone className="h-4 w-4 mr-2" /> Call Us</a>
                 <a href="https://maps.google.com" className="flex items-center"><MapPin className="h-4 w-4 mr-2" /> Directions</a>

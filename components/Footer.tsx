@@ -42,7 +42,7 @@ export default function Footer() {
                 { name: 'Startup Community', href: '/community' },
                 { name: 'Virtual Presence', href: '/virtual-office' },
                 { name: 'Pricing Plans', href: '/pricing' },
-                { name: 'FAQ', href: '/frequently-asked-questions' },
+                // { name: 'FAQ', href: '/frequently-asked-questions' },
                 { name: 'Connect', href: '/contact' }
               ].map((link) => (
                 <li key={link.name}>

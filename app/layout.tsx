@@ -3,6 +3,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
+import { Providers } from '@/components/Providers';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -40,9 +41,8 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favi.png',
   },
-  alternates: {
-    canonical: 'https://universecoworks.com/',
-  },
+  metadataBase: new URL('https://universecoworks.com'),
+
 };
 
 export default function RootLayout({
@@ -53,13 +53,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${plusJakartaSans.variable} font-sans`}>
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <Providers>
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </Providers>
         {/* SEO: Local Business Schema */}
         <script
           type="application/ld+json"

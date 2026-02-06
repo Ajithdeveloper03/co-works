@@ -90,11 +90,11 @@ export default function HeroSlider() {
                   </div>
                 )}
 
-                <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold text-white leading-tight tracking-tight font-headings">
+                <h1 className="text-2xl md:text-5xl xl:text-6xl font-bold text-white leading-tight tracking-tight font-headings">
                   {slide.title}
                 </h1>
 
-                <p className="text-lg text-justify text-gray-200 leading-relaxed max-w-2xl font-medium">
+                <p className="text-md text-justify text-gray-200 leading-relaxed max-w-2xl font-medium">
                   {slide.subtitle}
                 </p>
 
@@ -102,7 +102,7 @@ export default function HeroSlider() {
                   {slide.ctaPrimary && (
                     <Link
                       href={slide.linkPrimary}
-                      className="bg-[#00a896] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-[#00897b] hover:scale-105 transition-all shadow-lg flex items-center justify-center sm:justify-start"
+                      className="bg-[#00a896] text-white px-4 py-2 rounded-full font-bold text-md hover:bg-[#00897b] hover:scale-105 transition-all shadow-lg flex items-center justify-center sm:justify-start"
                     >
                       {slide.ctaPrimary} <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
@@ -110,7 +110,7 @@ export default function HeroSlider() {
                   {slide.ctaSecondary && (
                     <Link
                       href={slide.linkSecondary}
-                      className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#273a96] transition-all flex items-center justify-center sm:justify-start"
+                      className="bg-white/10 backdrop-blur-md border border-white/30 text-white px-4 py-2 rounded-full font-bold text-md hover:bg-white hover:text-[#273a96] transition-all flex items-center justify-center sm:justify-start"
                     >
                       {slide.ctaSecondary}
                     </Link>
@@ -120,11 +120,11 @@ export default function HeroSlider() {
                 {/* Global Trust Signals */}
                 <div className="flex items-center space-x-8 pt-8 border-t border-white/10 mt-8">
                   <div>
-                    <p className="text-3xl font-bold text-white">500+</p>
+                    <p className="text-2xl font-bold text-white">500+</p>
                     <p className="text-sm text-gray-400">Members in Trichy</p>
                   </div>
                   <div>
-                    <p className="text-3xl font-bold text-white">4.9/5</p>
+                    <p className="text-2xl font-bold text-white">4.9/5</p>
                     <p className="text-sm text-gray-400">Google Rating</p>
                   </div>
                 </div>
@@ -135,7 +135,7 @@ export default function HeroSlider() {
       ))}
 
       {/* Navigation Controls */}
-      <div className="absolute bottom-10 right-10 flex space-x-4 z-20">
+      <div className="absolute bottom-5 right-10 flex space-x-4 z-20">
         <button
           onClick={prevSlide}
           className="p-3 rounded-full bg-white/10 hover:bg-[#00a896] backdrop-blur-md text-white border border-white/30 transition-all"
@@ -151,7 +151,7 @@ export default function HeroSlider() {
       </div>
 
       {/* Dots */}
-      <div className="absolute bottom-10 left-10 flex space-x-2 z-20">
+      <div className="absolute bottom-5 left-10 flex space-x-2 z-20">
         {slides.map((_, idx) => (
           <button
             key={idx}

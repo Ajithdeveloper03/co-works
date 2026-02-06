@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description: 'Explore our FAQ to learn about Universe Coworks services, pricing, facilities, and membership policies in Trichy.',
     alternates: {
         canonical: 'https://universecoworks.com/frequently-asked-questions',
+    },
+    openGraph: {
+        url: 'https://universecoworks.com/frequently-asked-questions',
     }
 };
 

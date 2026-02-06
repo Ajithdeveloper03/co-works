@@ -33,6 +33,17 @@ export const metadata: Metadata = {
     description: 'Looking for managed office space in Trichy? Explore our blog for insights on how this flexible workspace can elevate your business environment.',
     alternates: {
         canonical: 'https://universecoworks.com/managed-office-space-in-trichy',
+    },
+    openGraph: {
+        url: 'https://universecoworks.com/managed-office-space-in-trichy',
+        images: [
+            {
+                url: 'https://images.pexels.com/photos/159213/hall-congress-architecture-building-159213.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                width: 1200,
+                height: 630,
+                alt: 'Managed Office Space in Trichy',
+            },
+        ],
     }
 };
 
@@ -177,14 +188,14 @@ export default function ManagedOfficePage() {
                         <span className="inline-block px-4 py-1.5 rounded-full bg-[#00a896]/10 border border-[#00a896]/20 text-[#00a896] text-sm font-bold   tracking-wider mb-6">
                             Enterprise Workspace Solutions
                         </span>
-                        <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
+                        <h1 className="text-2xl md:text-5xl lg:text-5xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
                             Premium Managed Office Space in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00a896] to-[#273a96]">Trichy</span> | Universe Coworks
                         </h1>
-                        <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl mb-12 font-medium">
+                        <p className="text-lg md:text-2xl text-gray-300 leading-relaxed max-w-2xl mb-12 font-medium">
                             Transform Your Business with Flexible Workspace Solutions in Tiruchirappalli. Universe Coworks delivers fully furnished, plug-and-play office solutions designed for growing teams, startups, and established enterprises.
                         </p>
                         <div className="flex flex-wrap gap-4">
-                            <Link href="/contact" className="px-10 py-5 bg-[#00a896] text-white rounded-full font-bold text-lg hover:bg-[#00897b] transition-all shadow-xl hover:-translate-y-1">
+                            <Link href="/contact" className="px-8 py-4 bg-[#00a896] text-white rounded-full font-bold text-sm hover:bg-[#00897b] transition-all shadow-xl hover:-translate-y-1">
                                 Schedule a Site Visit Today
                             </Link>
                         </div>

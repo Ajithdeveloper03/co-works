@@ -8,6 +8,17 @@ export const metadata: Metadata = {
   description: 'Explore our strategic coworking locations in Trichy. Situated in the commercial heart of the city, offering seamless access to key transit and talent hubs.',
   alternates: {
     canonical: 'https://universecoworks.com/locations',
+  },
+  openGraph: {
+    url: 'https://universecoworks.com/locations',
+    images: [
+      {
+        url: 'https://images.pexels.com/photos/7412095/pexels-photo-7412095.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Universe Coworks Locations in Trichy',
+      },
+    ],
   }
 };
 
