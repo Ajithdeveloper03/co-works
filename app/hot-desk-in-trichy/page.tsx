@@ -209,6 +209,7 @@ export default function HotDeskPage() {
                         src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?q=80&w=2000&auto=format&fit=crop"
                         alt="Laptop placed on a long shared desk near large windows in a modern office, showcasing a hot desk in Trichy."
                         fill
+                        sizes="100vw"
                         className="object-cover opacity-90"
                         priority
                     />
@@ -260,11 +261,12 @@ export default function HotDeskPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div className="lg:w-1/2 relative">
-                            <div className="relative h-[600px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl transform -rotate-2 hover:rotate-0 transition-all duration-700">
+                            <div className="relative h-[25rem] lg:h-[600px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl transform lg:-rotate-2 lg:hover:rotate-0 transition-all duration-700">
                                 <Image
                                     src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1200&auto=format&fit=crop"
                                     alt="Space Interior"
                                     fill
+                                    sizes="(max-width: 768px) 100vw, 50vw"
                                     className="object-cover"
                                 />
                             </div>
@@ -322,7 +324,7 @@ export default function HotDeskPage() {
                         ].map((feature, i) => (
                             <div key={i} className="group p-10 bg-gray-50 rounded-[2.5rem] hover:bg-[#273a96] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 overflow-hidden relative">
                                 <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity">
-                                    <Image src={feature.img} alt={feature.title} fill className="object-cover" />
+                                    <Image src={feature.img} alt={feature.title} fill sizes="(max-width: 768px) 100vw, 25vw" className="object-cover" />
                                 </div>
                                 <div className="relative z-10">
                                     <div className="bg-white group-hover:bg-[#00a896] w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-sm transition-colors transform group-hover:rotate-6">
@@ -478,6 +480,7 @@ export default function HotDeskPage() {
                                 src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop"
                                 alt="CTA Image"
                                 fill
+                                sizes="(max-width: 768px) 100vw, 50vw"
                                 className="object-cover opacity-60"
                             />
                         </div>

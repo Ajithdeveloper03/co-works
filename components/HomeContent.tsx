@@ -81,6 +81,7 @@ export default function HomeContent() {
                                     src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=75&w=1200&auto=format&fit=crop"
                                     alt="Trichy Coworking Interior"
                                     fill
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
                                     className="object-cover transform group-hover:scale-105 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent"></div>
@@ -105,6 +106,7 @@ export default function HomeContent() {
                                     src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=75&w=400&auto=format&fit=crop"
                                     alt="Team Collaboration"
                                     fill
+                                    sizes="200px"
                                     className="object-cover"
                                 />
                             </div>
@@ -130,6 +132,7 @@ export default function HomeContent() {
                                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=75&w=1200&auto=format&fit=crop"
                                 alt="Trichy Location"
                                 fill
+                                sizes="(max-width: 1280px) 100vw, 66vw"
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a]/90 to-[#0f172a]/40 p-10 flex flex-col justify-center">
@@ -161,7 +164,7 @@ export default function HomeContent() {
                             </div>
 
                             <div className="mt-8 relative h-32 w-full rounded-xl overflow-hidden border border-white/20">
-                                <Image src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=75&w=800&auto=format&fit=crop" alt="Office Amenities" fill className="object-cover" />
+                                <Image src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=75&w=800&auto=format&fit=crop" alt="Office Amenities" fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover" />
                             </div>
                         </div>
 
@@ -177,7 +180,7 @@ export default function HomeContent() {
                                 </p>
                             </div>
                             <div className="mt-8 relative h-32 w-full rounded-xl overflow-hidden border border-white/20">
-                                <Image src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=75&w=800&auto=format&fit=crop" alt="Community Event" fill className="object-cover" />
+                                <Image src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=75&w=800&auto=format&fit=crop" alt="Community Event" fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover" />
                             </div>
                         </div>
 
@@ -198,6 +201,7 @@ export default function HomeContent() {
                                         src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?q=75&w=800&auto=format&fit=crop"
                                         alt="Financial Growth"
                                         fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                                         className="object-cover"
                                     />
                                 </div>
@@ -218,6 +222,7 @@ export default function HomeContent() {
                                 src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=75&w=1200&auto=format&fit=crop"
                                 alt="Support Team"
                                 fill
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                                 className="object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#273a96]/90 to-transparent flex flex-col justify-end p-10">
@@ -268,6 +273,7 @@ export default function HomeContent() {
                         src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=75&w=1600&auto=format&fit=crop"
                         alt="Office Background"
                         fill
+                        sizes="100vw"
                         className="object-cover opacity-60"
                     />
                     <div className="absolute inset-0 bg-[#273a96]/60"></div>

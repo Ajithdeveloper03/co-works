@@ -354,14 +354,30 @@ export default function WorkspaceSolutionsPage() {
                                         Request Managed Suite <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform" />
                                     </Link>
                                 </div>
-                                <div className="lg:w-3/5 grid grid-cols-2 gap-4">
-                                    <div className="relative h-72 w-full rounded-[3rem] overflow-hidden shadow-xl mt-12">
-                                        <Image src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=600" alt="Managed Office 1" fill className="object-cover" />
-                                    </div>
-                                    <div className="relative h-72 w-full rounded-[3rem] overflow-hidden shadow-xl">
-                                        <Image src="https://images.pexels.com/photos/8068878/pexels-photo-8068878.jpeg" alt="Managed Office 2" fill className="object-cover" />
-                                    </div>
-                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
+    {/* Image Card 1 */}
+    <div className="relative aspect-video md:h-72 w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl">
+        <Image 
+            src="https://images.unsplash.com/photo-1604328698692-f76ea9498e76?q=80&w=600" 
+            alt="Managed Office 1" 
+            fill 
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+            className="object-cover"
+            priority 
+        />
+    </div>
+
+    {/* Image Card 2 */}
+    <div className="relative aspect-video md:h-72 w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl">
+        <Image 
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=600" 
+            alt="Managed Office 2" 
+            fill 
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+            className="object-cover" 
+        />
+    </div>
+</div>
                             </div>
                         </div>
 
@@ -519,7 +535,7 @@ export default function WorkspaceSolutionsPage() {
                                 Whether you're a freelancer seeking community, a startup needing private space, or an entrepreneur requiring a virtual office address, Trichy Coworks delivers flexible solutions.
                             </p>
                             <div className="flex flex-wrap justify-center gap-6">
-                                <Link href="/contact" className="px-12 py-5 bg-[#00a896] text-white rounded-full font-black text-xl hover:bg-[#00897b] transition-all shadow-xl hover:-translate-y-1 flex items-center justify-center group uppercase tracking-widest text-sm">
+                                <Link href="/contact" className="px-8 py-5 bg-[#00a896] text-white rounded-full font-black text-xl hover:bg-[#00897b] transition-all shadow-xl hover:-translate-y-1 flex items-center justify-center group uppercase tracking-widest text-sm">
                                     BOOK WORKSPACE ONLINE <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
                                 </Link>
                                 <Link href="/contact" className="px-12 py-5 bg-white text-[#273a96] rounded-full font-black text-xl hover:bg-gray-100 transition-all shadow-xl hover:-translate-y-1 flex items-center justify-center">

@@ -341,9 +341,16 @@ export default function ManagedOfficePage() {
                         </div>
 
                         <div className="lg:w-1/2 relative">
-                            <div className="relative h-[600px] w-full rounded-[3rem] overflow-hidden shadow-2xl">
-                                <Image src="https://images.pexels.com/photos/7550286/pexels-photo-7550286.jpeg" alt="Business Growth" fill className="object-cover" />
-                            </div>
+                            <div className="relative aspect-[4/3] sm:aspect-video lg:h-[600px] lg:aspect-auto w-full rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl transition-transform duration-500 lg:hover:skew-x-1">
+    <Image
+        src="https://images.pexels.com/photos/7550286/pexels-photo-7550286.jpeg"
+        alt="Business Growth"
+        fill
+        sizes="(max-width: 768px) 100vw, 50vw"
+        className="object-cover"
+        priority
+    />
+</div>
                             <div className="absolute -bottom-10 -right-10 bg-[#273a96] p-12 rounded-[2.5rem] text-white shadow-2xl hidden md:block">
                                 <div className="text-5xl font-bold">500+</div>
                                 <div className="text-sm font-bold   tracking-widest text-blue-200 mt-2">Team Capacity</div>

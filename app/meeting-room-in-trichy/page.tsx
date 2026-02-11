@@ -436,8 +436,8 @@ export default function MeetingRoomPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
                         <div className="lg:w-1/2 relative">
-                            <div className="relative h-[600px] w-full rounded-[3rem] overflow-hidden shadow-2xl skew-x-1">
-                                <Image src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=1200" alt="Sleek and professional meeting room setup with a minimalist design, available on an hourly basis in Trichy." fill className="object-cover" />
+                            <div className="relative h-[25rem] lg:h-[600px] w-full rounded-[3rem] overflow-hidden shadow-2xl skew-x-0 lg:skew-x-1">
+                                <Image src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=1200" alt="Sleek and professional meeting room setup with a minimalist design, available on an hourly basis in Trichy." fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                             </div>
                             <div className="absolute -top-10 -right-10 bg-white p-10 rounded-[2.5rem] shadow-2xl border border-gray-100 hidden lg:block">
                                 <p className="text-4xl font-black text-[#273a96]">1 Hr</p>
@@ -558,8 +558,8 @@ export default function MeetingRoomPage() {
                         </div>
 
                         <div className="lg:w-1/2 relative">
-                            <div className="relative h-[600px] w-full rounded-[3rem] overflow-hidden shadow-2xl">
-                                <Image src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200" alt="Large conference hall with tiered seating and professional AV equipment, ideal for corporate events in Trichy." fill className="object-cover" />
+                            <div className="relative h-[25rem] lg:h-[600px] w-full rounded-[3rem] overflow-hidden shadow-2xl">
+                                <Image src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200" alt="Large conference hall with tiered seating and professional AV equipment, ideal for corporate events in Trichy." fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                             </div>
                             <div className="absolute -bottom-10 -left-10 bg-blue-900 p-12 rounded-[2.5rem] text-white shadow-2xl hidden lg:block">
                                 <p className="font-bold text-[#c4b5fd]   tracking-widest  text-sm mb-4">When to Choose Hotels:</p>

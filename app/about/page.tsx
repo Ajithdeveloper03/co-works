@@ -380,11 +380,11 @@ export default function AboutPage() {
               <div className="pt-16 grid grid-cols-2 md:grid-cols-2 gap-8 text-center border-t border-white/20">
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/50 mb-2">Inquiries</p>
-                  <p className="text-sm font-bold">contact@universecoworks.com</p>
+                  <p className="text-sm font-bold">info@universecoworks.com</p>
                 </div>
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-[0.4em] text-white/50 mb-2">Speak to Us</p>
-                  <p className="text-sm font-bold">+91 9789913368</p>
+                  <p className="text-sm font-bold">+91 97899-13368</p>
                 </div>
               </div>
             </div>

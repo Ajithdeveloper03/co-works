@@ -293,8 +293,8 @@ export default function DedicatedDeskPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
                         <div className="lg:w-1/2 relative">
-                            <div className="relative h-[600px] w-full rounded-[4rem] overflow-hidden shadow-2xl skew-x-1">
-                                <Image src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=1200" alt=".Spacious modern office with individual workstations, representing a dedicated desk in Trichy for professionals." fill className="object-cover" />
+                            <div className="relative h-[25rem] lg:h-[600px] w-full rounded-[4rem] overflow-hidden shadow-2xl skew-x-0 lg:skew-x-1">
+                                <Image src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=1200" alt=".Spacious modern office with individual workstations, representing a dedicated desk in Trichy for professionals." fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                             </div>
                             <div className="absolute -bottom-10 -right-10 bg-[#00a896] p-12 rounded-[2.5rem] text-white shadow-2xl hidden lg:block">
                                 <p className="text-4xl font-black">100%</p>
@@ -327,7 +327,7 @@ export default function DedicatedDeskPage() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Comparison Section */}
             <section className="py-24 bg-white">
@@ -375,7 +375,7 @@ export default function DedicatedDeskPage() {
                         </p>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Locations section */}
             <section className="py-24 bg-gray-50">
@@ -408,16 +408,16 @@ export default function DedicatedDeskPage() {
                         </div>
 
                         <div className="lg:w-1/2 grid grid-cols-2 gap-4">
-                            <div className="relative h-96 w-full rounded-[3rem] overflow-hidden shadow-2xl mt-12">
-                                <Image src="https://images.pexels.com/photos/7438096/pexels-photo-7438096.jpeg" alt="Trichy Office" fill className="object-cover" />
+                            <div className="relative h-64 lg:h-96 w-full rounded-[3rem] overflow-hidden shadow-2xl mt-12">
+                                <Image src="https://images.pexels.com/photos/7438096/pexels-photo-7438096.jpeg" alt="Trichy Office" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                             </div>
-                            <div className="relative h-96 w-full rounded-[3rem] overflow-hidden shadow-2xl">
-                                <Image src="https://images.pexels.com/photos/7070/space-desk-workspace-coworking.jpg" alt="Dedicated Space" fill className="object-cover" />
+                            <div className="relative h-64 lg:h-96 w-full rounded-[3rem] overflow-hidden shadow-2xl">
+                                <Image src="https://images.pexels.com/photos/7070/space-desk-workspace-coworking.jpg" alt="Dedicated Space" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
+                    </div >
+                </div >
+            </section >
 
             {/* Amenities Section */}
             <section className="py-24 bg-white">
@@ -489,7 +489,7 @@ export default function DedicatedDeskPage() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* FAQs */}
             <section className="py-24 bg-gray-50 overflow-hidden">

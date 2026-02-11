@@ -215,7 +215,7 @@ export default function LocationsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="md:col-span-2 bg-white/5 backdrop-blur-xl border border-white/10 p-12 rounded-[3.5rem] group hover:bg-white/10 transition-all">
               <Globe className="h-12 w-12 text-[#00a896] mb-8" />
-              <h4 className="text-3xl font-bold mb-6 font-headings italic">One Membership. Multiple Access.</h4>
+              <h4 className="text-3xl font-bold mb-6 font-headings text-white">One Membership. Multiple Access.</h4>
               <p className="text-blue-100/60 text-lg leading-relaxed max-w-xl">
                 A Universe Coworks membership isn't just for a desk; it's a passport to our entire local network. Need to meet a client in Thillai Nagar but your base is Chatram Bus Stand? No problem.
               </p>
@@ -223,8 +223,8 @@ export default function LocationsPage() {
             <div className="bg-[#00a896] p-12 rounded-[3.5rem] flex flex-col justify-between shadow-2xl">
               <CheckCircle className="h-12 w-12 text-white" />
               <div>
-                <h4 className="text-2xl font-bold mb-4 font-headings">Standard Experience</h4>
-                <p className="text-white/80 text-sm leading-relaxed font-bold">Identical infrastructure, security, and coffee standards at every hub.</p>
+                <h4 className="text-3xl font-bold mb-4 font-headings">Standard Experience</h4>
+                <p className="text-white/80 text-lg leading-relaxed font-bold">Identical infrastructure, security, and coffee standards at every hub.</p>
               </div>
             </div>
           </div>
@@ -239,7 +239,7 @@ export default function LocationsPage() {
               <Image src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2301&auto=format&fit=crop" alt="Experience" fill className="object-cover" />
             </div>
             <div className="relative z-10 space-y-12">
-              <h3 className="text-3xl md:text-5xl font-bold font-headings tracking-tight">Experience Our Spaces Today.</h3>
+              <h3 className="text-3xl md:text-5xl font-bold font-headings tracking-tight text-white">Experience Our Spaces Today.</h3>
               <p className="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mx-auto">
                 The best way to evaluate a workspace is to feel its energy. We offer no-obligation tours at both Thillai Nagar and Chatram Bus Stand.
               </p>

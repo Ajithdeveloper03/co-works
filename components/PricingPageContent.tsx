@@ -8,7 +8,7 @@ import { useState } from 'react';
 const pricingPlans = [
     {
         title: 'Day Pass',
-        price: '₹299',
+        price: '₹499',
         period: '/day',
         desc: 'Perfect for travellers, freelancers, and occasional users.',
         features: ['Full access to coworking amenities', 'High-Speed WiFi', 'Unlimited Coffee/Tea', 'Common Area Access', 'Printing Facilities'],
@@ -18,7 +18,7 @@ const pricingPlans = [
     },
     {
         title: 'Monthly Coworking',
-        price: '₹3,499',
+        price: '₹4,999',
         period: '/month',
         desc: 'Flexible monthly plans for individuals and remote professionals.',
         features: ['Unlimited shared workspace access', 'High-Speed Internet', 'Meeting Room Credits', 'Community Events Access', 'Locker Facility Available'],
@@ -38,7 +38,7 @@ const pricingPlans = [
     },
     {
         title: 'Private Office',
-        price: '₹4,999',
+        price: '₹11,999',
         period: '/seat/mo',
         desc: 'Fully furnished private offices for startups and teams.',
         features: ['Private Cabins (2-50 Seats)', 'Custom branding on door', 'Unlimited Meeting Room Access', 'Manager Cabin Included', 'Premium Ergonomic Chairs'],

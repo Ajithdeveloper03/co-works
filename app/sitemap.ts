@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { blogPosts } from '@/lib/blogData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://universecoworks.com';
@@ -28,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/coworking-space-trichy',
         '/frequently-asked-questions',
         '/insights/blogs',
+        ...blogPosts.map((post) => `/insights/blogs/${post.slug}`),
     ];
 
     return routes.map((route) => ({

@@ -380,11 +380,12 @@ export default function PrivateOfficePage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col lg:flex-row items-center gap-20">
                         <div className="lg:w-1/2 relative">
-                            <div className="relative h-[500px] w-full rounded-[3rem] overflow-hidden shadow-2xl skew-y-3">
+                            <div className="relative h-[25rem] lg:h-[500px] w-full rounded-[3rem] overflow-hidden shadow-2xl skew-y-0 lg:skew-y-3">
                                 <Image
                                     src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
                                     alt="Universe Coworks Experience"
                                     fill
+                                    sizes="(max-width: 768px) 100vw, 50vw"
                                     className="object-cover"
                                 />
                             </div>
@@ -410,7 +411,7 @@ export default function PrivateOfficePage() {
             {/* Pricing Section */}
             <section className="py-24 bg-blue-900 text-white relative">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-8">Transparent Pricing, No Hidden Costs</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">Transparent Pricing, No Hidden Costs</h2>
                     <div className="max-w-4xl mx-auto space-y-8">
                         <p className="text-xl md:text-2xl text-blue-200 font-medium leading-relaxed">
                             When you partner with Universe Coworks for your private office space with a carpet area in Trichy, you get all-inclusive pricing. Your monthly fee covers rent, utilities, internet, maintenance, amenities, and services. No surprise bills, no hidden charges—just straightforward pricing that helps you budget accurately.

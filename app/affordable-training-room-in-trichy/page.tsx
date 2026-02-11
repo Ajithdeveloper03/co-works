@@ -308,8 +308,8 @@ export default function TrainingRoomPage() {
                         {/* Option 1 */}
                         <div className="flex flex-col lg:flex-row gap-16 items-center group">
                             <div className="lg:w-1/2 relative">
-                                <div className="relative h-[450px] w-full rounded-[3.5rem] overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
-                                    <Image src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200" alt="Small Training Room" fill className="object-cover" />
+                                <div className="relative h-[22rem] lg:h-[450px] w-full rounded-[3.5rem] overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+                                    <Image src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200" alt="Small Training Room" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
                                     <div className="absolute bottom-10 left-10 text-white">
                                         <p className="text-5xl font-black">10–20</p>
@@ -336,8 +336,8 @@ export default function TrainingRoomPage() {
                         {/* Option 2 */}
                         <div className="flex flex-col lg:flex-row-reverse gap-16 items-center group">
                             <div className="lg:w-1/2 relative">
-                                <div className="relative h-[450px] w-full rounded-[3.5rem] overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
-                                    <Image src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=1200" alt="Mid Sized Training Hall" fill className="object-cover" />
+                                <div className="relative h-[22rem] lg:h-[450px] w-full rounded-[3.5rem] overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+                                    <Image src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=1200" alt="Mid Sized Training Hall" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
                                     <div className="absolute bottom-10 left-10 text-white">
                                         <p className="text-5xl font-black">20–40</p>
@@ -364,8 +364,8 @@ export default function TrainingRoomPage() {
                         {/* Option 3 */}
                         <div className="flex flex-col lg:flex-row gap-16 items-center group">
                             <div className="lg:w-1/2 relative">
-                                <div className="relative h-[450px] w-full rounded-[3.5rem] overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
-                                    <Image src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1200" alt="Large Training Facility" fill className="object-cover" />
+                                <div className="relative h-[22rem] lg:h-[450px] w-full rounded-[3.5rem] overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+                                    <Image src="https://images.unsplash.com/photo-1505373777841-8d25f7d46678?q=80&w=1200" alt="Large Training Facility" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
                                     <div className="absolute bottom-10 left-10 text-white">
                                         <p className="text-5xl font-black">40–100</p>

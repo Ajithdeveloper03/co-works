@@ -69,7 +69,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-[#273a96] mr-4 shrink-0" />
-                <a href="mailto:contact@universecoworks.com" className="text-sm font-bold hover:text-white transition-colors">contact@universecoworks.com</a>
+                <a href="mailto:info@universecoworks.com" className="text-sm font-bold hover:text-white transition-colors">info@universecoworks.com</a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-[#00a896] mr-4 shrink-0" />
@@ -94,10 +94,10 @@ export default function Footer() {
 
             <div className="flex space-x-6">
               {[
-                { icon: Linkedin, href: '#' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/company/universe-coworks/' },
                 { icon: Twitter, href: '#' },
-                { icon: Instagram, href: '#' },
-                { icon: Facebook, href: '#' }
+                { icon: Instagram, href: 'https://www.instagram.com/universe_coworks/' },
+                { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61585951603848' }
               ].map((social, i) => (
                 <a key={i} href={social.href} className="text-gray-500 hover:text-[#00a896] transition-all">
                   <social.icon className="h-6 w-6" />

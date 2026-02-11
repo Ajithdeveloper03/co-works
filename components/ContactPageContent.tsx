@@ -149,7 +149,7 @@ export default function ContactPageContent() {
                         <div className="lg:col-span-4 space-y-6">
                             <div className="bg-[#273a96] text-white rounded-[3rem] p-10 md:p-12 shadow-2xl relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#00a896] rounded-full blur-3xl -mr-16 -mt-16 opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                                <h3 className="text-2xl font-bold mb-10 font-headings">Office Locations</h3>
+                                <h3 className="text-2xl font-bold mb-10 font-headings text-white">Office Locations</h3>
                                 <div className="space-y-10 relative z-10">
                                     <div className="space-y-3">
                                         <div className="flex items-center space-x-3 text-[#00a896] font-black text-xs uppercase tracking-widest">

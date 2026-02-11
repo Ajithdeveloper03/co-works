@@ -192,6 +192,7 @@ export default function CoworkingSpacePage() {
                         src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=2000&auto=format&fit=crop"
                         alt="Coworking Space Trichy"
                         fill
+                        sizes="100vw"
                         className="object-cover opacity-20"
                         priority
                     />
@@ -277,8 +278,8 @@ export default function CoworkingSpacePage() {
                             </div>
                         </div>
                         <div className="lg:w-1/2 relative">
-                            <div className="relative h-[600px] w-full rounded-[4rem] overflow-hidden shadow-2xl">
-                                <Image src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200" alt="Modern coworking space Trichy with professionals working together, highlighting 500+ active successes." fill className="object-cover" />
+                            <div className="relative h-[25rem] lg:h-[600px] w-full rounded-[4rem] overflow-hidden shadow-2xl">
+                                <Image src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200" alt="Modern coworking space Trichy with professionals working together, highlighting 500+ active successes." fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                             </div>
                             <div className="absolute -bottom-10 -left-10 bg-[#00a896] p-12 rounded-[2.5rem] text-white shadow-2xl hidden lg:block">
                                 <p className="text-5xl font-black">500+</p>
@@ -387,7 +388,7 @@ export default function CoworkingSpacePage() {
                         </div>
 
                         <div className="relative h-[550px] w-full rounded-[4rem] overflow-hidden shadow-2xl">
-                            <Image src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg" alt="Woman using a tablet in a secure server room at a modern coworking space Trichy with advanced IT infrastructure." fill className="object-cover" />
+                            <Image src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg" alt="Woman using a tablet in a secure server room at a modern coworking space Trichy with advanced IT infrastructure." fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                             <div className="absolute inset-x-0 bottom-0 p-12 bg-gradient-to-t from-gray-900 to-transparent text-white">
                                 <div className="flex items-center gap-4 mb-4">
                                     <Lock className="h-8 w-8 text-[#00a896]" />
@@ -478,8 +479,8 @@ export default function CoworkingSpacePage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="lg:w-1/2 relative h-64 rounded-[3rem] overflow-hidden shadow-2xl skew-y-1">
-                            <Image src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200" alt="Team Work" fill className="object-cover" />
+                        <div className="lg:w-1/2 relative h-64 rounded-[3rem] overflow-hidden shadow-2xl skew-y-0 lg:skew-y-1">
+                            <Image src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200" alt="Team Work" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
                             <div className="absolute inset-0 bg-[#273a96] opacity-20"></div>
                         </div>
                     </div>
@@ -491,7 +492,7 @@ export default function CoworkingSpacePage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="relative p-12 md:p-32 bg-[#273a96] rounded-[4rem] overflow-hidden shadow-3xl text-center">
                         <div className="absolute inset-0 bg-[#0a0f1a] opacity-90"></div>
-                        <Image src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=1200" alt="CTA BG" fill className="object-cover opacity-10" />
+                        <Image src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=1200" alt="CTA BG" fill sizes="100vw" className="object-cover opacity-10" />
                         <div className="relative z-10 max-w-4xl mx-auto text-white">
                             <h2 className="text-4xl md:text-7xl font-black mb-8 text-white leading-tight">
                                 Ready to Experience the Best Coworking Space in Trichy?

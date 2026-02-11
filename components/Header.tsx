@@ -43,7 +43,7 @@ export default function Header() {
     { name: 'Blog', href: '/insights/blogs' },
     { name: 'FAQ', href: '/frequently-asked-questions' },
     { name: 'Locations', href: '/locations' },
-    { name: 'Connect', href: '/contact' }
+    // { name: 'Connect', href: '/contact' }
   ];
 
   const toggleDropdown = (name: string) => {
