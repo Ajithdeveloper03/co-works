@@ -3,8 +3,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Facebook, Twitter, Instagram, Linkedin, MapPin, Mail, Phone, ShieldCheck } from 'lucide-react';
+import { usePopup } from '@/context/PopupContext';
 
 export default function Footer() {
+  const { openPopup } = usePopup();
   return (
     <footer className="bg-[#0a0f1a] text-white pt-12 pb-12 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,9 +107,9 @@ export default function Footer() {
               ))}
             </div>
             <div className="mt-10">
-              <Link href="/contact" className="inline-flex items-center px-8 py-3 bg-[#273a96] hover:bg-[#1e2a78] text-white rounded-xl font-black text-xs uppercase tracking-widest transition-all shadow-xl">
+              <button onClick={openPopup} className="inline-flex items-center px-8 py-3 bg-[#273a96] hover:bg-[#1e2a78] text-white rounded-xl font-black text-xs uppercase tracking-widest transition-all shadow-xl">
                 Book Workspace
-              </Link>
+              </button>
             </div>
           </div>
         </div>

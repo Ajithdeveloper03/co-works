@@ -5,8 +5,10 @@ import Image from 'next/image';
 import { Calendar, Users, Coffee, ArrowRight, Star, Briefcase, GraduationCap, Mic, CheckCircle, Search, Rocket } from 'lucide-react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
+import { usePopup } from '@/context/PopupContext';
 
 export default function CommunityPageContent() {
+    const { openPopup } = usePopup();
     const searchParams = useSearchParams();
     const [activeTab, setActiveTab] = useState('events');
 
@@ -287,9 +289,9 @@ export default function CommunityPageContent() {
             <section className="bg-white py-16 text-center border-t border-gray-100">
                 <h2 className="text-2xl md:text-3xl font-bold text-[#0f172a] mb-8 font-headings tracking-tight max-w-2xl mx-auto">Join Trichy's most connected professional community.<br />The future is collaborative.</h2>
                 <div className="flex justify-center gap-6">
-                    <Link href="/contact" className="px-8 py-4 bg-[#273a96] text-white font-bold rounded-full hover:bg-[#1e2a78] transition-colors">
+                    <button onClick={openPopup} className="px-8 py-4 bg-[#273a96] text-white font-bold rounded-full hover:bg-[#1e2a78] transition-colors">
                         Attend Next Event
-                    </Link>
+                    </button>
                     <Link href="/pricing" className="px-8 py-4 border border-gray-300 text-gray-700 font-bold rounded-full hover:border-[#273a96] hover:text-[#273a96] transition-colors">
                         Explore Membership
                     </Link>

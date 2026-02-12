@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { usePopup } from '@/context/PopupContext';
 import Image from 'next/image';
 import {
     Rocket,
@@ -21,6 +22,7 @@ import {
 import Link from 'next/link';
 
 export default function SolutionsPageContent() {
+    const { openPopup } = usePopup();
     const [activeTab, setActiveTab] = useState<'startup' | 'custom'>('startup');
 
     return (
@@ -293,9 +295,9 @@ export default function SolutionsPageContent() {
                             <div className="space-y-6">
                                 <p className="text-gray-600 mb-8 max-w-xl mx-auto">Ready to accelerate your startup content? Join the community that's building the future of Trichy.</p>
                                 <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-                                    <Link href="/contact" className="w-full md:w-auto px-8 py-4 bg-[#273a96] text-white rounded-full font-bold hover:bg-[#1e2a78] transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                                    <button onClick={openPopup} className="w-full md:w-auto px-8 py-4 bg-[#273a96] text-white rounded-full font-bold hover:bg-[#1e2a78] transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
                                         Book Free Tour
-                                    </Link>
+                                    </button>
                                     <Link href="/pricing" className="w-full md:w-auto px-8 py-4 bg-white text-[#273a96] border border-[#273a96] rounded-full font-bold hover:bg-gray-50 transition-all">
                                         View Plans
                                     </Link>
@@ -308,12 +310,12 @@ export default function SolutionsPageContent() {
                             <div className="space-y-6">
                                 <p className="text-gray-600 mb-8 max-w-xl mx-auto">Get a workspace that works as hard as your team. Let's design your custom office today.</p>
                                 <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-                                    <Link href="/contact" className="w-full md:w-auto px-8 py-4 bg-[#00a896] text-white rounded-full font-bold hover:bg-[#00897b] transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                                    <button onClick={openPopup} className="w-full md:w-auto px-8 py-4 bg-[#00a896] text-white rounded-full font-bold hover:bg-[#00897b] transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
                                         Request Quote
-                                    </Link>
-                                    <Link href="/contact" className="w-full md:w-auto px-8 py-4 bg-white text-[#00a896] border border-[#00a896] rounded-full font-bold hover:bg-gray-50 transition-all">
+                                    </button>
+                                    <button onClick={openPopup} className="w-full md:w-auto px-8 py-4 bg-white text-[#00a896] border border-[#00a896] rounded-full font-bold hover:bg-gray-50 transition-all">
                                         Schedule Consultation
-                                    </Link>
+                                    </button>
                                 </div>
                                 <div className="mt-6 text-sm text-gray-500">
                                     Enterprise Support: <a href="mailto:solutions@universecoworks.com" className="text-[#273a96] font-bold hover:underline">solutions@universecoworks.com</a>

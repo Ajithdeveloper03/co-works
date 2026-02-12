@@ -113,6 +113,10 @@ export default function ContactPageContent() {
                                                 <label className="text-xs font-black uppercase tracking-[0.2em] text-gray-400 ml-1">Phone Number</label>
                                                 <input name="phone" type="tel" required className="w-full px-6 py-5 rounded-[1.5rem] bg-gray-50 border-2 border-transparent focus:border-[#273a96] focus:bg-white focus:shadow-xl outline-none transition-all placeholder:text-gray-300 font-bold text-gray-900" placeholder="+91 97866 XXXX" />
                                             </div>
+
+                                            {/* Honeypot Field */}
+                                            <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+
                                             <div className="space-y-3">
                                                 <label className="text-xs font-black uppercase tracking-[0.2em] text-gray-400 ml-1">Proposed Solution</label>
                                                 <div className="relative">

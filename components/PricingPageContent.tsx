@@ -4,6 +4,7 @@ import { CheckCircle, Shield, Rocket, Building2, Calendar, Coffee, Printer, Wifi
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { usePopup } from '@/context/PopupContext';
 
 const pricingPlans = [
     {
@@ -69,6 +70,7 @@ const pricingPlans = [
 ];
 
 export default function PricingPageContent() {
+    const { openPopup } = usePopup();
     const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
 
     return (
@@ -154,12 +156,12 @@ export default function PricingPageContent() {
                                 </ul>
                             </div>
 
-                            <Link
-                                href="/contact"
+                            <button
+                                onClick={openPopup}
                                 className={`block w-full text-center py-4 rounded-xl font-bold transition-all shadow-lg ${plan.highlight ? 'bg-[#00a896] text-white hover:bg-[#00897b] hover:shadow-[#00a896]/30' : 'bg-[#0f172a] text-white hover:bg-[#273a96] hover:shadow-blue-900/30'}`}
                             >
                                 {plan.cta}
-                            </Link>
+                            </button>
                         </div>
                     ))}
                 </div>
@@ -185,7 +187,7 @@ export default function PricingPageContent() {
                                 <Building2 className="h-10 w-10 text-[#00a896] mx-auto mb-4" />
                                 <h4 className="font-bold text-lg mb-2">Book a Tour</h4>
                                 <p className="text-gray-500 mb-4">See the space yourself</p>
-                                <Link href="/contact" className="text-[#273a96] font-bold hover:underline">Schedule Visit</Link>
+                                <button onClick={openPopup} className="text-[#273a96] font-bold hover:underline">Schedule Visit</button>
                             </div>
                             <div className="p-6">
                                 <Rocket className="h-10 w-10 text-[#00a896] mx-auto mb-4" />

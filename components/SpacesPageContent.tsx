@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { Check, Users, Monitor, Lock, Coffee, Projector, Calendar, ArrowRight, Shield } from 'lucide-react';
 import Link from 'next/link';
+import { usePopup } from '@/context/PopupContext';
 
 const spaces = [
     {
@@ -85,6 +86,7 @@ const spaces = [
 ];
 
 export default function SpacesPageContent() {
+    const { openPopup } = usePopup();
     return (
         <div className="min-h-screen bg-white">
             {/* Hero */}
@@ -133,9 +135,9 @@ export default function SpacesPageContent() {
                                 </div>
 
                                 <div className="pt-6">
-                                    <Link href="/contact" className={`inline-flex items-center px-8 py-3 rounded-full font-bold text-white transition-all shadow-lg hover:-translate-y-1 ${index % 2 === 0 ? 'bg-[#273a96]' : 'bg-[#00a896]'}`}>
+                                    <button onClick={openPopup} className={`inline-flex items-center px-8 py-3 rounded-full font-bold text-white transition-all shadow-lg hover:-translate-y-1 ${index % 2 === 0 ? 'bg-[#273a96]' : 'bg-[#00a896]'}`}>
                                         Book This Space <ArrowRight className="ml-2 h-5 w-5" />
-                                    </Link>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -168,9 +170,9 @@ export default function SpacesPageContent() {
                     </div>
 
                     <div className="mt-16">
-                        <Link href="/contact" className="bg-white text-[#0f172a] px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-xl">
+                        <button onClick={openPopup} className="bg-white text-[#0f172a] px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-xl">
                             Schedule a Tour
-                        </Link>
+                        </button>
                         <p className="mt-6 text-gray-500 text-sm">Flexible plans starting at ₹5,000/month</p>
                     </div>
                 </div>
