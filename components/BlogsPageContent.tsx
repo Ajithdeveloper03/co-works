@@ -15,16 +15,19 @@ const BlogsPageContent = () => {
                     <div className="inline-block px-4 py-1.5 bg-blue-900/50 text-blue-200 rounded-full text-sm font-semibold mb-6 border border-blue-800">
                         Latest Insights
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6 font-headings text-white">Stories from the Universe</h1>
-                    <p className="text-xl text-gray-400 max-w-2xl mx-auto font-sans">
+                    <h1 className="text-4xl md:text-6xl font-bold mb-6 font-headings text-white">Stories & Insights from the Universe</h1>
+                    <p className="text-xl text-gray-400 max-w-2xl mx-auto font-sans mb-4">
                         Trends, guides, and success stories from Trichy's fastest-growing startup ecosystem.
                     </p>
+                    <div className="text-xs text-blue-400 tracking-widest uppercase font-bold">
+                        Discovered {blogPosts.length} Articles
+                    </div>
                 </div>
             </section>
 
             {/* Blog Grid */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mt-5 relative z-20">
-                <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {blogPosts.map((post) => (
                         <div key={post.id} className="bg-white rounded-[2rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 flex flex-col h-full">
                             <div className="relative h-64 w-full overflow-hidden">
@@ -35,7 +38,7 @@ const BlogsPageContent = () => {
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                     className="object-cover transform group-hover:scale-105 transition-transform duration-700"
                                 />
-                                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-[#273a96]">
+                                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-[#273a96]">
                                     {post.category}
                                 </div>
                             </div>
@@ -59,7 +62,7 @@ const BlogsPageContent = () => {
                                         <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
                                             <User className="h-4 w-4" />
                                         </div>
-                                        <span className="text-sm font-semibold text-gray-900">{post.author}</span>
+                                        <span className="text-sm font-semibold text-gray-900">By {post.author}</span>
                                     </div>
                                     <Link href={`/insights/blogs/${post.slug}`} className="flex items-center text-[#00a896] font-bold text-sm hover:underline">
                                         Read Article <ArrowRight className="ml-1 h-4 w-4" />
@@ -70,7 +73,7 @@ const BlogsPageContent = () => {
                     ))}
                 </div>
 
-                
+
             </section>
 
 

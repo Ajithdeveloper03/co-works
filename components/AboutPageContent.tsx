@@ -45,6 +45,7 @@ export default function AboutPageContent() {
                         src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=75&w=1600&auto=format&fit=crop"
                         alt="Universe Coworks Hub"
                         fill
+                        sizes="100vw"
                         className="object-cover opacity-30 "
                         priority
                     />
@@ -63,7 +64,7 @@ export default function AboutPageContent() {
                         </h1>
 
                         <p className="text-lg md:text-xl text-gray-300 max-w-xl leading-relaxed font-medium animate-fade-in-up delay-200">
-                            Building the world-class infrastructure required for India's next wave of global startups and offshore enterprises.
+                            Building the world-class infrastructure required for India&apos;s next wave of global startups and offshore enterprises.
                         </p>
 
                         <div className="flex gap-4 pt-6 animate-fade-in-up delay-400">
@@ -110,6 +111,7 @@ export default function AboutPageContent() {
                                     src="https://images.pexels.com/photos/19996231/pexels-photo-19996231.jpeg"
                                     alt="Ecosystem Image"
                                     fill
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
                                     className="object-cover"
                                 />
                             </div>
@@ -166,6 +168,7 @@ export default function AboutPageContent() {
                                     src="https://images.pexels.com/photos/29267511/pexels-photo-29267511.jpeg"
                                     alt="Industrial Hub"
                                     fill
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
                                     className="object-cover"
                                 />
                             </div>
@@ -285,7 +288,7 @@ export default function AboutPageContent() {
                         <div className="bg-[#0a0f1a] rounded-[2.5rem] p-12 text-white flex flex-col justify-between">
                             <div className="space-y-6">
                                 <span className="text-[#00a896] font-black text-sm uppercase tracking-[0.3em]">Elite Access</span>
-                                <h3 className="text-3xl font-bold font-headings  text-white leading-tight">Access to India's Premier Talent.</h3>
+                                <h3 className="text-3xl font-bold font-headings  text-white leading-tight">Access to India&apos;s Premier Talent.</h3>
                                 <p className="text-gray-400 leading-relaxed font-medium">
                                     Tap into graduates from NIT Trichy and IIM. Employees in Tier-2 cities demonstrate significantly higher loyalty due to family proximity and reduced living stress.
                                 </p>
@@ -366,7 +369,7 @@ export default function AboutPageContent() {
                         <div className="relative z-10 space-y-8">
                             <h2 className="text-3xl md:text-5xl xl:text-6xl font-bold font-headings tracking-tight">Build the Future from Trichy.</h2>
                             <p className="text-lg md:text-xl text-white/80 font-medium max-w-2xl mx-auto leading-relaxed">
-                                Ready to establish your India operations or launch your next innovation? Let's design your growth trajectory together.
+                                Ready to establish your India operations or launch your next innovation? Let&apos;s design your growth trajectory together.
                             </p>
                             <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
                                 <button onClick={openPopup} className="px-10 py-5 bg-[#0a0f1a] text-white rounded-xl font-bold text-lg hover:scale-105 transition-all shadow-2xl">

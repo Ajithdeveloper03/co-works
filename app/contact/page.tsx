@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import ContactPageContent from '@/components/ContactPageContent';
-
 export const metadata: Metadata = {
+  
   title: 'Contact Us | Universe Coworks',
   description: 'Get in touch with Universe Coworks for office space inquiries, virtual office setups, and partnership opportunities in Trichy.',
   alternates: {
@@ -21,5 +21,6 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  
   return <ContactPageContent />;
 }

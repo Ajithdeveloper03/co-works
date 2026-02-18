@@ -40,11 +40,11 @@ if (!empty($data['_gotcha'])) {
 }
 
 // --- VALIDATION ---
-$name = filter_var($data['name'] ?? '', FILTER_SANITIZE_STRING);
-$email = filter_var($data['email'] ?? '', FILTER_VALIDATE_EMAIL);
-$phone = filter_var($data['phone'] ?? '', FILTER_SANITIZE_STRING);
-$interest = filter_var($data['interest'] ?? '', FILTER_SANITIZE_STRING);
-$message = htmlspecialchars($data['message'] ?? '');
+$name = strip_tags(trim($data['name'] ?? ''));
+$email = filter_var(trim($data['email'] ?? ''), FILTER_VALIDATE_EMAIL);
+$phone = strip_tags(trim($data['phone'] ?? ''));
+$interest = strip_tags(trim($data['interest'] ?? ''));
+$message = htmlspecialchars(trim($data['message'] ?? ''));
 
 $errors = [];
 if (empty($name)) $errors[] = "Name is required.";
@@ -58,9 +58,8 @@ if (!empty($errors)) {
 }
 
 // --- EMAIL CONFIGURATION ---
-// REPLACE WITH YOUR ACTUAL EMAIL ADDRESS
-$to = "admin@universecoworks.com"; 
-$subject = "New Inquiry from Universe Coworks: $name";
+$to = "info@universecoworks.com"; 
+$subject = "New Inquiry from Universe Coworks Website: $name";
 
 // Email Body
 $email_content = "
@@ -68,29 +67,36 @@ $email_content = "
 <head>
     <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-        .container { max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-top: 5px solid #00a896; }
-        h2 { color: #00a896; }
-        .field { margin-bottom: 10px; }
-        .label { font-weight: bold; color: #555; }
-        .val { background: #f9f9f9; padding: 5px 10px; border-radius: 4px; display: inline-block; }
-        .message-box { background: #f4f4f4; padding: 15px; border-radius: 5px; border-left: 4px solid #ddd; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-top: 5px solid #00a896; border-radius: 8px; }
+        .header { background: #00a896; color: white; padding: 15px; border-radius: 4px 4px 0 0; text-align: center; }
+        h2 { margin: 0; color: #ffffff; }
+        .content { padding: 20px; }
+        .field { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        .label { font-weight: bold; color: #555; display: block; font-size: 12px; text-transform: uppercase; }
+        .val { color: #273a96; font-size: 16px; font-weight: bold; }
+        .message-box { background: #f9f9f9; padding: 15px; border-radius: 5px; border-left: 4px solid #00a896; margin-top: 10px; }
+        .footer { font-size: 11px; color: #999; margin-top: 30px; text-align: center; }
     </style>
 </head>
 <body>
     <div class='container'>
-        <h2>New Contact Inquiry</h2>
-        <div class='field'><span class='label'>Name:</span> <span class='val'>$name</span></div>
-        <div class='field'><span class='label'>Email:</span> <a href='mailto:$email'>$email</a></div>
-        <div class='field'><span class='label'>Phone:</span> <span class='val'>$phone</span></div>
-        <div class='field'><span class='label'>Interest:</span> <span class='val'>$interest</span></div>
-        
-        <br>
-        <div class='field'>
-            <span class='label'>Message:</span>
-            <div class='message-box'>$message</div>
+        <div class='header'>
+            <h2>New Workspace Inquiry</h2>
         </div>
-        
-        <p style='font-size: 12px; color: #999; margin-top: 30px;'>Sent from universecoworks.com website form.</p>
+        <div class='content'>
+            <div class='field'><span class='label'>Name:</span> <span class='val'>$name</span></div>
+            <div class='field'><span class='label'>Email:</span> <span class='val'><a href='mailto:$email' style='color: #273a96;'>$email</a></span></div>
+            <div class='field'><span class='label'>Phone:</span> <span class='val'>$phone</span></div>
+            <div class='field'><span class='label'>Interest:</span> <span class='val'>$interest</span></div>
+            
+            <div class='field' style='border-bottom: none;'>
+                <span class='label'>Requirements / Message:</span>
+                <div class='message-box'>$message</div>
+            </div>
+        </div>
+        <div class='footer'>
+            Sent from universecoworks.com website contact form.
+        </div>
     </div>
 </body>
 </html>
@@ -99,8 +105,7 @@ $email_content = "
 // Email Headers
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-// Ensure the 'From' domain matches your hosting domain to avoid spam filters
-$headers .= "From: Universe Coworks Website <no-reply@universecoworks.com>" . "\r\n"; 
+$headers .= "From: Universe Coworks <info@universecoworks.com>" . "\r\n"; 
 $headers .= "Reply-To: $email" . "\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
@@ -109,7 +114,13 @@ if (mail($to, $subject, $email_content, $headers)) {
     http_response_code(200);
     echo json_encode(["success" => true, "message" => "Thank you! Your message has been sent successfully."]);
 } else {
+    // If mail() returns false, it could be a server configuration issue
+    $last_error = error_get_last();
     http_response_code(500);
-    echo json_encode(["success" => false, "message" => "Sorry, something went wrong. Please try again later."]);
+    echo json_encode([
+        "success" => false, 
+        "message" => "Sorry, the server could not send your email. Please contact us directly at +91 8675556079.",
+        "debug" => $last_error['message'] ?? 'Unknown error'
+    ]);
 }
 ?>

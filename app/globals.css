@@ -258,6 +258,50 @@
   }
 }
 
+
 .animate-subtle-scroll {
   animation: sublteScroll 60s linear infinite;
+}
+
+/* Blog Content Styles */
+.blog-content {
+  @apply text-slate-700 leading-relaxed;
+}
+
+.blog-content p {
+  @apply mb-6 text-justify;
+}
+
+.blog-content h2 {
+  @apply text-2xl font-bold text-slate-900 mt-12 mb-6;
+}
+
+.blog-content h3 {
+  @apply text-xl font-bold text-slate-900 mt-8 mb-4;
+}
+
+.blog-content ul {
+  @apply space-y-4 mb-8;
+}
+
+.blog-content li {
+  @apply flex items-start text-justify;
+}
+
+.blog-content .bullet {
+  @apply mr-3 text-blue-600 font-bold shrink-0 mt-1.5;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.blog-content table {
+  @apply w-full text-left border-collapse border border-gray-200 rounded-xl overflow-hidden my-8;
+}
+
+.blog-content th {
+  @apply p-4 bg-gray-50 border border-gray-200 font-bold text-slate-900;
+}
+
+.blog-content td {
+  @apply p-4 border border-gray-200;
 }

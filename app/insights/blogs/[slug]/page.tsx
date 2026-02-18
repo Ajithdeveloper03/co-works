@@ -118,7 +118,9 @@ export default function BlogPostPage({ params }: Props) {
                 {/* Content */}
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
                     <div className="bg-white rounded-t-[2.5rem] p-6 sm:p-10 md:p-14 shadow-xl border border-gray-100">
-                        {post.content}
+                        <div className="blog-content">
+                            {post.content}
+                        </div>
                     </div>
 
                     {/* Share / Footer of Article */}

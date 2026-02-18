@@ -2,20 +2,26 @@
   RewriteEngine On
   RewriteBase /
 
-  # Serve resources (CSS, JS, Images) correctly
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
+  # 1. Force Trail Slash if it's a directory (Next.js trailingSlash: true)
+  # This avoids duplicate content issues and ensures relative paths work.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !(.*)\.(.*)$ [NC]
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteRule ^(.*)$ $1/ [L,R=301]
+
+  # 2. Serve resources (CSS, JS, Images) if they exist
+  RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # Redirect .html requests to clean URLs (e.g. /about.html -> /about)
-  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
-  RewriteRule ^ %1 [R=301,L]
+  # 3. Serve folder/index.html for requests ending in /
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.*)/$ $1/index.html [L]
 
-  # Map clean URLs to .html files (e.g. /about -> /about.html)
-  RewriteCond %{REQUEST_FILENAME} !-d
+  # 4. Handle clean URLs without slash (Fallback for old files if they exist)
   RewriteCond %{REQUEST_FILENAME}\.html -f
   RewriteRule ^(.*)$ $1.html [L]
 
-  # Handle 404
-  ErrorDocument 404 /404.html
+  # 5. Handle 404
+  ErrorDocument 404 /404/index.html
 </IfModule>
