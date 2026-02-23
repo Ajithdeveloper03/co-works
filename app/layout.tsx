@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 import { Providers } from '@/components/Providers';
+import Script from 'next/script';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -53,6 +54,19 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${plusJakartaSans.variable} font-sans`}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-D1FRF3P3X5"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-D1FRF3P3X5');
+          `}
+        </Script>
         <Providers>
           <div className="flex flex-col min-h-screen">
             <Header />
