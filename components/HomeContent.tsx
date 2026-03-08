@@ -3,6 +3,10 @@
 import dynamic from 'next/dynamic';
 
 const HeroSlider = dynamic(() => import('@/components/HeroSlider'), { ssr: false });
+const StaticHero = dynamic(() => import('@/components/StaticHero'), { ssr: false });
+const BuiltForHowYouWork = dynamic(() => import('@/components/BuiltForHowYouWork'), { ssr: false });
+const ImagineYourWorkday = dynamic(() => import('@/components/ImagineYourWorkday'), { ssr: false });
+const SmartFinancialChoice = dynamic(() => import('@/components/SmartFinancialChoice'), { ssr: false });
 const TestimonialSlider = dynamic(() => import('@/components/TestimonialSlider'), { ssr: false });
 import { MapPin, ChevronDown, CheckCircle, Users, TrendingUp, Zap, ArrowRight, Star } from 'lucide-react';
 import Link from 'next/link';
@@ -27,7 +31,8 @@ export default function HomeContent() {
                     ]
                 })
             }} />
-            <HeroSlider />
+            <StaticHero />
+            <BuiltForHowYouWork />
 
             {/* About Us Section - Split Layout with Image */}
             <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
@@ -211,7 +216,11 @@ export default function HomeContent() {
                 </div>
             </section>
 
+            <ImagineYourWorkday />
+            <SmartFinancialChoice />
+
             <TestimonialSlider />
+
 
             {/* FAQ Section with Side Image */}
             <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">

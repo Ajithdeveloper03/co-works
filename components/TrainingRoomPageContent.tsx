@@ -527,7 +527,7 @@ export default function TrainingRoomPageContent() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="relative p-12 md:p-32 bg-[#273a96] rounded-[4rem] overflow-hidden shadow-3xl text-center">
                         <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f1a] to-[#273a96] opacity-90"></div>
-                        <Image src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200" alt="CTA BG" fill className="object-cover opacity-10" />
+                        <Image src="https://images.unsplash.com/photo-1603796846097-bee99e4a6e2b?q=80&w=1200" alt="Training room CTA background" fill className="object-cover opacity-10" />
                         <div className="relative z-10 max-w-4xl mx-auto">
                             <h2 className="text-3xl md:text-6xl font-bold text-white mb-8 leading-tight">
                                 Reserve Your Professional Training Room in Trichy Today

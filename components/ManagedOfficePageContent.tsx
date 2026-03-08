@@ -202,7 +202,7 @@ export default function ManagedOfficePageContent() {
                                 title: "Customized Workspace Solutions",
                                 desc: "At Universe Coworks, we understand that your office space represents your business identity. Our managed office spaces offer complete design flexibility, allowing you to customize layouts, choose color schemes, and create interiors that reflect your brand values.",
                                 icon: <Settings className="h-10 w-10" />,
-                                img: "https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=800"
+                                img: "https://images.unsplash.com/photo-1603796846097-bee99e4a6e2b?q=80&w=800"
                             },
                             {
                                 title: "Hassle-Free Setup & Operations",
@@ -214,7 +214,7 @@ export default function ManagedOfficePageContent() {
                                 title: "Scalable Solutions for All Sizes",
                                 desc: "Whether you're a startup team of 10 or an enterprise with 200+ employees, our managed office spaces scale with your business. We provide flexible solutions from compact private offices to expansive floor plans.",
                                 icon: <Maximize2 className="h-10 w-10" />,
-                                img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800"
+                                img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800"
                             }
                         ].map((item, i) => (
                             <div key={i} className="group relative bg-gray-50 rounded-[2.5rem] overflow-hidden hover:shadow-2xl transition-all duration-500">

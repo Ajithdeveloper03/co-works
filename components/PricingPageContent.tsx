@@ -1,6 +1,6 @@
 'use client';
 
-import { CheckCircle, Shield, Rocket, Building2, Calendar, Coffee, Printer, Wifi, Lock, Phone } from 'lucide-react';
+import { CheckCircle, Shield, Rocket, Building2, Calendar, Coffee, Printer, Wifi, Lock, Phone, Clock, Monitor, Globe } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -15,17 +15,17 @@ const pricingPlans = [
         features: ['Full access to coworking amenities', 'High-Speed WiFi', 'Unlimited Coffee/Tea', 'Common Area Access', 'Printing Facilities'],
         cta: 'Book Now',
         highlight: false,
-        icon: Calendar
+        icon: Clock
     },
     {
-        title: 'Monthly Coworking',
+        title: 'Monthly Pass',
         price: '₹4,999',
         period: '/month',
         desc: 'Flexible monthly plans for individuals and remote professionals.',
         features: ['Unlimited shared workspace access', 'High-Speed Internet', 'Meeting Room Credits', 'Community Events Access', 'Locker Facility Available'],
         cta: 'Join Now',
         highlight: false,
-        icon: Coffee
+        icon: Calendar
     },
     {
         title: 'Dedicated Desk',
@@ -35,17 +35,17 @@ const pricingPlans = [
         features: ['Fixed Desk with Pedestal', '24/7 Office Access', 'Business Address Usage', 'Meeting Room Credits (5 Hrs)', 'Guest Reception Service'],
         cta: 'Get Started',
         highlight: true,
-        icon: Lock
+        icon: Monitor
     },
     {
         title: 'Private Office',
         price: '₹11,999',
         period: '/seat/mo',
         desc: 'Fully furnished private offices for startups and teams.',
-        features: ['Private Cabins (2-50 Seats)', 'Custom branding on door', 'Unlimited Meeting Room Access', 'Manager Cabin Included', 'Premium Ergonomic Chairs'],
+        features: ['Private Cabins (upto 50 Seats)', 'Custom branding on door', 'Unlimited Meeting Room Access', 'Manager Cabin Included', 'Premium Ergonomic Chairs'],
         cta: 'Inquire Now',
         highlight: false,
-        icon: Building2
+        icon: Lock
     },
     {
         title: 'Virtual Office',
@@ -55,7 +55,7 @@ const pricingPlans = [
         features: ['Prime Business Address', 'Mail Handling & Forwarding', 'Company Registration Support', 'Lobby Directory Listing', 'GST Compliant Invoices'],
         cta: 'Get Virtual',
         highlight: false,
-        icon: Wifi
+        icon: Globe
     },
     {
         title: 'Custom Enterprise',
@@ -80,8 +80,8 @@ export default function PricingPageContent() {
             <section className="bg-[#0f172a] text-white pt-32 pb-24 text-center relative overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=75&w=1200&auto=format&fit=crop"
-                        alt="Pricing Background"
+                        src="https://images.unsplash.com/photo-1554469384-e58e16dd2698?q=75&w=1200&auto=format&fit=crop"
+                        alt="Professional pricing plans background with business growth chart"
                         fill
                         className="object-cover opacity-40"
                         priority
@@ -181,7 +181,7 @@ export default function PricingPageContent() {
                                 <Phone className="h-10 w-10 text-[#00a896] mx-auto mb-4" />
                                 <h4 className="font-bold text-lg mb-2">Call Us</h4>
                                 <p className="text-gray-500 mb-4">Immediate assistance</p>
-                                <a href="tel:+919786655005" className="text-[#273a96] font-bold hover:underline">+91 86755-56079</a>
+                                <a href="tel:+919789913368" className="text-[#273a96] font-bold hover:underline">+91 97899 13368</a>
                             </div>
                             <div className="p-6 border-x border-gray-200">
                                 <Building2 className="h-10 w-10 text-[#00a896] mx-auto mb-4" />

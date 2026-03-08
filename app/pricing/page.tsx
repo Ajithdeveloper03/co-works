@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: 'Affordable coworking spaces, dedicated desks, and private offices in Trichy. Transparent pricing with no hidden costs for startups and freelancers.',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1497215842964-222b430dc094?q=75&w=1200&auto=format&fit=crop',
+        url: 'https://images.unsplash.com/photo-1554469384-e58e16dd2698?q=75&w=1200&auto=format&fit=crop',
         width: 1200,
         height: 630,
         alt: 'Universe Coworks Pricing',

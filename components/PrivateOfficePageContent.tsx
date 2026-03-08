@@ -172,7 +172,7 @@ export default function PrivateOfficePageContent() {
                             >
                                 Schedule a Tour Today
                             </button>
-                            <a href="tel:+918675556079" className="px-10 py-5 bg-white/5 text-white border border-white/20 backdrop-blur-sm rounded-full font-bold text-lg hover:bg-white/10 transition-all">
+                            <a href="tel:+919789913368" className="px-10 py-5 bg-white/5 text-white border border-white/20 backdrop-blur-sm rounded-full font-bold text-lg hover:bg-white/10 transition-all">
                                 Get a Quote
                             </a>
                         </div>
@@ -251,14 +251,14 @@ export default function PrivateOfficePageContent() {
                                     icon: Layout,
                                     title: "Fully Furnished & Ready to Use",
                                     desc: "Walk into a professionally designed office with ergonomic furniture, high-speed internet, and modern interiors.",
-                                    img: "https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=600",
+                                    img: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=600",
                                     alt: "Comfortable and stylish private cabin interior at universecoworks, featuring high-speed internet and premium furniture."
                                 },
                                 {
                                     icon: Maximize2,
                                     title: "Scalable Solutions for Growing Teams",
                                     desc: "Whether you need space for 2 people or 20, our private offices grow with your business.",
-                                    img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=600",
+                                    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600",
                                     alt: "Private office cabin with a view, showcasing a modern and productive workspace in Trichy."
                                 },
                                 {
@@ -452,7 +452,7 @@ export default function PrivateOfficePageContent() {
                                 >
                                     Schedule a Tour <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-2 transition-transform" />
                                 </button>
-                                <a href="tel:+918675556079" className="px-12 py-5 bg-white text-[#273a96] rounded-full font-bold text-xl hover:bg-gray-100 transition-all shadow-xl hover:-translate-y-1 flex items-center justify-center">
+                                <a href="tel:+919789913368" className="px-12 py-5 bg-white text-[#273a96] rounded-full font-bold text-xl hover:bg-gray-100 transition-all shadow-xl hover:-translate-y-1 flex items-center justify-center">
                                     Call Us Now
                                 </a>
                             </div>

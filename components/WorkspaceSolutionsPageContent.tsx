@@ -148,8 +148,8 @@ export default function WorkspaceSolutionsPageContent() {
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#0a0f1a]">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=2000&auto=format&fit=crop"
-                        alt="Team of freelancers and startup professionals collaborating in a modern meeting room, showcasing a flexible workspace solution in Trichy."
+                        src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=2000&auto=format&fit=crop"
+                        alt="Modern open office workspace with professionals collaborating, showcasing flexible workspace solutions in Trichy."
                         fill
                         className="object-cover opacity-20"
                         priority
@@ -326,7 +326,7 @@ export default function WorkspaceSolutionsPageContent() {
                         {/* Managed Office Solutions */}
                         <div className="bg-white rounded-[5rem] p-12 lg:p-24 border border-gray-100 shadow-sm">
                             <div className="flex flex-col lg:flex-row gap-20 items-center">
-                                <div className="lg:w-2/5 space-y-8">
+                                <div className=" space-y-8">
                                     <h3 className="text-4xl font-black text-gray-900">Managed Office Solutions</h3>
                                     <p className="text-lg text-gray-600 font-light leading-relaxed">
                                         Fully managed office spaces for teams of 10–50 members with exclusive floors and enterprise infrastructure. Eliminate operational hassles completely.
@@ -453,7 +453,7 @@ export default function WorkspaceSolutionsPageContent() {
                             </div>
                             <div className="relative group">
                                 <div className="relative h-[300px] md:h-[550px] w-full rounded-[2rem] overflow-hidden shadow-2xl skew-y-1">
-                                    <Image src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=1200" alt="Ready-to-use office desk with computer and plants, highlighting a zero setup workspace solution in Trichy." fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
+                                    <Image src="https://images.unsplash.com/photo-1603796846097-bee99e4a6e2b?q=80&w=1200" alt="Modern office workspace with computer and plants, highlighting zero setup workspace solution in Trichy." fill className="object-cover group-hover:scale-110 transition-transform duration-1000" />
                                 </div>
                                 <div className="absolute -bottom-6 -left-6 bg-white p-10 rounded-[2.5rem] shadow-xl border border-gray-50 hidden md:block">
                                     <p className="text-xs font-black uppercase tracking-widest text-gray-400 mb-2">Operational Ready</p>
@@ -480,11 +480,11 @@ export default function WorkspaceSolutionsPageContent() {
                             { s: "Step 03", t: "Easy Registration", d: "Complete a simple digital registration with zero upfront hidden costs." },
                             { s: "Step 04", t: "Start Working", d: "Walk in and start working immediately with our fully equipped setup." }
                         ].map((step, i) => (
-                            <div key={i} className="p-10 bg-gray-50 rounded-[3rem] border border-gray-100 relative group overflow-hidden h-72 flex flex-col justify-end">
-                                <div className="absolute top-10 left-10 text-6xl font-black text-gray-200 group-hover:text-[#00a896] group-hover:opacity-10 transition-all">{step.s}</div>
-                                <div className="relative z-10 space-y-3">
+                            <div key={i} className="p-10 bg-gray-50 rounded-[3rem] border border-gray-100 relative group overflow-hidden h-80 flex flex-col justify-between">
+                                <div className="absolute top-6 left-6 text-6xl font-black text-gray-200 group-hover:text-[#00a896] group-hover:opacity-10 transition-all">{step.s}</div>
+                                <div className="relative z-10 space-y-4">
                                     <h4 className="text-xl font-bold text-gray-900 group-hover:text-[#00a896] transition-colors">{step.t}</h4>
-                                    <p className="text-xs text-gray-500 font-medium leading-relaxed">{step.d}</p>
+                                    <p className="text-sm text-gray-500 font-medium leading-relaxed">{step.d}</p>
                                 </div>
                             </div>
                         ))}

@@ -175,8 +175,8 @@ export default function CoworkingSpacePageContent() {
             <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#0a0f1a]">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=2000&auto=format&fit=crop"
-                        alt="Coworking Space Trichy"
+                        src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=2000&auto=format&fit=crop"
+                        alt="Modern coworking space Trichy with collaborative work environment"
                         fill
                         priority
                         className="object-cover opacity-20"
@@ -267,7 +267,7 @@ export default function CoworkingSpacePageContent() {
                         </div>
                         <div className="lg:w-1/2 relative">
                             <div className="relative h-[25rem] lg:h-[600px] w-full rounded-[4rem] overflow-hidden shadow-2xl">
-                                <Image src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200" alt="Modern coworking space Trichy with professionals working together, highlighting 500+ active successes." fill className="object-cover" />
+                                <Image src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200" alt="Modern coworking space Trichy with professionals working together, highlighting 500+ active successes." fill className="object-cover" />
                             </div>
                             <div className="absolute -bottom-10 -left-10 bg-[#00a896] p-12 rounded-[2.5rem] text-white shadow-2xl hidden lg:block">
                                 <p className="text-5xl font-black">500+</p>
@@ -483,7 +483,7 @@ export default function CoworkingSpacePageContent() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="relative p-12 md:p-32 bg-[#273a96] rounded-[4rem] overflow-hidden shadow-3xl text-center">
                         <div className="absolute inset-0 bg-[#0a0f1a] opacity-90"></div>
-                        <Image src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=1200" alt="CTA BG" fill sizes="100vw" className="object-cover opacity-10" />
+                        <Image src="https://images.unsplash.com/photo-1582407978358-5bc61349c16f?q=80&w=1200" alt="Coworking space CTA background" fill sizes="100vw" className="object-cover opacity-10" />
                         <div className="relative z-10 max-w-4xl mx-auto text-white">
                             <h2 className="text-4xl md:text-7xl font-black mb-8 text-white leading-tight">
                                 Ready to Experience the Best Coworking Space in Trichy?

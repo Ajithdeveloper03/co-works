@@ -303,7 +303,7 @@ export default function SolutionsPageContent() {
                                     </Link>
                                 </div>
                                 <div className="mt-6 text-sm text-gray-500">
-                                    Or speak with an advisor: <a href="tel:+919789913368" className="text-[#00a896] font-bold hover:underline">+91 86755-56079</a>
+                                    Or speak with an advisor: <a href="tel:+919789913368" className="text-[#00a896] font-bold hover:underline">+91 97899 13368</a>
                                 </div>
                             </div>
                         ) : (

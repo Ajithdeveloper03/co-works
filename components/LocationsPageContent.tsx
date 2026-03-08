@@ -105,8 +105,8 @@ export default function LocationsPageContent() {
                                 <div className="flex items-start">
                                     <MapPin className="h-6 w-6 text-[#00a896] mr-4 shrink-0 mt-1" />
                                     <div>
-                                        <p className="font-bold text-lg mb-1">4th Floor, Kannan Towers</p>
-                                        <p className="text-sm text-gray-400">11th Cross East, Thillai Nagar, Trichy - 620018</p>
+                                        <p className="font-bold text-lg mb-1">74A, Salai Rd, 2nd floor</p>
+                                        <p className="text-sm text-gray-400">opp. Vaishali Hospital, Thillai Nagar East, Trichy - 620018</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start">
@@ -149,14 +149,14 @@ export default function LocationsPageContent() {
                                 <div className="flex items-start">
                                     <MapPin className="h-6 w-6 text-[#273a96] mr-4 shrink-0 mt-1" />
                                     <div>
-                                        <p className="font-bold text-lg mb-1">2nd Floor, Bharath Plaza</p>
-                                        <p className="text-sm text-gray-400">Promenade Road, Chatram Bus Stand, Trichy - 620001</p>
+                                        <p className="font-bold text-lg mb-1">Door No. 2, Ground Floor, 34</p>
+                                        <p className="text-sm text-gray-400">1st Cross Rd, V N Nagar, Chatram, Trichy - 620002</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start">
                                     <Smartphone className="h-6 w-6 text-[#273a96] mr-4 shrink-0 mt-1" />
                                     <div>
-                                        <p className="font-bold text-lg mb-1">Support: +91 97866 55005</p>
+                                        <p className="font-bold text-lg mb-1">Support: +91 97899 13368</p>
                                         <p className="text-sm text-gray-400">Dedicated Facility Management Desk</p>
                                     </div>
                                 </div>

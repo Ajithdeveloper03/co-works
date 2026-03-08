@@ -82,40 +82,27 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "CoworkingSpace",
+              "@type": "LocalBusiness",
               "name": "Universe Coworks",
-              "image": "https://universecoworks.com/images/home-hero-coworking.png",
-              "description": "Premium coworking space in Trichy offering private offices, dedicated desks, and virtual office solutions.",
+              "url": "https://universecoworks.com",
+              "telephone": ["+918675556079", "+919789913368"],
+              "email": "info@universecoworks.com",
+              "image": "https://universecoworks.com/logo.png",
+              "priceRange": "₹₹",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "4th Floor, Kannan Towers, 11th Cross East",
-                "addressLocality": "Thillai Nagar",
-                "addressRegion": "Trichy",
+                "streetAddress": "74A, Salai Rd, 2nd Floor, Opp. Vaishali Hospital, Thillai Nagar East",
+                "addressLocality": "Tiruchirappalli",
+                "addressRegion": "Tamil Nadu",
                 "postalCode": "620018",
                 "addressCountry": "IN"
               },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "10.8296",
-                "longitude": "78.6924"
-              },
-              "telephone": "+919789913368",
-              "priceRange": "₹5000 - ₹50000",
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday"
-                  ],
-                  "opens": "09:00",
-                  "closes": "21:00"
-                }
-              ]
+              "openingHoursSpecification": [{
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "09:00",
+                "closes": "18:00"
+              }]
             })
           }}
         />

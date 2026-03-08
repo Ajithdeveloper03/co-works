@@ -510,7 +510,7 @@ export default function DedicatedDeskPageContent() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="relative p-12 md:p-32 bg-[#273a96] rounded-[4rem] overflow-hidden shadow-3xl text-center">
                         <div className="absolute inset-0 bg-[#0f172a] opacity-90"></div>
-                        <Image src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200" alt="CTA BG" fill className="object-cover opacity-10" />
+                        <Image src="https://images.unsplash.com/photo-1582407978358-5bc61349c16f?q=80&w=1200" alt="Dedicated desk CTA background" fill className="object-cover opacity-10" />
                         <div className="relative z-10 max-w-4xl mx-auto">
                             <h2 className="text-4xl md:text-6xl font-black text-white mb-8 leading-tight">
                                 Book Your Dedicated Desk in Trichy Today
@@ -535,7 +535,7 @@ export default function DedicatedDeskPageContent() {
                             <div className="mt-12 flex justify-center items-center gap-8">
                                 <div className="text-white">
                                     <p className="text-md font-black uppercase tracking-widest opacity-60 mb-1">Call Support</p>
-                                    <p className="font-bold underline text-blue-300">86755 56079</p>
+                                    <p className="font-bold underline text-blue-300">97899 13368</p>
                                 </div>
                                 <div className="text-white border-l border-white/20 pl-8">
                                     <p className="text-md font-black uppercase tracking-widest opacity-60 mb-1">Satisfaction Guarantee</p>

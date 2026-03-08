@@ -1,6 +1,6 @@
 <?php
 // Prevent direct access to file/directory listing if possible (via .htaccess usually)
-// This script handles contact form submissions.
+// This script handles contact form submissions using PHPMailer
 
 // CORS Handling - Allow requests from your frontend domain
 // In production, tighten this to your actual domain
@@ -50,6 +50,7 @@ $errors = [];
 if (empty($name)) $errors[] = "Name is required.";
 if (!$email) $errors[] = "Valid email is required.";
 if (empty($phone)) $errors[] = "Phone number is required.";
+if (!preg_match('/^[0-9+\-\s()]{10,}$/', $phone)) $errors[] = "Valid phone number is required.";
 
 if (!empty($errors)) {
     http_response_code(422);
@@ -57,70 +58,106 @@ if (!empty($errors)) {
     exit();
 }
 
-// --- EMAIL CONFIGURATION ---
-$to = "info@universecoworks.com"; 
-$subject = "New Inquiry from Universe Coworks Website: $name";
+// --- PHPMailer Configuration ---
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-// Email Body
-$email_content = "
-<html>
-<head>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-        .container { max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-top: 5px solid #00a896; border-radius: 8px; }
-        .header { background: #00a896; color: white; padding: 15px; border-radius: 4px 4px 0 0; text-align: center; }
-        h2 { margin: 0; color: #ffffff; }
-        .content { padding: 20px; }
-        .field { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
-        .label { font-weight: bold; color: #555; display: block; font-size: 12px; text-transform: uppercase; }
-        .val { color: #273a96; font-size: 16px; font-weight: bold; }
-        .message-box { background: #f9f9f9; padding: 15px; border-radius: 5px; border-left: 4px solid #00a896; margin-top: 10px; }
-        .footer { font-size: 11px; color: #999; margin-top: 30px; text-align: center; }
-    </style>
-</head>
-<body>
-    <div class='container'>
-        <div class='header'>
-            <h2>New Workspace Inquiry</h2>
-        </div>
-        <div class='content'>
-            <div class='field'><span class='label'>Name:</span> <span class='val'>$name</span></div>
-            <div class='field'><span class='label'>Email:</span> <span class='val'><a href='mailto:$email' style='color: #273a96;'>$email</a></span></div>
-            <div class='field'><span class='label'>Phone:</span> <span class='val'>$phone</span></div>
-            <div class='field'><span class='label'>Interest:</span> <span class='val'>$interest</span></div>
-            
-            <div class='field' style='border-bottom: none;'>
-                <span class='label'>Requirements / Message:</span>
-                <div class='message-box'>$message</div>
+// Load PHPMailer with proper error handling
+if (file_exists('vendor/autoload.php')) {
+    require 'vendor/autoload.php';
+} else {
+    // Fallback to local PHPMailer if vendor doesn't exist
+    if (file_exists('PHPMailer/src/PHPMailer.php')) {
+        require 'PHPMailer/src/PHPMailer.php';
+        require 'PHPMailer/src/SMTP.php';
+        require 'PHPMailer/src/Exception.php';
+    } else {
+        http_response_code(500);
+        echo json_encode([
+            "success" => false, 
+            "message" => "PHPMailer not found. Please run 'composer install' in the public directory."
+        ]);
+        exit();
+    }
+}
+
+$mail = new PHPMailer(true);
+
+try {
+    // Server settings
+    $mail->SMTPDebug = SMTP::DEBUG_OFF;                      // Disable verbose debug output
+    $mail->isSMTP();                                         // Send using SMTP
+    $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                // Enable SMTP authentication
+    $mail->Username   = 'inymartlabs@gmail.com';             // SMTP username - UPDATE THIS
+    $mail->Password   = 'zinv bcnm thak kxkm';                 // SMTP password - UPDATE THIS
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;     // Enable TLS encryption
+    $mail->Port       = 587;                                 // TCP port to connect to
+
+    // Recipients
+    $mail->setFrom('info@universecoworks.com', 'Universe Coworks');
+    $mail->addAddress('info@universecoworks.com', 'Universe Coworks');
+    $mail->addReplyTo($email, $name);
+
+    // Content
+    $mail->isHTML(true);                                     // Set email format to HTML
+    $mail->Subject = "New Inquiry from Universe Coworks Website: $name";
+
+    // Email Body
+    $email_content = "
+    <html>
+    <head>
+        <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+            .container { max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-top: 5px solid #00a896; border-radius: 8px; }
+            .header { background: #00a896; color: white; padding: 15px; border-radius: 4px 4px 0 0; text-align: center; }
+            h2 { margin: 0; color: #ffffff; }
+            .content { padding: 20px; }
+            .field { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+            .label { font-weight: bold; color: #555; display: block; font-size: 12px; text-transform: uppercase; }
+            .val { color: #273a96; font-size: 16px; font-weight: bold; }
+            .message-box { background: #f9f9f9; padding: 15px; border-radius: 5px; border-left: 4px solid #00a896; margin-top: 10px; }
+            .footer { font-size: 11px; color: #999; margin-top: 30px; text-align: center; }
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <div class='header'>
+                <h2>New Workspace Inquiry</h2>
+            </div>
+            <div class='content'>
+                <div class='field'><span class='label'>Name:</span> <span class='val'>$name</span></div>
+                <div class='field'><span class='label'>Email:</span> <span class='val'><a href='mailto:$email' style='color: #273a96;'>$email</a></span></div>
+                <div class='field'><span class='label'>Phone:</span> <span class='val'>$phone</span></div>
+                <div class='field'><span class='label'>Interest:</span> <span class='val'>$interest</span></div>
+                
+                <div class='field' style='border-bottom: none;'>
+                    <span class='label'>Requirements / Message:</span>
+                    <div class='message-box'>$message</div>
+                </div>
+            </div>
+            <div class='footer'>
+                Sent from universecoworks.com website contact form on " . date('Y-m-d H:i:s') . "
             </div>
         </div>
-        <div class='footer'>
-            Sent from universecoworks.com website contact form.
-        </div>
-    </div>
-</body>
-</html>
-";
+    </body>
+    </html>";
 
-// Email Headers
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-$headers .= "From: Universe Coworks <info@universecoworks.com>" . "\r\n"; 
-$headers .= "Reply-To: $email" . "\r\n";
-$headers .= "X-Mailer: PHP/" . phpversion();
+    $mail->Body = $email_content;
+    $mail->AltBody = strip_tags($email_content);
 
-// --- SEND EMAIL ---
-if (mail($to, $subject, $email_content, $headers)) {
+    $mail->send();
+    
     http_response_code(200);
     echo json_encode(["success" => true, "message" => "Thank you! Your message has been sent successfully."]);
-} else {
-    // If mail() returns false, it could be a server configuration issue
-    $last_error = error_get_last();
+
+} catch (Exception $e) {
     http_response_code(500);
     echo json_encode([
         "success" => false, 
-        "message" => "Sorry, the server could not send your email. Please contact us directly at +91 8675556079.",
-        "debug" => $last_error['message'] ?? 'Unknown error'
+        "message" => "Sorry, the server could not send your email. Please contact us directly at +91 97899-13368.",
+        "debug" => $mail->ErrorInfo
     ]);
 }
 ?>

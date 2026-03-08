@@ -63,11 +63,11 @@ export default function Footer() {
             <ul className="space-y-6 text-gray-400">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-[#00a896] mr-4 mt-0.5 shrink-0" />
-                <span className="text-sm font-medium">74A, Salai Rd, 2 floor nd
-                  opp. Vaishali Hospital,
-                  Thillai Nagar East,
-                  Tiruchirappalli, Tamil Nadu
-                  620018</span>
+                <span className="text-sm font-medium">
+                  74A, Salai Rd, 2nd floor opp. Vaishali Hospital, <br />
+                  Thillai Nagar East, <br />
+                  Tiruchirappalli, Tamil Nadu 620018
+                </span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-[#273a96] mr-4 shrink-0" />
@@ -75,7 +75,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-[#00a896] mr-4 shrink-0" />
-                <a href="tel:+9186755-56079" className="text-sm font-bold hover:text-white transition-colors">+91 86755-56079 <br /> +91 97899-13368</a>
+                <a href="tel:+919789913368" className="text-sm font-bold hover:text-white transition-colors">+91 97899 13368</a>
               </li>
             </ul>
           </div>

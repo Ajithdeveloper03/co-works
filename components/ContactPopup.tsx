@@ -26,7 +26,7 @@ export default function ContactPopup() {
             // Point directly to the PHP script in the public folder (or api folder)
             // Note: This only executes as PHP on a real server (Apache/Nginx). 
             // Locally with 'next dev', it just returns the file content as text.
-            const response = await fetch('/api/contact.php', {
+            const response = await fetch('https://universecoworks.com/api/contact.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -73,7 +73,8 @@ export default function ContactPopup() {
                 <div className="grid md:grid-cols-5 h-full">
                     {/* Sidebar Image */}
                     <div className="hidden md:block md:col-span-2 relative bg-[#273a96] text-white p-8 overflow-hidden">
-                        <div className="absolute inset-0 bg-[#0f172a]/20 z-10"></div>
+                        <div className="absolute inset-0 bg-[url('/images/enterprise-hero.png')] bg-cover bg-center bg-[#0f172a]/40 z-10"></div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-[#273a96]/80 via-[#273a96]/60 to-[#0f172a]/80 z-10"></div>
                         <div className="relative z-20 h-full flex flex-col justify-between">
                             <div>
                                 <h3 className="text-2xl font-black font-headings leading-tight text-white mb-4">Let's Build Your Workspace</h3>
@@ -88,7 +89,7 @@ export default function ContactPopup() {
                                 </div>
                             </div>
                         </div>
-                        {/* Decorative Circles */}
+                        {/* Decorative Elements */}
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#00a896] rounded-full blur-3xl -mr-16 -mt-16 opacity-40"></div>
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-400 rounded-full blur-3xl -ml-16 -mb-16 opacity-20"></div>
                     </div>

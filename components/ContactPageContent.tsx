@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { usePopup } from '@/context/PopupContext';
 
 export default function ContactPageContent() {
-      const { openPopup } = usePopup();
+    const { openPopup } = usePopup();
     const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -18,7 +18,7 @@ export default function ContactPageContent() {
         const data = Object.fromEntries(formData.entries());
 
         try {
-            const response = await fetch('/api/contact.php', {
+            const response = await fetch('https://universecoworks.com/api/contact.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -175,9 +175,9 @@ export default function ContactPageContent() {
                                             <MapPin className="h-4 w-4" />
                                             <span>Thillai Nagar East</span>
                                         </div>
-                                        <p className="text-white font-bold leading-relaxed">74A, Salai Rd, 2nd floor
-                                            opp. Vaishali Hospital, Thillai
-                                            Nagar East, Tiruchirappalli,
+                                        <p className="text-white font-bold leading-relaxed">74A, Salai Rd, 2nd floor<br />
+                                            opp. Vaishali Hospital, Thillai<br />
+                                            Nagar East, Tiruchirappalli,<br />
                                             Tamil Nadu 620018</p>
                                     </div>
                                     <div className="space-y-3 pt-6 border-t border-white/10">
@@ -185,11 +185,10 @@ export default function ContactPageContent() {
                                             <MapPin className="h-4 w-4" />
                                             <span>Chatiram Bus Stand</span>
                                         </div>
-                                        <p className="text-white font-bold leading-relaxed">Door No. 2, Ground Floor, 34,
-                                            1st Cross Rd, V N Nagar,
-                                            Chatram
-                                            Tiruchirappalli, Tamil Nadu
-                                            620002
+                                        <p className="text-white font-bold leading-relaxed">Door No. 2, Ground Floor, 34,<br />
+                                            1st Cross Rd, V N Nagar,<br />
+                                            Chatram Tiruchirappalli,<br />
+                                            Tamil Nadu 620002
                                         </p>
                                     </div>
                                 </div>
@@ -203,7 +202,7 @@ export default function ContactPageContent() {
                                         </div>
                                         <div className="ml-6">
                                             <p className="text-xs text-gray-500 font-bold uppercase tracking-widest leading-none mb-2">Speak to Growth Team</p>
-                                            <p className="text-lg font-black">+91 86755-56079</p>
+                                            <a href="tel:+919789913368" className="text-lg font-black hover:text-[#00a896] transition-colors">+91 97899 13368</a>
                                         </div>
                                     </div>
                                     <div className="flex items-center group cursor-pointer pt-6 border-t border-white/5">
@@ -212,7 +211,7 @@ export default function ContactPageContent() {
                                         </div>
                                         <div className="ml-6">
                                             <p className="text-xs text-gray-500 font-bold uppercase tracking-widest leading-none mb-2">Write to Member Ops</p>
-                                            <p className="text-lg font-black italic underline decoration-[#273a96]">sales@universecoworks.com</p>
+                                            <p className="text-lg font-black italic underline decoration-[#273a96]">info@universecoworks.com</p>
                                         </div>
                                     </div>
                                 </div>
@@ -241,7 +240,7 @@ export default function ContactPageContent() {
                         Skip the form and join our waiting list instantly via WhatsApp or a direct call during business hours.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-                        <a  href='https://api.whatsapp.com/send/?phone=9789913368&text&type=phone_number&app_absent=0' className="w-full sm:w-auto px-12 py-5 bg-[#00a896] text-white rounded-2xl font-black text-xl hover:bg-[#00897b] transition-all shadow-xl">
+                        <a href='https://api.whatsapp.com/send/?phone=9789913368&text&type=phone_number&app_absent=0' className="w-full sm:w-auto px-12 py-5 bg-[#00a896] text-white rounded-2xl font-black text-xl hover:bg-[#00897b] transition-all shadow-xl">
                             Message on WhatsApp
                         </a>
                         <button onClick={openPopup} className="w-full sm:w-auto px-12 py-5 bg-white text-[#273a96] border-2 border-[#273a96] rounded-2xl font-black text-xl hover:bg-[#273a96] hover:text-white transition-all shadow-lg">

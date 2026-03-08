@@ -458,7 +458,7 @@ export default function HotDeskPageContent() {
                     <div className="relative p-12 md:p-24 bg-[#273a96] rounded-[4rem] overflow-hidden shadow-2xl">
                         <div className="absolute top-0 right-0 w-1/2 h-full">
                             <Image
-                                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop"
+                                src="https://images.unsplash.com/photo-1603796846097-bee99e4a6e2b?q=80&w=1200&auto=format&fit=crop"
                                 alt="CTA Image"
                                 fill
                                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -479,8 +479,8 @@ export default function HotDeskPageContent() {
                                 >
                                     Book Now <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-2 transition-transform" />
                                 </button>
-                                <a href="tel:+918675556079" className="px-10 py-5 bg-white text-[#273a96] rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-xl hover:-translate-y-1">
-                                    Call: +91 86755-56079
+                                <a href="tel:+919789913368" className="px-10 py-5 bg-white text-[#273a96] rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-xl hover:-translate-y-1">
+                                    Call: +91 97899 13368
                                 </a>
                             </div>
                         </div>

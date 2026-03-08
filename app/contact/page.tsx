@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     url: 'https://universecoworks.com/contact',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=1200',
+        url: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200',
         width: 1200,
         height: 630,
         alt: 'Contact Universe Coworks',

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
         url: 'https://universecoworks.com/coworking-space-trichy',
         images: [
             {
-                url: 'https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=1200',
+                url: 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=1200',
                 width: 1200,
                 height: 630,
                 alt: 'Coworking Space in Trichy',

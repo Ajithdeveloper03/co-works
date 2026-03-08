@@ -425,7 +425,7 @@ export default function MeetingRoomPageContent() {
                     <div className="flex flex-col lg:flex-row gap-20 items-center">
                         <div className="lg:w-1/2 relative">
                             <div className="relative h-[25rem] lg:h-[600px] w-full rounded-[3rem] overflow-hidden shadow-2xl skew-x-0 lg:skew-x-1">
-                                <Image src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=1200" alt="Sleek and professional meeting room setup with a minimalist design, available on an hourly basis in Trichy." fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+                                <Image src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200" alt="Sleek and professional meeting room setup with a minimalist design, available on an hourly basis in Trichy." fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                             </div>
                             <div className="absolute -top-10 -right-10 bg-white p-10 rounded-[2.5rem] shadow-2xl border border-gray-100 hidden lg:block">
                                 <p className="text-4xl font-black text-[#273a96]">1 Hr</p>
@@ -740,7 +740,7 @@ export default function MeetingRoomPageContent() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="relative p-12 md:p-32 bg-[#273a96] rounded-[4rem] overflow-hidden shadow-3xl text-center">
                         <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f1a] to-[#273a96] opacity-95"></div>
-                        <Image src="https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=1200" alt="CTA BG" fill className="object-cover opacity-10" />
+                        <Image src="https://images.unsplash.com/photo-1582407978358-5bc61349c16f?q=80&w=1200" alt="Professional meeting room CTA background" fill className="object-cover opacity-10" />
                         <div className="relative z-10 max-w-4xl mx-auto">
                             <h2 className="text-4xl md:text-6xl font-black text-white mb-8 leading-tight">
                                 Book Your Professional Meeting Space Today
@@ -772,7 +772,7 @@ export default function MeetingRoomPageContent() {
                             </p>
                         </div>
                         <div className="flex gap-4">
-                            <a href="tel:+918675556079" className="p-4 bg-white border border-gray-200 rounded-2xl hover:bg-gray-100 transition-colors shadow-sm font-bold text-gray-700">Call Team</a>
+                            <a href="tel:+919789913368" className="p-4 bg-white border border-gray-200 rounded-2xl hover:bg-gray-100 transition-colors shadow-sm font-bold text-gray-700">Call Team</a>
                             <Link href="/" className="p-4 bg-[#273a96] text-white rounded-2xl hover:bg-[#1e2a78] transition-colors shadow-sm font-bold">Visit Site</Link>
                         </div>
                     </div>
