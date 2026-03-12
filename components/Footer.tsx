@@ -19,7 +19,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-gray-400 text-sm leading-relaxed font-medium">
-              Universe Coworks is Trichy's global coworking brand, redefining professional environments for startups and enterprises since 2023.
+              Universe Coworks is Trichy's global coworking brand, redefining professional environments for startups and enterprises since 2025.
             </p>
 
             <div className="space-y-3">
