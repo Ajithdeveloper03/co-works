@@ -18,7 +18,7 @@ export default function ContactPageContent() {
         const data = Object.fromEntries(formData.entries());
 
         try {
-            const response = await fetch('https://universecoworks.com/api/contact.php', {
+            const response = await fetch('/api/contact.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -37,8 +37,8 @@ export default function ContactPageContent() {
                         throw new Error(result.message || 'Submission failed');
                     }
                 } catch (jsonError) {
-                    console.warn('Could parse JSON response (likely running locally without PHP):', jsonError);
-                    // Mock success for local development if we get a 200 OK but invalid JSON (i.e. PHP source code)
+                    console.warn('Response was not JSON:', jsonError);
+                    // For local development or cases where PHP returns raw text success
                     setFormStatus('success');
                 }
             } else {

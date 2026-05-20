@@ -1,13 +1,10 @@
 'use client';
 
-import dynamic from 'next/dynamic';
-
-const HeroSlider = dynamic(() => import('@/components/HeroSlider'), { ssr: false });
-const StaticHero = dynamic(() => import('@/components/StaticHero'), { ssr: false });
-const BuiltForHowYouWork = dynamic(() => import('@/components/BuiltForHowYouWork'), { ssr: false });
-const ImagineYourWorkday = dynamic(() => import('@/components/ImagineYourWorkday'), { ssr: false });
-const SmartFinancialChoice = dynamic(() => import('@/components/SmartFinancialChoice'), { ssr: false });
-const TestimonialSlider = dynamic(() => import('@/components/TestimonialSlider'), { ssr: false });
+import StaticHero from '@/components/StaticHero';
+import BuiltForHowYouWork from '@/components/BuiltForHowYouWork';
+import ImagineYourWorkday from '@/components/ImagineYourWorkday';
+import SmartFinancialChoice from '@/components/SmartFinancialChoice';
+import TestimonialSlider from '@/components/TestimonialSlider';
 import { MapPin, ChevronDown, CheckCircle, Users, TrendingUp, Zap, ArrowRight, Star } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';

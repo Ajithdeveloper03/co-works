@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useCallback } from 'react';
 
 interface PopupContextType {
     isOpen: boolean;
@@ -13,8 +13,8 @@ const PopupContext = createContext<PopupContextType | undefined>(undefined);
 export function PopupProvider({ children }: { children: ReactNode }) {
     const [isOpen, setIsOpen] = useState(false);
 
-    const openPopup = () => setIsOpen(true);
-    const closePopup = () => setIsOpen(false);
+    const openPopup = useCallback(() => setIsOpen(true), []);
+    const closePopup = useCallback(() => setIsOpen(false), []);
 
     return (
         <PopupContext.Provider value={{ isOpen, openPopup, closePopup }}>

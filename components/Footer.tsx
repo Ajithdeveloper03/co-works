@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0a0f1a] text-white pt-12 pb-12 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 xl:gap-16 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-12 lg:gap-14 xl:gap-16 mb-8">
 
           {/* Column 1: About */}
           <div className="space-y-8">

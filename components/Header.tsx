@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, ChevronDown, ChevronRight, MapPin, Phone } from 'lucide-react';
+import { Menu, X, ChevronDown, MapPin, Phone } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { usePopup } from '@/context/PopupContext';
 
@@ -43,7 +43,6 @@ export default function Header() {
     { name: 'Blog', href: '/insights/blogs' },
     { name: 'FAQ', href: '/frequently-asked-questions' },
     { name: 'Locations', href: '/locations' },
-    // { name: 'Connect', href: '/contact' }
   ];
 
   const toggleDropdown = (name: string) => {
@@ -63,11 +62,9 @@ export default function Header() {
   };
 
   return (
-    <header
-      className="fixed w-full z-50 bg-white backdrop-blur-md shadow-sm border-b border-gray-100 py-3 transition-all duration-300 font-sans"
-    >
+    <header className="fixed w-full z-50 bg-white backdrop-blur-md shadow-sm border-b border-gray-100 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center h-20"> {/* Standardized height */}
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 relative h-12 w-48">
             <Image
@@ -80,31 +77,36 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center space-x-4 2xl:space-x-8">
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
             {navLinks.map((link) => (
-              <div key={link.name} className="relative group">
+              <div 
+                key={link.name} 
+                className="relative flex items-center h-full"
+                onMouseEnter={() => link.hasDropdown && setActiveDropdown(link.name)}
+                onMouseLeave={() => link.hasDropdown && setActiveDropdown(null)}
+              >
                 {link.hasDropdown ? (
-                  <div
-                    onMouseEnter={() => setActiveDropdown(link.name)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                    className="relative py-2"
-                  >
+                  <div className="relative py-2">
                     <button
-                      className="flex items-center text-[13px] font-bold tracking-wide transition-colors text-gray-700 hover:text-[#273a96]"
+                      className="flex items-center text-[12px] lg:text-[13px] font-bold tracking-wide transition-colors text-gray-700 hover:text-[#273a96] whitespace-nowrap outline-none"
                     >
-                      {link.name} <ChevronDown className="ml-1 h-4 w-4" />
+                      {link.name} 
+                      <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${activeDropdown === link.name ? 'rotate-180' : ''}`} />
                     </button>
 
                     {/* Dropdown Menu */}
                     <div
-                      className={`absolute top-full left-0 mt-0 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 transition-all duration-200 transform origin-top-left ${activeDropdown === link.name ? 'opacity-100 scale-100 visible translate-y-0' : 'opacity-0 scale-95 invisible -translate-y-2'
-                        }`}
+                      className={`absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 transition-all duration-200 transform origin-top-left z-50 ${
+                        activeDropdown === link.name 
+                          ? 'opacity-100 scale-100 visible translate-y-0' 
+                          : 'opacity-0 scale-95 invisible -translate-y-2'
+                      }`}
                     >
                       {link.dropdownItems?.map((item) => (
                         <Link
                           key={item.name}
                           href={item.href}
-                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#273a96] font-medium border-b border-gray-50 last:border-none"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#273a96] font-medium border-b border-gray-50 last:border-none transition-colors"
                         >
                           {item.name}
                         </Link>
@@ -114,7 +116,9 @@ export default function Header() {
                 ) : (
                   <Link
                     href={link.href}
-                    className={`text-[13px] font-bold tracking-wide transition-colors ${pathname === link.href ? 'text-[#273a96]' : 'text-gray-700 hover:text-[#273a96]'}`}
+                    className={`text-[12px] lg:text-[13px] font-bold tracking-wide transition-colors whitespace-nowrap py-2 ${
+                      pathname === link.href ? 'text-[#273a96]' : 'text-gray-700 hover:text-[#273a96]'
+                    }`}
                   >
                     {link.name}
                   </Link>
@@ -124,17 +128,17 @@ export default function Header() {
 
             <Link
               href="/contact"
-              className="px-5 py-2.5 rounded-full font-bold text-sm bg-[#273a96] text-white hover:bg-[#1e2a78] transition-all shadow-lg hover:scale-105 whitespace-nowrap"
+              className="ml-4 px-5 py-2.5 rounded-full font-bold text-xs md:text-sm bg-[#273a96] text-white hover:bg-[#1e2a78] transition-all shadow-md hover:shadow-lg hover:scale-105 whitespace-nowrap"
             >
               Book a tour
             </Link>
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="xl:hidden">
+          <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-gray-900"
+              className="p-2 rounded-md text-gray-900 focus:outline-none"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -142,10 +146,10 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu (unchanged logic, refined padding) */}
       {isOpen && (
-        <div className="xl:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100 max-h-[90vh] overflow-y-auto">
-          <div className="px-4 pt-4 pb-8 space-y-2">
+        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-100 max-h-[90vh] overflow-y-auto">
+          <div className="px-4 pt-4 pb-8 space-y-1">
             {navLinks.map((link) => (
               <div key={link.name}>
                 {link.hasDropdown ? (
@@ -158,12 +162,12 @@ export default function Header() {
                       <ChevronDown className={`h-5 w-5 transition-transform ${mobileSubmenu === link.name ? 'rotate-180' : ''}`} />
                     </button>
                     {mobileSubmenu === link.name && (
-                      <div className="pl-6 space-y-1 bg-gray-50 rounded-b-lg mb-2">
+                      <div className="pl-6 space-y-1 bg-gray-50 rounded-lg mb-2 mx-2">
                         {link.dropdownItems?.map((item) => (
                           <Link
                             key={item.name}
                             href={item.href}
-                            className="block px-4 py-2.5 text-sm font-medium text-gray-600 hover:text-[#273a96]"
+                            className="block px-4 py-2.5 text-sm font-semibold text-gray-600 hover:text-[#273a96]"
                             onClick={() => setIsOpen(false)}
                           >
                             {item.name}
@@ -183,7 +187,7 @@ export default function Header() {
                 )}
               </div>
             ))}
-            <div className="pt-4 px-4">
+            <div className="pt-6 px-4">
               <button
                 onClick={() => {
                   setIsOpen(false);
@@ -193,9 +197,9 @@ export default function Header() {
               >
                 Book a Free Tour
               </button>
-              <div className="flex justify-center space-x-6 mt-6 text-gray-500">
-                <a href="tel:+919789913368" className="flex items-center"><Phone className="h-4 w-4 mr-2" /> Call Us</a>
-                <a href="https://maps.google.com" className="flex items-center"><MapPin className="h-4 w-4 mr-2" /> Directions</a>
+              <div className="flex justify-around mt-8 text-gray-500 pb-4">
+                <a href="tel:+919789913368" className="flex items-center text-sm font-medium"><Phone className="h-4 w-4 mr-2 text-[#273a96]" /> Call</a>
+                <a href="#" className="flex items-center text-sm font-medium"><MapPin className="h-4 w-4 mr-2 text-[#273a96]" /> Directions</a>
               </div>
             </div>
           </div>

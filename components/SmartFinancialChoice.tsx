@@ -48,7 +48,7 @@ export default function SmartFinancialChoice() {
 
                     {/* Universe Coworks */}
                     <div className="bg-white p-8 md:p-10 rounded-[2rem] border-2 border-[#00a896] shadow-xl relative overflow-hidden group">
-                        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-5 py-1 bg-[#00a896] text-white rounded-full text-xs font-bold shadow-lg z-20">
+                        <div className="absolute top-3.5 left-1/2 -translate-x-1/2 px-5 py-1 bg-[#00a896] text-white rounded-full text-xs font-bold shadow-lg z-20">
                             BEST VALUE
                         </div>
                         <h3 className="text-xl md:text-2xl font-bold text-[#0f172a] mb-10 text-center font-headings">Universe Coworks</h3>

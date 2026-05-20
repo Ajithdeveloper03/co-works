@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { usePopup } from '@/context/PopupContext';
 import {
     Dialog,
@@ -12,8 +12,17 @@ import {
 import { ChevronRight, Send } from 'lucide-react';
 
 export default function ContactPopup() {
-    const { isOpen, closePopup } = usePopup();
+    const { isOpen, openPopup, closePopup } = usePopup();
     const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+
+    useEffect(() => {
+        // Automatically open the popup after 10 seconds
+        const timer = setTimeout(() => {
+            openPopup();
+        }, 10000); // 10000ms = 10s
+
+        return () => clearTimeout(timer);
+    }, [openPopup]);
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -23,10 +32,7 @@ export default function ContactPopup() {
         const data = Object.fromEntries(formData.entries());
 
         try {
-            // Point directly to the PHP script in the public folder (or api folder)
-            // Note: This only executes as PHP on a real server (Apache/Nginx). 
-            // Locally with 'next dev', it just returns the file content as text.
-            const response = await fetch('https://universecoworks.com/api/contact.php', {
+            const response = await fetch('/api/contact.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -49,8 +55,8 @@ export default function ContactPopup() {
                         throw new Error(result.message || 'Submission failed');
                     }
                 } catch (jsonError) {
-                    console.warn('Could not parse JSON response (likely running locally without PHP):', jsonError);
-                    // Mock success for local development if we get a 200 OK but invalid JSON (i.e. PHP source code)
+                    console.warn('Response was not JSON:', jsonError);
+                    // For local development or cases where PHP returns raw text success
                     setFormStatus('success');
                     setTimeout(() => {
                         setFormStatus('idle');
@@ -73,7 +79,7 @@ export default function ContactPopup() {
                 <div className="grid md:grid-cols-5 h-full">
                     {/* Sidebar Image */}
                     <div className="hidden md:block md:col-span-2 relative bg-[#273a96] text-white p-8 overflow-hidden">
-                        <div className="absolute inset-0 bg-[url('/images/enterprise-hero.png')] bg-cover bg-center bg-[#0f172a]/40 z-10"></div>
+                        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/8117466/pexels-photo-8117466.jpeg')] bg-cover bg-center bg-[#0f172a]/40 z-10"></div>
                         <div className="absolute inset-0 bg-gradient-to-b from-[#273a96]/80 via-[#273a96]/60 to-[#0f172a]/80 z-10"></div>
                         <div className="relative z-20 h-full flex flex-col justify-between">
                             <div>
