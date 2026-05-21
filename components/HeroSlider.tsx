@@ -91,11 +91,11 @@ export default function HeroSlider() {
                   </div>
                 )}
 
-                <h1 className="text-2xl md:text-5xl xl:text-6xl font-bold text-white leading-tight tracking-tight font-headings">
+                <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight tracking-tight font-headings">
                   {slide.title}
                 </h1>
 
-                <p className="text-md text-justify text-gray-200 leading-relaxed max-w-2xl font-medium">
+                <p className="text-sm md:text-base lg:text-lg text-justify text-gray-200 leading-relaxed max-w-2xl font-medium">
                   {slide.subtitle}
                 </p>
 
@@ -119,14 +119,14 @@ export default function HeroSlider() {
                 </div>
 
                 {/* Global Trust Signals */}
-                <div className="flex items-center space-x-8 pt-8 border-t border-white/10 mt-8">
+                <div className="flex flex-wrap items-center space-x-4 sm:space-x-8 pt-8 border-t border-white/10 mt-8 gap-4">
                   <div>
-                    <p className="text-2xl font-bold text-white">500+</p>
-                    <p className="text-sm text-gray-400">Members in Trichy</p>
+                    <p className="text-xl sm:text-2xl font-bold text-white">500+</p>
+                    <p className="text-xs sm:text-sm text-gray-400">Members in Trichy</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-white">4.9/5</p>
-                    <p className="text-sm text-gray-400">Google Rating</p>
+                    <p className="text-xl sm:text-2xl font-bold text-white">4.9/5</p>
+                    <p className="text-xs sm:text-sm text-gray-400">Google Rating</p>
                   </div>
                 </div>
               </div>

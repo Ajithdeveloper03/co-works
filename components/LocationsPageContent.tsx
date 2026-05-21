@@ -31,12 +31,12 @@ export default function LocationsPageContent() {
                             <span className="uppercase tracking-[0.3em]">Our Strategic Network</span>
                         </div>
 
-                        <h1 className="text-4xl md:text-4xl font-bold text-white leading-tight font-headings tracking-tight animate-fade-in-up">
+                        <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight font-headings tracking-tight animate-fade-in-up">
                             Strategic Spaces. <br />
                             <span className="text-[#00a896]">Connected Success.</span>
                         </h1>
 
-                        <p className="text-xl md:text-3xl text-gray-300 max-w-2xl leading-relaxed font-light animate-fade-in-up delay-200">
+                        <p className="text-lg md:text-2xl lg:text-3xl text-gray-300 max-w-2xl leading-relaxed font-light animate-fade-in-up delay-200">
                             Situated in the commercial heart of Trichy, Universe Coworks provides seamless access to the city's key transit and talent hubs.
                         </p>
                     </div>

@@ -31,7 +31,7 @@ export default function StaticHero() {
                 </div>
 
                 {/* Main H1 Title */}
-                <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight leading-[1.2] font-headings">
+                <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight leading-[1.2] font-headings">
                     Best Coworking Space in Trichy <br className="hidden md:block" />
                     for Business & Growing Teams
                 </h1>

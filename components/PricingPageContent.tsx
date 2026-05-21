@@ -115,7 +115,7 @@ export default function PricingPageContent() {
 
             {/* Pricing Grid */}
             <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto -mt-20 relative z-20">
-                <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8">
                     {pricingPlans.map((plan, idx) => (
                         <div
                             key={idx}

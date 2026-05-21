@@ -36,7 +36,7 @@ const BlogsPageContent = () => {
                                     alt={post.title}
                                     fill
                                     sizes="(max-width: 768px) 100vw, 50vw"
-                                    className="object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                    className="object-cover transform object-top group-hover:scale-105 transition-transform duration-700"
                                 />
                                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-[#273a96]">
                                     {post.category}

@@ -18,7 +18,7 @@ export default function ContactPageContent() {
         const data = Object.fromEntries(formData.entries());
 
         try {
-            const response = await fetch('/api/contact.php', {
+            const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ export default function ContactPageContent() {
                             <span className="uppercase tracking-[0.3em]">We're Always Online</span>
                         </div>
 
-                        <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight font-headings tracking-tight">
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight font-headings tracking-tight">
                             Let's build your <br />
                             <span className="text-[#00a896]">Future Network.</span>
                         </h1>
