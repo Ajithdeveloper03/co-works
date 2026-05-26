@@ -218,7 +218,16 @@ try {
     http_response_code(500);
     echo json_encode([
         "success" => false,
-        "message" => "We encountered an email delivery issue. Please contact us directly at +91 97899 13368."
+        "message" => "We encountered an email delivery issue. Please contact us directly at +91 97899 13368. Error: " . $e->getMessage()
+    ]);
+} catch (\Exception $e) {
+    // Log global exception details to PHP error log
+    error_log("Global exception: " . $e->getMessage());
+
+    http_response_code(500);
+    echo json_encode([
+        "success" => false,
+        "message" => "Server error occurred. Please contact us directly at +91 97899 13368. Error: " . $e->getMessage()
     ]);
 }
 ?>
