@@ -2544,14 +2544,10 @@ export const blogPosts: BlogPost[] = [
         schemas: [
             {
                 "@context": "https://schema.org",
-                "@type": "Article",
-                "mainEntityOfPage": {
-                    "@type": "WebPage",
-                    "@id": "https://universecoworks.com/insights/blogs/15-coworking-space-amenities-you-should-expect-in-2026/"
-                },
+                "@type": "BlogPosting",
                 "headline": "15 Coworking Space Amenities You Should Expect in 2026",
-                "description": "Discover the 15 essential and premium coworking space amenities in 2026. Compare costs with traditional offices and download our evaluation checklist before committing.",
-                "image": "https://universecoworks.com/images/coworking-amenities-cover-2026.png",
+                "description": "Explore the top coworking space amenities professionals, startups, and remote teams should expect in 2026 including high-speed internet, meeting rooms, ergonomic workspaces, networking zones, wellness areas, and flexible office solutions.",
+                "image": "https://universecoworks.com/favicon.ico",
                 "author": {
                     "@type": "Organization",
                     "name": "Universe Coworks"
@@ -2561,9 +2557,25 @@ export const blogPosts: BlogPost[] = [
                     "name": "Universe Coworks",
                     "logo": {
                         "@type": "ImageObject",
-                        "url": "https://universecoworks.com/logo.png"
+                        "url": "https://universecoworks.com/favicon.ico"
                     }
                 },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://universecoworks.com/insights/blogs/15-coworking-space-amenities-you-should-expect-in-2026/"
+                },
+                "url": "https://universecoworks.com/insights/blogs/15-coworking-space-amenities-you-should-expect-in-2026/",
+                "keywords": [
+                    "coworking space amenities",
+                    "coworking space 2026",
+                    "shared office amenities",
+                    "flexible workspace",
+                    "remote workspaces",
+                    "startup office solutions",
+                    "coworking trends"
+                ],
+                "articleSection": "Coworking",
+                "inLanguage": "en",
                 "datePublished": "2026-05-26",
                 "dateModified": "2026-05-26"
             },
@@ -2660,7 +2672,7 @@ export const blogPosts: BlogPost[] = [
                 </div>
 
                 <section>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">9 essential coworking amenities every workspace offers</h2>
+                    <h2 className="text-2xl md:text-3xl font-extrabold text-[#273a96] mb-6">9 essential coworking amenities every workspace offers</h2>
                     <p className="mb-6">
                         The following nine amenities form the baseline at any quality coworking space. If a space is missing any of them, that's worth asking about during your tour.
                     </p>
@@ -2768,7 +2780,7 @@ export const blogPosts: BlogPost[] = [
                 </section>
 
                 <section>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">6 premium coworking amenities that set top spaces apart</h2>
+                    <h2 className="text-2xl md:text-3xl font-extrabold text-[#273a96] mb-6">6 premium coworking amenities that set top spaces apart</h2>
                     <p className="mb-6">
                         Not every coworking space offers the following six amenities. When you find them, they signal a space that's invested in member experience beyond the basics.
                     </p>
