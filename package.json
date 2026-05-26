@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/postbuild.js",
+    "verify-deploy": "node scripts/verify-deploy.js",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"

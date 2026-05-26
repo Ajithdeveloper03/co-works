@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { Suspense } from 'react';
 import CommunityPageContent from '@/components/CommunityPageContent';
 
 export const metadata: Metadata = {
@@ -23,5 +24,9 @@ export const metadata: Metadata = {
 };
 
 export default function CommunityPage() {
-    return <CommunityPageContent />;
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-gray-50" aria-hidden="true" />}>
+            <CommunityPageContent />
+        </Suspense>
+    );
 }

@@ -14,20 +14,6 @@ export default function HomeContent() {
     const { openPopup } = usePopup();
     return (
         <div className="min-h-screen bg-white font-sans">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{
-                __html: JSON.stringify({
-                    "@context": "https://schema.org/",
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [
-                        {
-                            "@type": "ListItem",
-                            "position": 1,
-                            "name": "Home",
-                            "item": "https://universecoworks.com/"
-                        }
-                    ]
-                })
-            }} />
             <StaticHero />
             <BuiltForHowYouWork />
 

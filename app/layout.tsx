@@ -4,13 +4,14 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 import { Providers } from '@/components/Providers';
+import ChunkLoadRecovery from '@/components/ChunkLoadRecovery';
 import Script from 'next/script';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-plus-jakarta',
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800']
+  weight: ['300', '400', '500', '600', '700', '800'],
 });
 
 export const metadata: Metadata = {
@@ -40,7 +41,8 @@ export const metadata: Metadata = {
     images: ['https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop'],
   },
   icons: {
-    icon: '/favi.png',
+    icon: [{ url: '/favi.png' }, { url: '/favicon.ico' }],
+    shortcut: '/favicon.ico',
   },
   metadataBase: new URL('https://universecoworks.com'),
 
@@ -52,19 +54,34 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${plusJakartaSans.variable} font-sans`}>
+    <html lang="en" className={`${plusJakartaSans.variable} scroll-smooth`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="font-sans">
+        <ChunkLoadRecovery />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-D1FRF3P3X5"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+            try {
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
 
-            gtag('config', 'G-D1FRF3P3X5');
+              gtag('config', 'G-D1FRF3P3X5', {
+                send_page_view: false
+              });
+            } catch (e) {
+              console.error('Google Analytics configuration failed:', e);
+            }
           `}
         </Script>
         <Providers>

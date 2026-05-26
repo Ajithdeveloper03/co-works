@@ -1,8 +1,6 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
-import { Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react';
+import { Calendar, User, ArrowRight, Clock } from 'lucide-react';
 import { blogPosts } from '@/lib/blogData';
 
 const BlogsPageContent = () => {

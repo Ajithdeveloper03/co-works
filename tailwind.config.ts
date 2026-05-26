@@ -62,8 +62,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-plus-jakarta)', 'sans-serif'],
-        headings: ['var(--font-plus-jakarta)', 'sans-serif'],
+        sans: ['var(--font-plus-jakarta)', 'Plus Jakarta Sans', 'sans-serif'],
+        headings: ['var(--font-plus-jakarta)', 'Plus Jakarta Sans', 'sans-serif'],
       },
       keyframes: {
         'accordion-down': {

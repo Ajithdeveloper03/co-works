@@ -51,6 +51,19 @@ export default function Home() {
     ]
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org/",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://universecoworks.com/"
+      }
+    ]
+  };
+
   return (
     <>
       <script
@@ -61,6 +74,11 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <HomeContent />
     </>
