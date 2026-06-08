@@ -70,9 +70,9 @@ $interest = htmlspecialchars($interest);
 $message = htmlspecialchars($message);
 
 // Load PHPMailer classes from local directory
-require __DIR__ . '/PHPMailer/Exception.php';
-require __DIR__ . '/PHPMailer/PHPMailer.php';
-require __DIR__ . '/PHPMailer/SMTP.php';
+require_once __DIR__ . '/PHPMailer/Exception.php';
+require_once __DIR__ . '/PHPMailer/PHPMailer.php';
+require_once __DIR__ . '/PHPMailer/SMTP.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -86,7 +86,7 @@ $admin_email = 'info@universecoworks.com';
 
 try {
     // ----------------------------------------------------
-    // 1. Send Notification Email to Admin
+    // Initialize PHPMailer
     // ----------------------------------------------------
     $mail = new PHPMailer(true);
 
@@ -138,6 +138,7 @@ try {
             <h3 style='color: #273a96; margin-top: 25px; margin-bottom: 10px;'>Requirements / Message:</h3>
             <p style='background: #f9fafb; padding: 15px; border-left: 4px solid #00a896; border-radius: 4px; line-height: 1.6; color: #444; margin: 0;'>
                 " . ($message ? nl2br($message) : 'No additional message provided.') . "
+                " . (isset($data['_gotcha']) && !empty($data['_gotcha']) ? "<br><br>[SPAM HONEYPOT CAPTURED: " . htmlspecialchars($data['_gotcha']) . "]" : "") . "
             </p>
             
             <hr style='border: none; border-top: 1px solid #eee; margin: 25px 0;'>
@@ -148,61 +149,73 @@ try {
     </body>
     </html>";
 
+    // Prevent submission if honeypot is filled (spam bot protection)
+    if (isset($data['_gotcha']) && !empty($data['_gotcha'])) {
+        http_response_code(400);
+        die(json_encode([
+            "success" => false,
+            "message" => "Spam detected."
+        ]));
+    }
+
+    // Send the first email (Admin Notification)
     $mail->send();
 
     // ----------------------------------------------------
-    // 2. Send Auto-Reply Confirmation to User
+    // Send Auto-Reply to User (Reusing SMTP Connection)
     // ----------------------------------------------------
-    $auto_reply = new PHPMailer(true);
-
-    $auto_reply->isSMTP();
-    $auto_reply->Host       = $smtp_host;
-    $auto_reply->SMTPAuth   = true;
-    $auto_reply->Username   = $smtp_username;
-    $auto_reply->Password   = $smtp_password;
-    $auto_reply->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-    $auto_reply->Port       = $smtp_port;
-    $auto_reply->CharSet    = 'UTF-8';
-
-    $auto_reply->setFrom($smtp_username, 'Universe Coworks');
-    $auto_reply->addAddress($email, $name);
-
-    $auto_reply->isHTML(true);
-    $auto_reply->Subject = "We have received your workspace inquiry - Universe Coworks";
-    
-    // HTML Email template for User
-    $auto_reply->Body = "
-    <html>
-    <body style='font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px;'>
-        <div style='max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; border: 1px solid #eef0f3;'>
-            <h2 style='color: #273a96; margin-top: 0;'>Thank you, $name!</h2>
-            
-            <p style='line-height: 1.6; color: #444;'>
-                We have received your interest in our <strong>$interest</strong> solutions. Our team is already reviewing your request.
-            </p>
-            
-            <p style='line-height: 1.6; color: #444;'>
-                A workspace advisor will reach out to you within the next <strong>2 hours</strong> (during business hours) to discuss pricing and book your tour.
-            </p>
-            
-            <div style='background: #f0fdfa; border-left: 4px solid #00a896; padding: 15px; border-radius: 4px; margin: 25px 0;'>
-                <p style='margin: 0; font-weight: bold; color: #0d9488;'>Need immediate assistance?</p>
-                <p style='margin: 5px 0 0 0; color: #333;'>
-                    Feel free to call or WhatsApp us directly at: <a href='tel:+919789913368' style='font-weight: bold; color: #273a96; text-decoration: none;'>+91 97899 13368</a>
+    try {
+        // Clear previous recipient and reply-to list
+        $mail->clearAddresses();
+        $mail->clearReplyTos();
+        
+        // Add the user as the recipient
+        $mail->addAddress($email, $name);
+        
+        // Update the sender's display name to just 'Universe Coworks'
+        $mail->setFrom($smtp_username, 'Universe Coworks');
+        
+        // Update Subject & Body
+        $mail->Subject = "We have received your workspace inquiry - Universe Coworks";
+        
+        // HTML Email template for User
+        $mail->Body = "
+        <html>
+        <body style='font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px;'>
+            <div style='max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; border: 1px solid #eef0f3;'>
+                <h2 style='color: #273a96; margin-top: 0;'>Thank you, $name!</h2>
+                
+                <p style='line-height: 1.6; color: #444;'>
+                    We have received your interest in our <strong>$interest</strong> solutions. Our team is already reviewing your request.
+                </p>
+                
+                <p style='line-height: 1.6; color: #444;'>
+                    A workspace advisor will reach out to you within the next <strong>2 hours</strong> (during business hours) to discuss pricing and book your tour.
+                </p>
+                
+                <div style='background: #f0fdfa; border-left: 4px solid #00a896; padding: 15px; border-radius: 4px; margin: 25px 0;'>
+                    <p style='margin: 0; font-weight: bold; color: #0d9488;'>Need immediate assistance?</p>
+                    <p style='margin: 5px 0 0 0; color: #333;'>
+                        Feel free to call or WhatsApp us directly at: <a href='tel:+919789913368' style='font-weight: bold; color: #273a96; text-decoration: none;'>+91 97899 13368</a>
+                    </p>
+                </div>
+                
+                <hr style='border: none; border-top: 1px solid #eee; margin: 25px 0;'>
+                <p style='margin: 0; font-size: 12px; color: #777;'>
+                    <strong>Universe Coworks</strong><br>
+                    Workspace Solutions built for Startups, Remote Teams & Professionals.<br>
+                    <a href='https://universecoworks.com' style='color: #00a896; text-decoration: none;'>universecoworks.com</a>
                 </p>
             </div>
-            
-            <hr style='border: none; border-top: 1px solid #eee; margin: 25px 0;'>
-            <p style='margin: 0; font-size: 12px; color: #777;'>
-                <strong>Universe Coworks</strong><br>
-                Workspace Solutions built for Startups, Remote Teams & Professionals.<br>
-                <a href='https://universecoworks.com' style='color: #00a896; text-decoration: none;'>universecoworks.com</a>
-            </p>
-        </div>
-    </body>
-    </html>";
+        </body>
+        </html>";
 
-    $auto_reply->send();
+        // Send the auto-reply
+        $mail->send();
+    } catch (\Throwable $autoReplyError) {
+        // Log the auto-reply failure, but DO NOT fail the main request since the admin email was sent.
+        error_log("Auto-reply mail failed to send to $email: " . $autoReplyError->getMessage());
+    }
 
     // Success response
     http_response_code(200);
@@ -211,23 +224,14 @@ try {
         "message" => "Your inquiry has been successfully received. We will contact you within 2 hours!"
     ]);
 
-} catch (Exception $e) {
+} catch (\Throwable $e) {
     // Log exception details to PHP error log
-    error_log("PHPMailer exception: " . $e->getMessage());
+    error_log("PHPMailer fatal exception: " . $e->getMessage());
 
     http_response_code(500);
     echo json_encode([
         "success" => false,
-        "message" => "We encountered an email delivery issue. Please contact us directly at +91 97899 13368. Error: " . $e->getMessage()
-    ]);
-} catch (\Exception $e) {
-    // Log global exception details to PHP error log
-    error_log("Global exception: " . $e->getMessage());
-
-    http_response_code(500);
-    echo json_encode([
-        "success" => false,
-        "message" => "Server error occurred. Please contact us directly at +91 97899 13368. Error: " . $e->getMessage()
+        "message" => "We encountered an email delivery issue. Please contact us directly at +91 97899 13368. Error: " . $e->getMessage() . " (" . (isset($mail) ? $mail->ErrorInfo : "No Mail Details") . ")"
     ]);
 }
 ?>

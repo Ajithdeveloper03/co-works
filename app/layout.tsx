@@ -93,7 +93,142 @@ export default function RootLayout({
             <Footer />
           </div>
         </Providers>
-        {/* SEO: Local Business Schema */}
+        {/* SEO: Local Business Schema - Full @graph with both locations */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://universecoworks.com/#organization",
+                  "name": "Universe Coworks",
+                  "url": "https://universecoworks.com",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://universecoworks.com/logo.png",
+                    "width": 400,
+                    "height": 100
+                  },
+                  "sameAs": [
+                    "https://www.instagram.com/universecoworks",
+                    "https://www.linkedin.com/company/universecoworks",
+                    "https://www.facebook.com/universecoworks"
+                  ],
+                  "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+91-97899-13368",
+                    "contactType": "customer service",
+                    "availableLanguage": ["English", "Tamil"],
+                    "areaServed": "IN"
+                  }
+                },
+                {
+                  "@type": "CoworkingSpace",
+                  "@id": "https://universecoworks.com/#location-thillai",
+                  "name": "Universe Coworks \u2013 Thillai Nagar East",
+                  "description": "Premium coworking space in Thillai Nagar East, Trichy offering hot desks, dedicated desks, private cabins, virtual offices, meeting rooms, and enterprise-grade internet with 100% power backup.",
+                  "url": "https://universecoworks.com",
+                  "telephone": ["+91-86755-56079", "+91-97899-13368"],
+                  "email": "info@universecoworks.com",
+                  "image": "https://universecoworks.com/logo.png",
+                  "logo": "https://universecoworks.com/logo.png",
+                  "priceRange": "\u20b9\u20b9",
+                  "currenciesAccepted": "INR",
+                  "paymentAccepted": "Cash, Credit Card, UPI, Bank Transfer",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "74A, Salai Rd, 2nd Floor, Opp. Vaishali Hospital, Thillai Nagar East",
+                    "addressLocality": "Tiruchirappalli",
+                    "addressRegion": "Tamil Nadu",
+                    "postalCode": "620018",
+                    "addressCountry": "IN"
+                  },
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "10.8231",
+                    "longitude": "78.7022"
+                  },
+                  "openingHoursSpecification": [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                      "opens": "09:00",
+                      "closes": "18:00"
+                    }
+                  ],
+                  "amenityFeature": [
+                    { "@type": "LocationFeatureSpecification", "name": "High-Speed Fiber Internet", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "100% Power Backup", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "Meeting Rooms", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "Private Cabins", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "Dedicated Desks", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "Hot Desks", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "Pantry & Beverages", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "Printing & Scanning", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "24/7 CCTV Security", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "Parking", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "Virtual Office / GST Address", "value": true }
+                  ],
+                  "hasMap": "https://maps.google.com/?q=Universe+Coworks+Thillai+Nagar+Trichy",
+                  "parentOrganization": { "@id": "https://universecoworks.com/#organization" }
+                },
+                {
+                  "@type": "CoworkingSpace",
+                  "@id": "https://universecoworks.com/#location-chatram",
+                  "name": "Universe Coworks \u2013 Chatram Bus Stand",
+                  "description": "Modern coworking space near Chatram Bus Stand, Trichy offering flexible hot desks, dedicated desks, private cabins, meeting rooms, and business registration support.",
+                  "url": "https://universecoworks.com",
+                  "telephone": ["+91-86755-56079", "+91-97899-13368"],
+                  "email": "info@universecoworks.com",
+                  "image": "https://universecoworks.com/logo.png",
+                  "logo": "https://universecoworks.com/logo.png",
+                  "priceRange": "\u20b9\u20b9",
+                  "currenciesAccepted": "INR",
+                  "paymentAccepted": "Cash, Credit Card, UPI, Bank Transfer",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Door No. 2, Ground Floor, 34, 1st Cross Rd, V N Nagar, Chatram",
+                    "addressLocality": "Tiruchirappalli",
+                    "addressRegion": "Tamil Nadu",
+                    "postalCode": "620002",
+                    "addressCountry": "IN"
+                  },
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "10.8150",
+                    "longitude": "78.6993"
+                  },
+                  "openingHoursSpecification": [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                      "opens": "09:00",
+                      "closes": "18:00"
+                    }
+                  ],
+                  "amenityFeature": [
+                    { "@type": "LocationFeatureSpecification", "name": "High-Speed Fiber Internet", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "100% Power Backup", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "Meeting Rooms", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "Private Cabins", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "Dedicated Desks", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "Hot Desks", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "Pantry & Beverages", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "24/7 CCTV Security", "value": true },
+                    { "@type": "LocationFeatureSpecification", "name": "Virtual Office / GST Address", "value": true }
+                  ],
+                  "hasMap": "https://maps.google.com/?q=Universe+Coworks+Chatram+Trichy",
+                  "parentOrganization": { "@id": "https://universecoworks.com/#organization" }
+                }
+              ]
+            })
+          }}
+        />
+        {/* SEO: LocalBusiness Schema with Wikipedia sameAs */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -105,7 +240,7 @@ export default function RootLayout({
               "telephone": ["+918675556079", "+919789913368"],
               "email": "info@universecoworks.com",
               "image": "https://universecoworks.com/logo.png",
-              "priceRange": "₹₹",
+              "priceRange": "\u20b9\u20b9",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "74A, Salai Rd, 2nd Floor, Opp. Vaishali Hospital, Thillai Nagar East",
@@ -119,7 +254,10 @@ export default function RootLayout({
                 "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
                 "opens": "09:00",
                 "closes": "18:00"
-              }]
+              }],
+              "sameAs": [
+                "https://en.wikipedia.org/wiki/Special:MyPage/sandbox"
+              ]
             })
           }}
         />
