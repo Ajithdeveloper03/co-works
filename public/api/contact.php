@@ -77,12 +77,34 @@ require_once __DIR__ . '/PHPMailer/SMTP.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// SMTP Server Configuration
-$smtp_host = 'smtp.gmail.com';
-$smtp_port = 465;
-$smtp_username = 'inymartlabs@gmail.com';
-$smtp_password = 'zinv bcnm thak kxkm'; // Gmail App Password
-$admin_email = 'info@universecoworks.com';
+// ⚠️ SECURITY: Load credentials from environment variables
+// Never hardcode secrets in source code!
+if (file_exists(__DIR__ . '/../.env.local')) {
+    $envFile = __DIR__ . '/../.env.local';
+    $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        if (strpos($line, '=') !== false && strpos($line, '#') !== 0) {
+            [$key, $value] = explode('=', $line, 2);
+            $_ENV[trim($key)] = trim($value);
+        }
+    }
+}
+
+// SMTP Server Configuration (from environment variables)
+$smtp_host = getenv('SMTP_HOST') ?: 'smtp.gmail.com';
+$smtp_port = (int)(getenv('SMTP_PORT') ?: 465);
+$smtp_username = getenv('SMTP_USERNAME');
+$smtp_password = getenv('SMTP_PASSWORD');
+$admin_email = getenv('ADMIN_EMAIL');
+
+// Validate required environment variables
+if (!$smtp_username || !$smtp_password || !$admin_email) {
+    http_response_code(500);
+    die(json_encode([
+        "success" => false,
+        "message" => "Server configuration error. Required environment variables not set."
+    ]));
+}
 
 try {
     // ----------------------------------------------------

@@ -1,5 +1,50 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 🔐 SECURITY: Environment Variables & Secrets
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# DO NOT commit any .env files with actual credentials!
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+.env.test
+.env.*.example.local
+*.key
+*.pem
+*.cer
+*.crt
+*.pfx
+.aws/
+.azure/
+.gcp/
+secrets/
+keys/
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Database & Backup Files
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+*.sql.gz
+dump.rdb
+*.backup
+*.bak
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Private Configuration Files
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+.env*
+config/private.js
+config/secrets.js
+credentials.json
+service-account.json
+firebase-key.json
+oauth-credentials.json
+
 # dependencies
 /node_modules
 /.pnp
@@ -23,10 +68,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# local env files
-.env
-.env*.local
+.debug
 
 # vercel
 .vercel
@@ -34,3 +76,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+

@@ -31,7 +31,7 @@ export const blogPosts: BlogPost[] = [
         author: 'By Admin',
         date: 'February 7, 2026',
         readTime: '6 min read',
-        image: '/images/is coworking space good for remote workers in 2026.png',
+        image: '/images/startup-hero.png',
         metadata: {
             title: 'Explore the Best Coworking Space Trichy for Innovators',
             description: 'Discover the best coworking space Trichy for innovative thinkers. Explore amenities, vibrant community, and how it can elevate your work experience.',
@@ -115,6 +115,16 @@ export const blogPosts: BlogPost[] = [
         ],
         content: (
             <div className="space-y-8 text-justify">
+                <div className="relative w-full h-[300px] sm:h-[350px] md:h-[500px] mb-8 rounded-2xl overflow-hidden border border-gray-100 shadow-md bg-white">
+                    <Image
+                        src="/images/startup-hero.png"
+                        alt="Find Your Ideal Coworking Space Trichy for Creativity"
+                        fill
+                        className="object-contain"
+                        priority
+                    />
+                </div>
+
                 <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100 mb-8">
                     <h3 className="text-xl font-bold text-blue-900 mb-4">Key Highlights</h3>
                     <ul className="space-y-3">
@@ -384,6 +394,16 @@ export const blogPosts: BlogPost[] = [
         ],
         content: (
             <div className="space-y-8 text-justify">
+                <div className="relative w-full h-[300px] sm:h-[350px] md:h-[500px] mb-8 rounded-2xl overflow-hidden border border-gray-100 shadow-md bg-white">
+                    <Image
+                        src="/images/coworking-vs-traditional-header.png"
+                        alt="Coworking Space vs Traditional Office in Trichy"
+                        fill
+                        className="object-contain"
+                        priority
+                    />
+                </div>
+
                 <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100 mb-8">
                     <h3 className="text-xl font-bold text-blue-900 mb-4">Key Highlights</h3>
                     <p className="mb-4">Here’s a quick look at the key differences between a <Link href="/" className="text-blue-600 hover:underline">coworking space</Link> and a traditional office in Trichy:</p>
@@ -851,6 +871,16 @@ export const blogPosts: BlogPost[] = [
         ],
         content: (
             <div className="space-y-8 text-gray-700 leading-relaxed text-justify">
+                <div className="relative w-full h-[300px] sm:h-[350px] md:h-[500px] mb-8 rounded-2xl overflow-hidden border border-gray-100 shadow-md bg-white">
+                    <Image
+                        src="/images/coworking-benefits-trichy.jpg"
+                        alt="Top 7 Benefits of Choosing a Coworking Space in Trichy"
+                        fill
+                        className="object-contain"
+                        priority
+                    />
+                </div>
+
                 <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100 mb-8">
                     <h3 className="text-xl font-bold text-blue-900 mb-4">Quick Summary – <Link href="/" className="text-blue-600 hover:underline">Coworking Space</Link> in Trichy</h3>
                     <ul className="space-y-3">
@@ -1235,6 +1265,16 @@ export const blogPosts: BlogPost[] = [
         ],
         content: (
             <div className="space-y-8 text-justify">
+                <div className="relative w-full h-[300px] sm:h-[350px] md:h-[500px] mb-8 rounded-2xl overflow-hidden border border-gray-100 shadow-md bg-white">
+                    <Image
+                        src="/images/why-startups-in-trichy-prefer-coworking.png"
+                        alt="Why Startups in Trichy Prefer Coworking"
+                        fill
+                        className="object-contain"
+                        priority
+                    />
+                </div>
+
                 <div className="bg-blue-50 p-8 rounded-2xl border border-blue-100 mb-8">
                     <h3 className="text-xl font-bold text-blue-900 mb-6">Quick Summary</h3>
                     <ul className="space-y-4">
@@ -1857,7 +1897,7 @@ export const blogPosts: BlogPost[] = [
         author: 'Admin',
         date: 'February 23, 2026',
         readTime: '8 min read',
-        image: '/images/home-hero-coworking.png',
+        image: '/images/is coworking space good for remote workers in 2026.png',
         metadata: {
             title: 'Is Coworking Space Good for Remote Workers in 2026? | Universe Coworks',
             description: 'Discover if coworking spaces are worth it for remote workers in 2026. Explore benefits like networking, productivity, and professional environment.',
@@ -1979,6 +2019,16 @@ export const blogPosts: BlogPost[] = [
         ],
         content: (
             <div className="space-y-8 text-justify">
+                <div className="relative w-full h-[300px] sm:h-[350px] md:h-[500px] mb-8 rounded-2xl overflow-hidden border border-gray-100 shadow-md bg-white">
+                    <Image
+                        src="/images/coworking-benefits-trichy.jpg"
+                        alt="Coworking benefits for remote workers in Trichy"
+                        fill
+                        className="object-contain"
+                        priority
+                    />
+                </div>
+
                 <div className="bg-blue-50 p-8 rounded-2xl border border-blue-100 mb-8">
                     <h3 className="text-xl font-bold text-blue-900 mb-6">Quick Summary</h3>
                     <p className="mb-4 text-gray-700">
@@ -2782,8 +2832,8 @@ export const blogPosts: BlogPost[] = [
                 <section>
                 <div className="relative w-full h-[300px] md:h-[500px] mb-6 rounded-xl overflow-hidden shadow-md border border-gray-100 bg-white">
                         <Image
-                            src="/images/6premium-coworking.png"
-                            alt="24/7 Access and Booking System for Coworking Spaces in Trichy"
+                            src="/images/premium-coworking-amenities.png"
+                            alt="6 premium coworking amenities that set top spaces apart - professional workspace with high-speed internet, power backup, private cabins, and wellness zones"
                             fill
                             className="object-contain"
                             priority
@@ -2880,8 +2930,8 @@ export const blogPosts: BlogPost[] = [
                 <section>
                 <div className="relative w-full h-[300px] md:h-[500px] mb-6 rounded-xl overflow-hidden shadow-md border border-gray-100 bg-white">
                         <Image
-                            src="/images/how coworking amentities.png"
-                            alt="24/7 Access and Booking System for Coworking Spaces in Trichy"
+                            src="/images/how-coworking-amenities-comparison.png"
+                            alt="How coworking amenities compare to traditional office - comparison showing cost savings and benefits of shared workspace amenities"
                             fill
                             className="object-contain"
                             priority
@@ -2897,7 +2947,7 @@ export const blogPosts: BlogPost[] = [
                     <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] mb-8 rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-white">
                         <Image
                             src="/images/coworking-15-amenities-infographic.png"
-                            alt="Coworking space amenities infographic comparing coworking vs traditional office in a modern blue and green themed design."
+                            alt="15 coworking space amenities infographic comparing coworking vs traditional office including internet, power backup, meeting rooms, and wellness facilities in a modern blue and green themed design"
                             fill
                             className="object-contain"
                         />
@@ -3187,6 +3237,15 @@ export const blogPosts: BlogPost[] = [
                 </section>
 
                 <section>
+                    <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] mb-8 rounded-2xl overflow-hidden border border-gray-100 shadow-md bg-white">
+                        <Image
+                            src="/images/better-workspace-decision-making-creativity.png"
+                            alt="Can a Better Workspace Improve Decision-Making and Creativity - showing professionals collaborating with insights on focus, thinking, creativity, and decisions"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
+                    </div>
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">The Relationship Between Workspace and Mental Performance</h2>
                     <p className="mb-4">
                         Every day, professionals make decisions that influence projects, clients, business operations, and future growth, ultimately impacting business success. Effective decision-making plays a crucial role in requiring concentration, logical thinking, and the ability to process information clearly. However, these abilities can be affected by the environment in which a person works, including the use of ergonomic furniture and interactive whiteboards to enhance employee engagement and foster a sense of ownership.
@@ -3318,15 +3377,6 @@ export const blogPosts: BlogPost[] = [
                 </section>
 
                 <section>
-                    <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] mb-8 rounded-2xl overflow-hidden border border-gray-100 shadow-md bg-white">
-                        <Image
-                            src="/images/businesses-investing-better-workspaces.png"
-                            alt="Why Businesses Are Investing in Better Workspaces - showing modern office environment with collaborative workspace and productivity focus"
-                            fill
-                            className="object-cover"
-                            priority
-                        />
-                    </div>
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Businesses Are Investing in Better Workspaces</h2>
                     <p className="mb-4">
                         Many organizations now recognize the connection between office environments, workplace quality, and employee performance, including the importance of smart meeting rooms. Businesses understand that providing a positive workplace culture and the right environment can improve both productivity and help employees do their best work, significantly enhancing the overall employee experience and helping to attract top talent.
@@ -3399,15 +3449,7 @@ export const blogPosts: BlogPost[] = [
                 </section>
 
                 <section>
-                    <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] mb-8 rounded-2xl overflow-hidden border border-gray-100 shadow-md bg-white">
-                        <Image
-                            src="/images/better-workspace-decision-making-creativity.png"
-                            alt="Can a Better Workspace Improve Decision-Making and Creativity - showing professionals collaborating with insights on focus, thinking, creativity, and decisions"
-                            fill
-                            className="object-cover"
-                            priority
-                        />
-                    </div>
+                    
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">Conclusion</h2>
                     <p className="mb-4">
                         <Link href="/" className="text-blue-600 underline">A workspace with open creative spaces and thoughtful office design</Link>, including writable walls and virtual whiteboards, is more than just a place where tasks are completed. It plays an important role in shaping how people think, create, and make decisions, unlocking innovative thinking. From improving focus and reducing stress to encouraging creativity and collaboration, the right environment can positively influence professional performance.
