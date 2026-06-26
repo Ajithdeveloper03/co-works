@@ -4057,7 +4057,7 @@ export const blogPosts: BlogPost[] = [
         author: 'Universe Coworks',
         date: 'June 22, 2026',
         readTime: '6 min read',
-        image: '/images/blog-modern-professionals-cover.png',
+        image: '/images/modern-professionals-coworking-cover.png',
         metadata: {
             title: 'Why Modern Professionals Are Choosing Coworking Spaces Today',
             description: 'Discover why modern professionals are choosing coworking spaces over traditional offices for flexibility, productivity, networking opportunities, cost savings, and business growth.',
